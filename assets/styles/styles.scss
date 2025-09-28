@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import "default.scss";
 
 .progressLoader {
@@ -363,6 +363,94 @@ header {
         z-index: 1;
     }
 }
+// Sidebar
+.sidebar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 9.375rem;
+    min-width: 20rem;
+    max-width: 21.875rem;
+    height: auto;
+    background-color: $dark;
+    border-radius: $cardRadius;
+    overflow: hidden;
+    flex-grow: 1;
+
+    .sidebarHeader,
+    .sidebarContent {
+        width: 100%;
+    }
+    .sidebarHeader {
+        background-color: $tertiary;
+        padding: $commonUnit / 2;
+
+        h3 {
+            font-size: $h5;
+            text-align: center;
+            color: $white !important;
+            margin-bottom: 0;
+        }
+    }
+    .sidebarContent {
+        padding: $commonUnit;
+
+        li {
+            .nav-link {
+                font-size: $medium;
+                text-transform: uppercase;
+                color: $white;
+                background-color: rgba($color: $primary, $alpha: 0.15);
+                padding: $commonUnit / 3;
+                border-radius: $cardRadius / 3;
+                &:hover,
+                &.active {
+                    background-color: $primary;
+                }
+            }
+        }
+    }
+}
+// Video Btn
+.videoBtn {
+    @extend .flex-center;
+    $wh: 4.375rem;
+    width: $wh;
+    height: $wh;
+    border: 0.125rem solid $white;
+    border-radius: 50%;
+    background-color: $primary;
+    background: linear-gradient(143.45deg, $primary 13.89%, $primary 84.75%);
+    box-shadow: 0rem 0.1465rem 0.1465rem rgba(0, 0, 0, 0.25);
+    animation: animateBtn 3s linear infinite;
+
+    i {
+        font-size: $h3;
+        color: $white;
+    }
+    @keyframes animateBtn {
+        0% {
+            box-shadow: 0 0 0 0 rgba($white, 0.3);
+        }
+
+        40% {
+            box-shadow:
+                0 0 0 0.75em rgba($white, 0.1),
+                0 0 0 1.5em rgba($white, 0.3);
+        }
+
+        80% {
+            box-shadow:
+                0 0 0 1.25em rgba($white, 0.05),
+                0 0 0 3em rgba($white, 0.15);
+        }
+
+        100% {
+            box-shadow:
+                0 0 0 2em rgba($white, 0),
+                0 0 0 5em rgba($white, 0);
+        }
+    }
+}
 // Main
 
 // Hero
@@ -456,7 +544,61 @@ header {
 }
 
 // About
-.about {
+.aboutUs {
+    dl {
+        margin-bottom: $commonUnit;
+        dt {
+            font-family: "Bona Nova", serif;
+            font-size: $h4;
+            font-weight: 600;
+            color: $dark;
+
+            i {
+                color: $primary;
+            }
+        }
+        dd {
+            margin-left: $commonUnit * 2;
+        }
+    }
+    .avatarCard {
+        background-color: $primary;
+        border-radius: $cardRadius;
+        overflow: hidden;
+        border: none;
+        figure {
+            margin: 0 !important;
+            border-radius: 0 !important;
+            position: relative;
+        }
+        .cardContent {
+            background-color: $dark;
+            padding: $commonUnit;
+
+            h3,
+            p {
+                margin-bottom: 0;
+            }
+            h3 {
+                font-size: $xLarge;
+                font-weight: 500;
+                color: $white;
+            }
+            p {
+                font-size: $medium;
+                color: $white;
+                opacity: 0.5;
+            }
+        }
+        &:hover {
+            .cardContent {
+                background-color: lighten($primary, 10%);
+            }
+            figure img {
+                transform: scale(1.1) rotate(2deg);
+            }
+        }
+    }
 }
 // Departments
 .departments {
@@ -648,113 +790,6 @@ footer {
 
 // Pages Scss Starts
 
-// About
-.about {
-    .aboutImgContainer {
-        @extend .flex-end-start;
-        gap: $commonUnit + $commonUnit / 2;
-        figure {
-            position: relative;
-            @extend .flex-center;
-            flex-direction: column;
-            flex-grow: 1;
-            height: 100%;
-            .radiusEmblem {
-                position: absolute;
-                top: -3.5rem;
-                left: 50%;
-                transform: translateX(-50%);
-                width: 11.25rem;
-                @extend .flex-center;
-
-                .emblem {
-                    position: absolute;
-                }
-                .circle-text {
-                    width: 82%;
-                    height: 82%;
-                    animation: circle 20s linear infinite;
-                    @keyframes circle {
-                        0% {
-                            transform: rotate(0deg);
-                        }
-                        100% {
-                            transform: rotate(360deg);
-                        }
-                    }
-                }
-            }
-            .aboutImg {
-                width: 100% !important;
-            }
-        }
-    }
-    .pgHeader {
-        margin: 0;
-        .pgTitle {
-            h2,
-            p:not(:last-child) {
-                margin-bottom: $commonUnit;
-            }
-        }
-    }
-}
-// Directors
-.director {
-    background-color: $dark;
-    padding: 0 !important;
-    .pgHeader {
-        @extend .flex-center;
-        padding: $commonUnit * 3;
-        margin-bottom: 0;
-        height: 100%;
-        .pgTitle {
-            max-width: 100%;
-        }
-        h2,
-        p {
-            color: $white;
-        }
-        h2 {
-            margin-bottom: $commonUnit;
-            span {
-                display: block;
-            }
-        }
-        p:not(:last-child) {
-            margin-bottom: $commonUnit;
-        }
-    }
-    figure {
-        height: 100%;
-        margin: 0;
-        position: relative;
-        img {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-        }
-        .directorInfo {
-            @extend .flex-start;
-            flex-direction: column;
-            gap: 0;
-            position: absolute;
-            bottom: 1.875rem;
-            left: 1.875rem;
-            background: $glossy;
-            backdrop-filter: blur(0.625rem);
-            padding: $commonUnit * 2;
-            border: 0.0625rem solid rgba($color: $white, $alpha: 0.1);
-            border-radius: $cardRadius;
-
-            h3,
-            small {
-                color: $white;
-                margin-bottom: 0;
-            }
-        }
-    }
-}
 // Video
 .videoSection {
     @extend .flex-center-start;
@@ -800,187 +835,14 @@ footer {
         }
     }
 }
-// Mission Vision
-.missionVision {
-    background-color: $dark;
-    background: url(../media/renewable-energy.jpg) no-repeat center/cover fixed;
-    &::after {
-        position: absolute;
-        top: 0;
-        left: 0;
-        content: "";
-        z-index: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba($color: $dark, $alpha: 0.9);
-    }
-    .container {
-        position: relative;
-        z-index: 1;
-    }
-    .mvCard {
-        background: $glossy;
-        backdrop-filter: blur(0.3125rem);
-        padding: $commonUnit * 2;
-        height: 100%;
-        border: 0.0625rem solid rgba($color: $white, $alpha: 0.1);
-        border-radius: $cardRadius;
 
-        .mvHeader {
-            @extend .flex-center-start;
-            gap: $commonUnit / 2;
-
-            .icon i {
-                font-size: $h2;
-                color: $secondary;
-            }
-            h3 {
-                font-size: $h5;
-                color: $white;
-            }
-        }
-        .mvBody {
-            p {
-                color: $white;
-            }
-        }
-    }
-}
-// Products
-.products {
-    .productCard {
-        background-color: $white;
-        padding: $commonUnit;
-        border: $commonBorder;
-        border-radius: $cardRadius;
-
-        figure {
-            margin-bottom: $commonUnit * 2;
-            img {
-                max-width: 60% !important;
-                display: block;
-                margin: 0 auto;
-                transition: transform 0.5s ease;
-            }
-        }
-        .productCardBody {
-            h6,
-            h3 {
-                margin-bottom: 0;
-            }
-            h6 {
-                font-size: $medium;
-                color: $primary;
-            }
-            h3 {
-                font-size: $h5;
-            }
-        }
-        .productCardFooter {
-            @extend .flex-center;
-            flex-wrap: wrap;
-            gap: $commonUnit;
-
-            .btn {
-                flex-grow: 1;
-            }
-        }
-        &:hover figure {
-            img {
-                transform: scale(1.1) rotate(0.5deg);
-            }
-        }
-    }
-}
 // Enquiry Modal
 #enquiryModal {
     .modal-body {
         padding: $commonUnit * 2 !important;
     }
 }
-// Product Details Page
-.productDetails {
-    .productShowcase {
-        border: $commonBorder;
-        padding: $commonUnit;
-        border-radius: $commonUnit;
-        position: relative;
-    }
-    .productInfo {
-        padding-left: $commonUnit * 2;
 
-        h2,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            margin-bottom: $commonUnit / 2;
-        }
-        a {
-            font-weight: 600;
-        }
-        p {
-            margin-bottom: 0;
-        }
-        .lead {
-            font-size: $xLarge;
-            font-weight: 500;
-            margin-bottom: $commonUnit;
-        }
-        ul {
-            padding: 0;
-            li {
-                list-style-type: none;
-                margin-bottom: $commonUnit / 2;
-                margin-left: 1.5em;
-                position: relative;
-                &::before {
-                    font-family: remixicon !important;
-                    font-style: normal;
-                    font-size: $h5;
-                    -webkit-font-smoothing: antialiased;
-                    line-height: normal;
-                    content: "\eb7a";
-                    color: $primary;
-                    position: absolute;
-                    top: 0.1em;
-                    margin-left: -1.5em;
-                }
-            }
-        }
-        .table {
-            & > :not(caption) > * > * {
-                font-size: $medium;
-                background-color: transparent;
-            }
-        }
-        .btnGroup {
-            @extend .flex-center-start;
-            flex-wrap: wrap;
-            gap: $commonUnit / 2;
-            margin-bottom: $commonUnit;
-
-            .form-select {
-                font-weight: 500;
-                text-transform: capitalize;
-                color: $primary !important;
-                background-color: rgba($color: $primary, $alpha: 0.06) !important;
-                border-color: rgba($color: $primary, $alpha: 0.2);
-                width: auto !important;
-                &:hover {
-                    background-color: $primary !important;
-                    color: $white !important;
-
-                    option {
-                        background-color: $primary;
-                        color: $white;
-                    }
-                }
-            }
-        }
-    }
-}
 // Swiper Gallery
 .swiper {
     height: fit-content !important;
@@ -1032,83 +894,6 @@ footer {
             background-color: rgba($color: $white, $alpha: 1);
             &::after {
                 color: $dark;
-            }
-        }
-    }
-}
-// ProductFeatures {
-.productFeatures {
-    background: url(../media/abstract-bg.jpg) no-repeat center/cover fixed;
-
-    .glossyCard {
-        .icon {
-            margin: 0 0 $commonUnit !important;
-        }
-        h3 {
-            font-size: $h6;
-            text-align: left;
-        }
-    }
-}
-
-// Documentation
-.documentation {
-    .docCard {
-        background-color: $white;
-        // border: $commonBorder;
-        // border-radius: $cardRadius / 2;
-        overflow: hidden;
-
-        .docHeader {
-            @extend .flex-center-start;
-            gap: $commonUnit / 2;
-            background-color: $dark;
-            padding: $commonUnit / 2 $commonUnit;
-            border-bottom: $commonBorder;
-
-            i {
-                font-size: $h5;
-                color: $secondary;
-            }
-            span {
-                font-size: $large;
-                font-weight: 700;
-                color: $white;
-            }
-        }
-        .docBody {
-            .doc {
-                position: relative;
-                @extend .flex-center-between;
-                gap: $commonUnit / 2;
-                padding: $commonUnit / 2 $commonUnit;
-                border-bottom: 0.0625rem solid rgba($color: $border, $alpha: 0.5);
-                transition: all 0.6s linear;
-
-                .docInfo {
-                    @extend .flex-start;
-                    flex-direction: column;
-                    flex-grow: 1;
-
-                    .docName {
-                        font-size: $large;
-                        margin-bottom: 0;
-                    }
-                    .size {
-                        font-size: $medium;
-                    }
-                }
-                &:hover {
-                    background-color: $light;
-
-                    .docName,
-                    .size {
-                        color: $primary;
-                    }
-                    i {
-                        color: $dark;
-                    }
-                }
             }
         }
     }
@@ -1285,70 +1070,6 @@ footer {
     }
 }
 
-// addresses
-.addresses {
-    .addressCard {
-        background-color: $white;
-        border: $commonBorder;
-        border-radius: $cardRadius;
-        overflow: hidden;
-        height: 100%;
-        box-shadow: $cardShadow;
-
-        figure {
-            overflow: hidden;
-            display: none;
-
-            img {
-                display: block;
-                transition: all 0.6s linear;
-            }
-        }
-        .addressContent {
-            padding: $commonUnit;
-            h3,
-            h4 {
-                margin-bottom: 0.25rem;
-            }
-            h3 {
-                font-size: $h5;
-            }
-            h4 {
-                font-size: $large;
-                color: $primary;
-            }
-            address {
-                font-size: $medium;
-            }
-            .addressChip {
-                margin-bottom: $commonUnit / 2;
-                h6 {
-                    font-size: $xLarge;
-                    font-weight: 600;
-                    color: $dark;
-                    display: block;
-                    margin-bottom: 0;
-                }
-                span,
-                a {
-                    font-size: $medium;
-                    color: $gray;
-                    margin-bottom: 0;
-                }
-                p,
-                a {
-                    margin: 0 0 0 $commonUnit / 2;
-                }
-                a:hover {
-                    color: $primary;
-                }
-            }
-        }
-        &:hover figure img {
-            transform: scale(1.1) rotate(0.5deg);
-        }
-    }
-}
 // Downloads
 .downloads {
     .pgHeader {

@@ -47,24 +47,24 @@ $currentPage = 'history';
                                         <h6 class="pgSection">Proud Past</h6>
                                         <h2>History</h2>
                                         <hr>
-                                        <p>Barnes School was founded on 29th January, 1925 in memory of Arch-Deacon
-                                            George
-                                            Barnes who had started the Bombay Education Society in 1815. During that
-                                            time
-                                            Barnes School was established primarily for Anglo-Indian Boys and Girls
-                                            where
-                                            they could be given a good upbringing and sound education. It is a private
-                                            co-educational prep School. It is an Anglican School, founded in 1925, under
-                                            the
-                                            auspices of the Bombay Education Society. The School is twinned with Christ
-                                            Church School, in Mumbai.</p>
-                                        <p>Both schools follow the ICSE curriculum and use the same shield as a badge or
-                                            logo, Barnes is in blue and Christ Church is in green. It is still a Church
-                                            School where Christian ideals are practiced and imparted. It has a long and
-                                            proud record, meting out distinguished educational service while catering to
-                                            students from all castes and creed.</p>
                                     </div>
                                 </div>
+                                <p>Barnes School was founded on 29th January, 1925 in memory of Arch-Deacon
+                                    George
+                                    Barnes who had started the Bombay Education Society in 1815. During that
+                                    time
+                                    Barnes School was established primarily for Anglo-Indian Boys and Girls
+                                    where
+                                    they could be given a good upbringing and sound education. It is a private
+                                    co-educational prep School. It is an Anglican School, founded in 1925, under
+                                    the
+                                    auspices of the Bombay Education Society. The School is twinned with Christ
+                                    Church School, in Mumbai.</p>
+                                <p>Both schools follow the ICSE curriculum and use the same shield as a badge or
+                                    logo, Barnes is in blue and Christ Church is in green. It is still a Church
+                                    School where Christian ideals are practiced and imparted. It has a long and
+                                    proud record, meting out distinguished educational service while catering to
+                                    students from all castes and creed.</p>
                             </div>
                             <div class="content">
                                 <div class="pgHeader">
@@ -72,29 +72,57 @@ $currentPage = 'history';
                                         <h6 class="pgSection">The Inspiration Behind Our School</h6>
                                         <h2>Venerable Archdeacon George Barnes</h2>
                                         <hr>
-                                        <img src="assets/media/george-barnes.jpg"
-                                            alt="Venerable Archdeacon George Barnes">
-                                        <p>On January 27th 1815 the Venerable Archdeacon George Barnes, the Senior
-                                            Anglican Priest in Western India, preached to the congregation of St Thomas'
-                                            Church, Bombay - now the Cathedral - appealing for help in educating the
-                                            children of poor Europeans and Anglo Indians. Immediately after the service
-                                            'The Society for Promoting the Education of the Poor within the Government
-                                            of Bombay' (now known as the Bombay Education Society) was formed with Sir
-                                            Evan Nepean, then Governor of Bombay, as its first President. Archdeacon
-                                            Barnes was only in India for twelve years, from 1814 to 1825.</p>
-                                        <img src="assets/media/old-building.jpg" alt="Barnes School & College">
-                                        <p>In that time he not only founded the B.E.S. but established five churches: St
-                                            James, Thana; Christ Church, Surat; St Paul's, Kaira ( in Gujarat); St
-                                            James, Baroda and St Mary's, Poona.In the Cathedral at Exeter in England,
-                                            there is a tablet in the chancel with these words: This tablet was erected
-                                            by The Dean and other members of the Chapter to the memory of George Barnes
-                                            D.D. The first Archdeacon of Bombay, who after twelve years spent in India,
-                                            was spared to revisit his native land and become Archdeacon of Barns table,
-                                            and Rector of Sowton in this diocese. Active, earnest, humble and sincere,
-                                            he won the affection of his friends and the esteem of all good men. He died
-                                            29th, June AD. 1847.</p>
+                                        <figure>
+                                            <img src="assets/media/george-barnes.jpg"
+                                                alt="Venerable Archdeacon George Barnes">
+                                        </figure>
                                     </div>
                                 </div>
+                                <p>On January 27th 1815 the Venerable Archdeacon George Barnes, the Senior
+                                    Anglican Priest in Western India, preached to the congregation of St Thomas'
+                                    Church, Bombay - now the Cathedral - appealing for help in educating the
+                                    children of poor Europeans and Anglo Indians. Immediately after the service
+                                    'The Society for Promoting the Education of the Poor within the Government
+                                    of Bombay' (now known as the Bombay Education Society) was formed with Sir
+                                    Evan Nepean, then Governor of Bombay, as its first President. Archdeacon
+                                    Barnes was only in India for twelve years, from 1814 to 1825.</p>
+                                <figure>
+                                    <img src="assets/media/old-building.jpg" alt="Barnes School & College">
+                                </figure>
+                                <p>In that time he not only founded the B.E.S. but established five churches: St
+                                    James, Thana; Christ Church, Surat; St Paul's, Kaira ( in Gujarat); St
+                                    James, Baroda and St Mary's, Poona.In the Cathedral at Exeter in England,
+                                    there is a tablet in the chancel with these words: This tablet was erected
+                                    by The Dean and other members of the Chapter to the memory of George Barnes
+                                    D.D. The first Archdeacon of Bombay, who after twelve years spent in India,
+                                    was spared to revisit his native land and become Archdeacon of Barns table,
+                                    and Rector of Sowton in this diocese. Active, earnest, humble and sincere,
+                                    he won the affection of his friends and the esteem of all good men. He died
+                                    29th, June AD. 1847.</p>
+                            </div>
+                            <div class="content">
+                                <div class="pgHeader">
+                                    <img src="assets/media/barnes-logo.png" alt="Barnes Logo" width="150">
+                                    <div class="pgTitle">
+                                        <h6 class="pgSection">Defining logo</h6>
+                                        <h2>The Crest</h2>
+                                        <hr>
+                                    </div>
+                                </div>
+                                <p>Two families' Coats of Arms have been combined to form the Crest of the
+                                    Barnes School & Junior College. The left half of the shield with blue
+                                    background having the faces of three white leopards represents the family of
+                                    our founder, the Venerable Archdeacon George Barnes. The right half of the
+                                    shield symbolises the Carnac family of George Barnes' spouse, having four
+                                    alternately blue and white quarters with two steel coloured crossed swords
+                                    pointing upwards.</p>
+
+                                <p>The three five pointed stars and a white crescent are blue over white and
+                                    white over blue quarters. A white falcon with golden beak and legs perched
+                                    on a green mount with six alternate twists of white and blue tops the Crest.
+                                    The motto, 'Accepto Robore Surgam' in Latin, can be interpreted as, 'I shall
+                                    arise with the strength I have received'. (From the College of Arms, London)
+                                </p>
                             </div>
                         </div>
                         <?php include 'includes/sidebar.php'; ?>
