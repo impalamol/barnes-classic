@@ -250,9 +250,9 @@ html {
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
   line-height: 2;
   color: #343e45;
@@ -288,7 +288,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Bona Nova", serif;
+  font-family: "Manrope", serif;
   font-style: normal;
   font-optical-sizing: auto;
   font-weight: 700;
@@ -355,10 +355,8 @@ input[type=number] {
 }
 
 .btn {
-  font-family: "Bona Nova", serif;
   font-size: 0.875rem;
   font-weight: 600;
-  letter-spacing: 0.0375rem;
   text-transform: uppercase;
   padding: 0.75rem 1.5rem;
   transition: all 0.3s ease;
@@ -537,6 +535,13 @@ input[type=number] {
   gap: 1.5rem;
 }
 
+hr {
+  width: 100%;
+  background-color: transparent;
+  margin-bottom: 1.5rem !important;
+  border-top: 0.125rem dashed rgba(0, 11, 32, 0.5);
+}
+
 section:not(.hero) {
   padding: 6.25rem 0;
   position: relative;
@@ -570,6 +575,9 @@ section:not(.hero) .wrapper .contentCard .content {
   border: 0.0625rem solid #e4e4e4;
   border-radius: 1rem;
 }
+section:not(.hero) .wrapper .contentCard .content .pgHeader {
+  margin-bottom: 0 !important;
+}
 section:not(.hero) .wrapper .contentCard .content figure {
   margin: 3rem 0;
   border-radius: 2rem;
@@ -578,29 +586,35 @@ section:not(.hero) .wrapper .contentCard .content figure {
 section:not(.hero) .wrapper .contentCard .content figure img {
   transition: all 0.7s linear;
 }
+section:not(.hero) .wrapper .contentCard .content p {
+  text-align: justify;
+  -moz-text-align-last: left;
+       text-align-last: left;
+}
 
 .pgHeader {
   flex-wrap: wrap;
   gap: 1.5rem;
   position: relative;
   z-index: 2;
+  margin-bottom: 3rem;
 }
 .pgHeader .pgTitle {
   flex-direction: column;
+  flex-grow: 1;
   max-width: 53.125rem;
 }
 .pgHeader .pgTitle .pgSection {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.0625rem;
   line-height: normal;
   color: #000b20;
   margin: 0;
 }
 .pgHeader .pgTitle h2 {
-  font-size: 3rem;
-  text-transform: uppercase;
+  font-size: 3.375rem;
+  font-weight: 700;
   color: #0071bf;
   margin: 0;
 }
@@ -849,7 +863,6 @@ section:not(.hero) .wrapper .contentCard .content figure img {
 .nav-tabs .nav-link {
   font-size: 0.875rem;
   font-weight: 600;
-  letter-spacing: 0.0375rem;
   text-transform: uppercase;
   padding: 0.75rem 1.5rem;
   color: #343e45;

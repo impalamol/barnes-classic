@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
 /* Box sizing rules */
 *,
 *::before,
@@ -73,7 +73,7 @@ textarea:not([rows]) {
   display: flex;
 }
 
-.flex-center, .contactUs .contactCard .contactChip .icon, .blogDetails .blogSidebar .sidebarContent .recentPost, .hero .paginationContainer .navigation .swiper-button-next,
+.flex-center, .contactUs .contactCard .contactChip .icon, .blogDetails .blogSidebar .sidebarContent .recentPost, .about figure, .hero .paginationContainer .navigation .swiper-button-next,
 .hero .paginationContainer .navigation .swiper-button-prev, .hero .paginationContainer .navigation, .hero .heroSlide, .videoBtn, .progressLoader .loaderContent .imgContainer, .progressLoader, .searchModal .nrs, .searchModal .searchResult .resultItem a .productIcon img, .pgHeader.centered .pgTitle,
 .pgHeader.centered .pgSection, .pgHeader.centered {
   display: flex;
@@ -94,13 +94,13 @@ textarea:not([rows]) {
 }
 
 .flex-center-start, .contactUs .contactCard .contactChip, .blogDetails .blogSidebar .sidebarContent ul.blogTags,
-.blogDetails .blogSidebar .sidebarContent ol.blogTags, .videoSection, footer .copyright .copyrightContent .copyrightLinks, .menu .menuContact .contactDetail .social, .menu .menuContact .contactDetail .contactNumbers, .menu, header .notification .notificationsContainer .notificationListContainer .notificationList, header .notification .notificationsContainer .title, header .notification .notificationsContainer, .topbar .topbarContent .quickLinks a, .topbar .topbarContent .quickLinks, .topbar .topbarContent .social, .searchModal .searchResult .resultItem a, .pgHeader, .btnGroup {
+.blogDetails .blogSidebar .sidebarContent ol.blogTags, footer .copyright .copyrightContent .copyrightLinks, .videoSection, .menu .menuContact .contactDetail .social, .menu .menuContact .contactDetail .contactNumbers, .menu, header .notification .notificationsContainer .notificationListContainer .notificationList, header .notification .notificationsContainer .title, header .notification .notificationsContainer, .topbar .topbarContent .quickLinks a, .topbar .topbarContent .quickLinks, .topbar .topbarContent .social, .searchModal .searchResult .resultItem a, .pgHeader, .btnGroup {
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
 
-.flex-center-end, .departments .departmentCard .departmentContent {
+.flex-center-end {
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -125,7 +125,7 @@ textarea:not([rows]) {
 }
 
 .flex-start, .blogDetails .blogSidebar .sidebarContent ul,
-.blogDetails .blogSidebar .sidebarContent ol, .videoSection .videoContent, .menu .menuContact .contactDetail, .menu .mainMenu ul, .enquiryModal .modal-body form .btnGroup, .pgHeader .pgTitle, section:not(.hero) .wrapper .contentCard {
+.blogDetails .blogSidebar .sidebarContent ol, .menu .menuContact .contactDetail, .menu .mainMenu ul, .enquiryModal .modal-body form .btnGroup, .pgHeader .pgTitle, section:not(.hero) .wrapper .contentCard {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -149,7 +149,7 @@ textarea:not([rows]) {
   justify-content: center;
 }
 
-.flex-start-end {
+.flex-start-end, .departments .departmentCard .departmentContent {
   display: flex;
   align-items: start;
   justify-content: flex-end;
@@ -254,9 +254,9 @@ html {
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
   line-height: 2;
   color: #343e45;
@@ -292,7 +292,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Bona Nova", serif;
+  font-family: "Manrope", serif;
   font-style: normal;
   font-optical-sizing: auto;
   font-weight: 700;
@@ -359,10 +359,8 @@ input[type=number] {
 }
 
 .btn {
-  font-family: "Bona Nova", serif;
   font-size: 0.875rem;
   font-weight: 600;
-  letter-spacing: 0.0375rem;
   text-transform: uppercase;
   padding: 0.75rem 1.5rem;
   transition: all 0.3s ease;
@@ -541,6 +539,13 @@ input[type=number] {
   gap: 1.5rem;
 }
 
+hr {
+  width: 100%;
+  background-color: transparent;
+  margin-bottom: 1.5rem !important;
+  border-top: 0.125rem dashed rgba(0, 11, 32, 0.5);
+}
+
 section:not(.hero) {
   padding: 6.25rem 0;
   position: relative;
@@ -574,6 +579,9 @@ section:not(.hero) .wrapper .contentCard .content {
   border: 0.0625rem solid #e4e4e4;
   border-radius: 1rem;
 }
+section:not(.hero) .wrapper .contentCard .content .pgHeader {
+  margin-bottom: 0 !important;
+}
 section:not(.hero) .wrapper .contentCard .content figure {
   margin: 3rem 0;
   border-radius: 2rem;
@@ -582,29 +590,35 @@ section:not(.hero) .wrapper .contentCard .content figure {
 section:not(.hero) .wrapper .contentCard .content figure img {
   transition: all 0.7s linear;
 }
+section:not(.hero) .wrapper .contentCard .content p {
+  text-align: justify;
+  -moz-text-align-last: left;
+       text-align-last: left;
+}
 
 .pgHeader {
   flex-wrap: wrap;
   gap: 1.5rem;
   position: relative;
   z-index: 2;
+  margin-bottom: 3rem;
 }
 .pgHeader .pgTitle {
   flex-direction: column;
+  flex-grow: 1;
   max-width: 53.125rem;
 }
 .pgHeader .pgTitle .pgSection {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.0625rem;
   line-height: normal;
   color: #000b20;
   margin: 0;
 }
 .pgHeader .pgTitle h2 {
-  font-size: 3rem;
-  text-transform: uppercase;
+  font-size: 3.375rem;
+  font-weight: 700;
   color: #0071bf;
   margin: 0;
 }
@@ -853,7 +867,6 @@ section:not(.hero) .wrapper .contentCard .content figure img {
 .nav-tabs .nav-link {
   font-size: 0.875rem;
   font-weight: 600;
-  letter-spacing: 0.0375rem;
   text-transform: uppercase;
   padding: 0.75rem 1.5rem;
   color: #343e45;
@@ -1018,7 +1031,7 @@ header .notification .notificationsContainer {
   gap: 0.75rem;
 }
 header .notification .notificationsContainer .title {
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 600;
   color: #ffffff;
   gap: 0.75rem;
@@ -1214,18 +1227,17 @@ header .notification .notificationsContainer .notificationListContainer .notific
 }
 
 .videoBtn {
-  width: 4.375rem;
-  height: 4.375rem;
+  width: 6.25rem;
+  height: 6.25rem;
   border: 0.125rem solid #ffffff;
   border-radius: 50%;
-  background-color: #0071bf;
-  background: linear-gradient(143.45deg, #0071bf 13.89%, #0071bf 84.75%);
+  background-color: #ffffff;
   box-shadow: 0rem 0.1465rem 0.1465rem rgba(0, 0, 0, 0.25);
   animation: animateBtn 3s linear infinite;
 }
 .videoBtn i {
-  font-size: 2.625rem;
-  color: #ffffff;
+  font-size: 2.25rem;
+  color: #000b20;
 }
 @keyframes animateBtn {
   0% {
@@ -1247,35 +1259,26 @@ header .notification .notificationsContainer .notificationListContainer .notific
   min-height: 85vh;
   flex-direction: column;
 }
-.hero .heroSlide::after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 11, 32, 0.6);
-  content: "";
-  z-index: 0;
-}
 .hero .heroSlide .heroContent {
   position: relative;
   z-index: 2;
   max-width: 40.625rem;
 }
-.hero .heroSlide .heroContent h6,
+.hero .heroSlide .heroContent span,
 .hero .heroSlide .heroContent h1,
 .hero .heroSlide .heroContent p {
   color: #ffffff;
 }
-.hero .heroSlide .heroContent h6 {
+.hero .heroSlide .heroContent span {
   background: #000b20;
   padding: 0.75rem 1.5rem;
   border-radius: 0.3333333333rem;
   display: inline-block;
 }
 .hero .heroSlide .heroContent h1 {
-  font-size: 3.375rem;
+  font-size: 4.25rem;
   font-weight: 800;
+  text-transform: uppercase;
 }
 .hero .heroSlide.addOverlay::after {
   position: absolute;
@@ -1283,7 +1286,7 @@ header .notification .notificationsContainer .notificationListContainer .notific
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, rgba(0, 11, 32, 0.5) 41.39%, #ffffff 86.43%);
+  background: linear-gradient(180deg, rgba(0, 11, 32, 0.2) 40%, #f2f5fd 86%);
   content: "";
   z-index: 0;
 }
@@ -1317,6 +1320,104 @@ header .notification .notificationsContainer .notificationListContainer .notific
 .hero .paginationContainer .navigation .swiper-button-prev::after {
   font-size: 0.875rem;
   font-weight: 600;
+}
+
+.about figure {
+  height: 100%;
+}
+.about figure img {
+  max-width: 60% !important;
+  margin: auto;
+}
+.about .pgHeader {
+  margin: 0 !important;
+}
+
+.departments .departmentCard {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.departments .departmentCard figure {
+  background-color: rgba(0, 11, 32, 0.03);
+  overflow: hidden;
+}
+.departments .departmentCard figure img {
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.departments .departmentCard .departmentContent {
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  padding: 3rem;
+  background: linear-gradient(180deg, rgba(0, 11, 32, 0) 0%, #000b20 100%);
+  transform: translateY(1.5rem);
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.departments .departmentCard .departmentContent h3,
+.departments .departmentCard .departmentContent p {
+  color: #ffffff;
+  margin-bottom: 0;
+}
+.departments .departmentCard .departmentContent h3 {
+  font-size: 1.5rem;
+}
+.departments .departmentCard .departmentContent p {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  margin-top: 0.75rem;
+  transition: opacity 0.3s ease-out, max-height 0.3s ease-out;
+}
+.departments .departmentCard:hover img {
+  transform: scale(1.1) rotate(0.5deg);
+}
+.departments .departmentCard:hover .departmentContent {
+  transform: translateY(0);
+}
+.departments .departmentCard:hover .departmentContent p {
+  opacity: 1;
+  max-height: 10rem;
+}
+
+.videoSection {
+  min-height: 80vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+  cursor: none;
+  position: relative;
+}
+.videoSection::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 11, 32, 0.5);
+  content: "";
+  z-index: 1;
+}
+.videoSection .playBtn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+  pointer-events: none;
+  width: 250px;
+  height: 250px;
+}
+.videoSection .playBtn h3 {
+  font-size: 1.5rem;
+  color: #ffffff;
+  text-align: center;
+  margin: 0;
 }
 
 .aboutUs dl {
@@ -1368,37 +1469,6 @@ header .notification .notificationsContainer .notificationListContainer .notific
 }
 .aboutUs .avatarCard:hover figure img {
   transform: scale(1.1) rotate(2deg);
-}
-
-.departments .departmentCard {
-  position: relative;
-}
-.departments .departmentCard figure {
-  overflow: hidden;
-}
-.departments .departmentCard figure img {
-  transition: all 0.9s ease-in-out;
-}
-.departments .departmentCard .departmentContent {
-  flex-direction: column;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 3rem;
-  background: linear-gradient(180deg, rgba(0, 11, 32, 0) 0%, #000b20 100%);
-}
-.departments .departmentCard .departmentContent h3,
-.departments .departmentCard .departmentContent p {
-  color: #ffffff;
-  margin-bottom: 0;
-}
-.departments .departmentCard .departmentContent h3 {
-  font-size: 2.25rem;
-}
-.departments .departmentCard:hover img {
-  transform: scale(1.1) rotate(0.5deg);
 }
 
 .blogs .blogCard {
@@ -1532,47 +1602,6 @@ footer .copyright .copyrightContent a:hover {
 footer .copyright .copyrightContent .copyrightLinks {
   flex-wrap: wrap;
   gap: commonUnit/2;
-}
-
-.videoSection {
-  min-height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-.videoSection::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 11, 32, 0.03);
-  content: "";
-  z-index: 1;
-}
-.videoSection .videoContent {
-  position: relative;
-  z-index: 2;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-.videoSection .videoContent .videoTitle {
-  max-width: 43.75rem;
-  margin-top: 4.375rem;
-}
-.videoSection .videoContent .videoTitle h5,
-.videoSection .videoContent .videoTitle h2,
-.videoSection .videoContent .videoTitle p {
-  color: #ffffff;
-}
-.videoSection .videoContent .videoTitle h2 {
-  font-size: 3.375rem;
-  letter-spacing: 0.0813rem;
-}
-.videoSection .videoContent .videoTitle p {
-  opacity: 0.5;
-  margin-bottom: 0;
 }
 
 #enquiryModal .modal-body {

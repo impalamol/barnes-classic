@@ -46,25 +46,25 @@ $currentPage = 'about';
                                         <h6 class="pgSection">Who We Are</h6>
                                         <h2>About Us</h2>
                                         <hr>
-                                        <p>Barnes School was founded on 29th January, 1925 in memory of Arch-Deacon
-                                            George
-                                            Barnes who had started the Bombay Education Society in 1815. During that
-                                            time
-                                            Barnes School was established primarily for Anglo-Indian Boys and Girls
-                                            where
-                                            they could be given a good upbringing and sound education. It is a private
-                                            co-educational prep School. It is an Anglican School, founded in 1925, under
-                                            the
-                                            auspices of the Bombay Education Society. The School is twinned with Christ
-                                            Church School, in Mumbai.</p>
-
-                                        <p>Both schools follow the ICSE curriculum and use the same shield as a badge or
-                                            logo, Barnes is in blue and Christ Church is in green. It is still a Church
-                                            School where Christian ideals are practiced and imparted. It has a long and
-                                            proud record, meting out distinguished educational service while catering to
-                                            students from all castes and creed.</p>
                                     </div>
                                 </div>
+                                <p>Barnes School was founded on 29th January, 1925 in memory of Arch-Deacon
+                                    George
+                                    Barnes who had started the Bombay Education Society in 1815. During that
+                                    time
+                                    Barnes School was established primarily for Anglo-Indian Boys and Girls
+                                    where
+                                    they could be given a good upbringing and sound education. It is a private
+                                    co-educational prep School. It is an Anglican School, founded in 1925, under
+                                    the
+                                    auspices of the Bombay Education Society. The School is twinned with Christ
+                                    Church School, in Mumbai.</p>
+
+                                <p>Both schools follow the ICSE curriculum and use the same shield as a badge or
+                                    logo, Barnes is in blue and Christ Church is in green. It is still a Church
+                                    School where Christian ideals are practiced and imparted. It has a long and
+                                    proud record, meting out distinguished educational service while catering to
+                                    students from all castes and creed.</p>
                             </div>
                         </div>
                         <?php include 'includes/sidebar.php'; ?>
