@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
 @import "default.scss";
 
 .progressLoader {
@@ -175,7 +175,7 @@ header {
             gap: $commonUnit / 2;
 
             .title {
-                font-size: $xLarge;
+                font-size: $large;
                 font-weight: 600;
                 color: $white;
                 @extend .flex-center-start;
@@ -413,19 +413,18 @@ header {
 // Video Btn
 .videoBtn {
     @extend .flex-center;
-    $wh: 4.375rem;
+    $wh: 6.25rem;
     width: $wh;
     height: $wh;
     border: 0.125rem solid $white;
     border-radius: 50%;
-    background-color: $primary;
-    background: linear-gradient(143.45deg, $primary 13.89%, $primary 84.75%);
+    background-color: $white;
     box-shadow: 0rem 0.1465rem 0.1465rem rgba(0, 0, 0, 0.25);
     animation: animateBtn 3s linear infinite;
 
     i {
-        font-size: $h3;
-        color: $white;
+        font-size: $h4;
+        color: $dark;
     }
     @keyframes animateBtn {
         0% {
@@ -461,35 +460,36 @@ header {
         @extend .flex-center;
         flex-direction: column;
 
-        &::after {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba($color: $dark, $alpha: 0.6);
-            content: "";
-            z-index: 0;
-        }
+        // &::after {
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     width: 100%;
+        //     height: 100%;
+        //     background-color: rgba($color: $dark, $alpha: 0.6);
+        //     content: "";
+        //     z-index: 0;
+        // }
 
         .heroContent {
             position: relative;
             z-index: 2;
             max-width: 40.625rem;
-            h6,
+            span,
             h1,
             p {
                 color: $white;
             }
-            h6 {
+            span {
                 background: $dark;
                 padding: $commonUnit / 2 $commonUnit;
                 border-radius: $cardRadius / 3;
                 display: inline-block;
             }
             h1 {
-                font-size: $h1;
+                font-size: $h1 + $medium;
                 font-weight: 800;
+                text-transform: uppercase;
             }
         }
         &.addOverlay::after {
@@ -498,7 +498,7 @@ header {
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(180deg, rgba(0, 11, 32, 0.5) 41.39%, #ffffff 86.43%);
+            background: linear-gradient(180deg, rgba($color: $dark, $alpha: 0.2) 40%, $light 86%);
             content: "";
             z-index: 0;
         }
@@ -544,6 +544,142 @@ header {
 }
 
 // About
+.about {
+    figure {
+        @extend .flex-center;
+        height: 100%;
+
+        img {
+            max-width: 60% !important;
+            margin: auto;
+        }
+    }
+    .pgHeader {
+        margin: 0 !important;
+    }
+}
+// Departments
+.departments {
+    .departmentCard {
+        position: relative;
+        border-radius: $cardRadius;
+        overflow: hidden;
+
+        figure {
+            background-color: rgba($color: $dark, $alpha: 0.03);
+            overflow: hidden;
+
+            img {
+                transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            }
+        }
+
+        .departmentContent {
+            @extend .flex-start-end;
+            flex-direction: column;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            padding: $commonUnit * 2;
+            background: linear-gradient(180deg, rgba($dark, 0) 0%, $dark 100%);
+            transform: translateY($commonUnit);
+            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+            h3,
+            p {
+                color: $white;
+                margin-bottom: 0;
+            }
+
+            h3 {
+                font-size: $h5;
+            }
+
+            p {
+                opacity: 0;
+                max-height: 0;
+                overflow: hidden;
+                margin-top: $commonUnit / 2;
+                transition:
+                    opacity 0.3s ease-out,
+                    max-height 0.3s ease-out;
+            }
+        }
+
+        &:hover {
+            img {
+                transform: scale(1.1) rotate(0.5deg);
+            }
+
+            .departmentContent {
+                transform: translateY(0);
+
+                p {
+                    opacity: 1;
+                    max-height: 10rem;
+                }
+            }
+        }
+    }
+}
+
+// Video
+
+.videoSection {
+    @extend .flex-center-start;
+    min-height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+    cursor: none;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: $dark, $alpha: 0.5);
+        content: "";
+        z-index: 1;
+    }
+    .playBtn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: transform 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+        pointer-events: none;
+
+        $wh: 250px;
+        width: $wh;
+        height: $wh;
+        // border-radius: 50%;
+        // background-color: rgba($color: $white, $alpha: 0.2);
+        // box-shadow:
+        //     0 0 1rem rgba($color: $white, $alpha: 0.2) inset,
+        //     0 0 0.5rem rgba($color: $dark, $alpha: 0.1);
+        // -webkit-backdrop-filter: blur(0.2rem);
+        // backdrop-filter: blur(0.2rem);
+        // @extend .flex-center;
+        // flex-direction: column;
+        // gap: $commonUnit;
+        // border: 0.0625rem solid rgba($color: $white, $alpha: 0.5);
+
+        h3 {
+            font-size: $h5;
+            color: $white;
+            text-align: center;
+            margin: 0;
+        }
+    }
+}
+
 .aboutUs {
     dl {
         margin-bottom: $commonUnit;
@@ -600,43 +736,7 @@ header {
         }
     }
 }
-// Departments
-.departments {
-    .departmentCard {
-        position: relative;
-        figure {
-            overflow: hidden;
-            img {
-                transition: all 0.9s ease-in-out;
-            }
-        }
-        .departmentContent {
-            @extend .flex-center-end;
-            flex-direction: column;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            padding: $commonUnit * 2;
-            background: linear-gradient(180deg, rgba($dark, 0) 0%, $dark 100%);
 
-            h3,
-            p {
-                color: $white;
-                margin-bottom: 0;
-            }
-            h3 {
-                font-size: $h4;
-            }
-        }
-        &:hover {
-            img {
-                transform: scale(1.1) rotate(0.5deg);
-            }
-        }
-    }
-}
 // Blogs
 .blogs {
     .blogCard {
@@ -789,52 +889,6 @@ footer {
 }
 
 // Pages Scss Starts
-
-// Video
-.videoSection {
-    @extend .flex-center-start;
-    min-height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-
-    &::before {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba($color: $dark, $alpha: 0.03);
-        content: "";
-        z-index: 1;
-    }
-    .videoContent {
-        position: relative;
-        z-index: 2;
-        @extend .flex-start;
-        flex-direction: column;
-        flex-wrap: wrap;
-
-        .videoTitle {
-            max-width: 43.75rem;
-            margin-top: 4.375rem;
-            h5,
-            h2,
-            p {
-                color: $white;
-            }
-            h2 {
-                font-size: $h1;
-                letter-spacing: 0.0813rem;
-            }
-            p {
-                opacity: 0.5;
-                margin-bottom: 0;
-            }
-        }
-    }
-}
 
 // Enquiry Modal
 #enquiryModal {

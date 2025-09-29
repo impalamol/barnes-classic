@@ -27,7 +27,7 @@ $currentPage = 'home';
                             style="background: url('assets/media/slider/slider1.jpg') no-repeat center center / cover;">
                             <div class="container">
                                 <div class="heroContent">
-                                    <h6>Enlightening Since 1925</h6>
+                                    <span>Enlightening Since 1925</span>
                                     <h1>School & Junior College</h1>
                                     <p>Accepto Robore Surgam</p>
                                     <div class="btnGroup">
@@ -45,7 +45,7 @@ $currentPage = 'home';
                             style="background: url('assets/media/slider/slider2.jpg') no-repeat center center / cover;">
                             <div class="container">
                                 <div class="heroContent">
-                                    <h6>Enlightening Since 1925</h6>
+                                    <span>Enlightening Since 1925</span>
                                     <h1>School & Junior College</h1>
                                     <p>Accepto Robore Surgam</p>
                                     <div class="btnGroup">
@@ -63,7 +63,7 @@ $currentPage = 'home';
                             style="background: url('assets/media/slider/slider3.jpg') no-repeat center center / cover;">
                             <div class="container">
                                 <div class="heroContent">
-                                    <h6>Enlightening Since 1925</h6>
+                                    <span>Enlightening Since 1925</span>
                                     <h1>School & Junior College</h1>
                                     <p>Accepto Robore Surgam</p>
                                     <div class="btnGroup">
@@ -94,7 +94,7 @@ $currentPage = 'home';
                             <img src="assets/media/barnes-logo.png" alt="Barnes">
                         </figure>
                     </div>
-                    <div class="col-12 col-lg-7 col-xl-7 col-xxl-7 mb-3">
+                    <div class="col-12 col-lg-7 col-xl-7 col-xxl-7">
                         <div class="pgHeader">
                             <div class="pgTitle">
                                 <h6 class="pgSection">Why Choose</h6>
@@ -129,44 +129,62 @@ $currentPage = 'home';
                             <div class="swiper-slide">
                                 <div class="departmentCard">
                                     <figure>
-                                        <img src="assets/media/departments/pre-primary.jpg" alt="Pre Primary">
+                                        <img src="assets/media/departments/education.jpg" alt="Education">
                                     </figure>
                                     <div class="departmentContent">
-                                        <h3>Pre Primary</h3>
-                                        <p>Because we care</p>
+                                        <h3>Education</h3>
+                                        <p>A spark that lights up a child's future. Barnes is a perfect paradigm of the
+                                            cultural diversity that India is known for. We are a rare combination of
+                                            age-old values as well as new trends and our teachers are a perfect blend of
+                                            the same.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="departmentCard">
                                     <figure>
-                                        <img src="assets/media/departments/primary.jpg" alt="Primary">
+                                        <img src="assets/media/departments/accommodation.jpg" alt="Accommodation">
                                     </figure>
                                     <div class="departmentContent">
-                                        <h3>Primary</h3>
-                                        <p>Where learning is fun</p>
+                                        <h3>Accommodation</h3>
+                                        <p>Barnes is a second home for its boarding students. All boarders are
+                                            comfortably accommodated in spacious dormitories. These have been
+                                            purpose-built to provide premium, student-friendly accommodation and have
+                                            been decorated to create a homely-feel.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="departmentCard">
                                     <figure>
-                                        <img src="assets/media/departments/middle-school.jpg" alt="Middle School">
+                                        <img src="assets/media/departments/sports.jpg" alt="Sports">
                                     </figure>
                                     <div class="departmentContent">
-                                        <h3>Middle School</h3>
-                                        <p>Great Place To Learn</p>
+                                        <h3>Sports</h3>
+                                        <p>We at Barnes, strongly believe importance of sports for children. There are 3
+                                            football fields, a tennis court, 3 volleyball courts, two indoor badminton
+                                            courts, a basketball court, a 400-meter Athletic field, a cricket ground, a
+                                            fully equipped indoor gymnasium, and a swimming pool on campus.
+
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="departmentCard">
                                     <figure>
-                                        <img src="assets/media/departments/jr-college.jpg" alt="Junior College">
+                                        <img src="assets/media/departments/activities.jpg" alt="Activities">
                                     </figure>
                                     <div class="departmentContent">
-                                        <h3>Junior College</h3>
-                                        <p>The Future Begins Here</p>
+                                        <h3>Activities</h3>
+                                        <p>Teaching is not limited to textbooks and blackboards. With our School
+                                            activities, learning becomes an interesting and enjoyable exercise. There
+                                            are lots of different School activities for all kind of choices which
+                                            includes Guitar, Piano, other musical instruments, Western dance, Indian
+                                            dance and many more.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -178,18 +196,18 @@ $currentPage = 'home';
             </div>
         </section>
         <section class="videoSection"
-            style="background: url('assets/media/video-bg.jpg') no-repeat center center / cover;">
+            style="background: url('assets/media/video-bg.jpg') no-repeat center center / cover;" data-bs-toggle="modal"
+            data-bs-target="#aboutVideo">
             <div class="container">
                 <div class="row">
                     <div class="playBtn">
-                        <button class="videoBtn" data-bs-toggle="modal" data-bs-target="#aboutVideo">
+                        <button class="videoBtn">
                             <i class="ph-duotone ph-play"></i>
                         </button>
-                        <h3>Virtual Tour</h3>
+                        <!-- <h3>Virtual Tour</h3> -->
                     </div>
                 </div>
             </div>
-
         </section>
     </main>
 
@@ -229,6 +247,43 @@ $currentPage = 'home';
 
     <?php include 'includes/footer.php'; ?>
     <?php include 'includes/scripts.php'; ?>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const videoSection = document.querySelector('.videoSection');
+            const playBtn = document.querySelector('.playBtn');
+
+            videoSection.addEventListener('mousemove', function (e) {
+                const rect = videoSection.getBoundingClientRect();
+
+                // 1. Find the center point of the video section (in screen coordinates)
+                const centerX = rect.left + rect.width / 2;
+                const centerY = rect.top + rect.height / 2;
+
+                // 2. Calculate the cursor's offset from the center point
+                // This gives us the precise amount we need to translate the already-centered button.
+                const xOffset = e.clientX - centerX;
+                const yOffset = e.clientY - centerY;
+
+                // 3. Apply the offset using 'calc' to combine the initial -50% centering shift with the new pixel offset.
+                playBtn.style.transform = `translate(calc(-50% + ${xOffset}px), calc(-50% + ${yOffset}px))`;
+            });
+
+            // Reset position when mouse leaves section
+            videoSection.addEventListener('mouseleave', function () {
+                // Slower transition for a graceful return
+                playBtn.style.transition = 'transform 0.5s cubic-bezier(0.19, 1, 0.22, 1)';
+
+                // Return to the initial centered state
+                playBtn.style.transform = 'translate(-50%, -50%)';
+            });
+
+            // On mouseenter, reset the faster transition for tracking
+            videoSection.addEventListener('mouseenter', function () {
+                // Switch back to the faster tracking transition defined in CSS
+                playBtn.style.transition = 'transform 0.3s cubic-bezier(0.19, 1, 0.22, 1)';
+            });
+        });
+    </script>
 </body>
 
 </html>

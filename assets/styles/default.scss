@@ -34,12 +34,11 @@ html {
 }
 
 body {
-    font-family: "Inter", sans-serif;
+    font-family: "Plus Jakarta Sans", sans-serif;
     font-size: $large;
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
     line-height: 2;
-    // letter-spacing: 0.6px;
     color: $gray;
     background-color: $white;
     position: relative;
@@ -76,12 +75,11 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Bona Nova", serif;
+    font-family: "Manrope", serif;
     font-style: normal;
     font-optical-sizing: auto;
     font-weight: 700;
     line-height: 1.5;
-    // letter-spacing: 0.0187rem;
     color: $dark;
     position: relative;
     margin-bottom: $commonUnit / 2;
@@ -139,10 +137,8 @@ input[type="number"] {
     min-height: 3.4375rem;
 }
 .btn {
-    font-family: "Bona Nova", serif;
     font-size: $medium;
     font-weight: 600;
-    letter-spacing: 0.0375rem;
     text-transform: uppercase;
     padding: 0.75rem 1.5rem;
     transition: all 0.3s ease;
@@ -362,6 +358,12 @@ input[type="number"] {
     @extend .flex-center-start;
     gap: $commonUnit;
 }
+hr {
+    width: 100%;
+    background-color: transparent;
+    margin-bottom: $commonUnit !important;
+    border-top: 0.125rem dashed rgba($color: $dark, $alpha: 0.5);
+}
 // Section
 section:not(.hero) {
     padding: 6.25rem 0;
@@ -396,6 +398,10 @@ section:not(.hero) {
                 border: $commonBorder;
                 border-radius: $cardRadius;
 
+                .pgHeader {
+                    margin-bottom: 0 !important;
+                }
+
                 figure {
                     margin: $commonUnit * 2 0;
                     border-radius: $cardRadius * 2;
@@ -404,6 +410,10 @@ section:not(.hero) {
                     img {
                         transition: all 0.7s linear;
                     }
+                }
+                p {
+                    text-align: justify;
+                    text-align-last: left;
                 }
             }
         }
@@ -414,28 +424,28 @@ section:not(.hero) {
     @extend .flex-center-start;
     flex-wrap: wrap;
     gap: $commonUnit;
-    // margin-bottom: $commonUnit * 2;
     position: relative;
     z-index: 2;
+    margin-bottom: $commonUnit * 2;
 
     .pgTitle {
         @extend .flex-start;
         flex-direction: column;
-        // flex-grow: 1;
+        flex-grow: 1;
         max-width: 53.125rem;
 
         .pgSection {
-            font-size: $h5;
+            font-size: $h6;
             font-weight: 500;
             text-transform: uppercase;
-            letter-spacing: 0.0625rem;
             line-height: normal;
             color: $dark;
             margin: 0;
         }
         h2 {
-            font-size: $h2;
-            text-transform: uppercase;
+            font-size: $h1;
+            font-weight: 700;
+            // text-transform: uppercase;
             color: $primary;
             margin: 0;
 
@@ -733,7 +743,6 @@ section:not(.hero) {
     .nav-link {
         font-size: $medium;
         font-weight: 600;
-        letter-spacing: 0.0375rem;
         text-transform: uppercase;
         padding: 0.75rem 1.5rem;
         color: $gray;
