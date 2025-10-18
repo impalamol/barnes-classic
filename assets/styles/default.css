@@ -250,7 +250,7 @@ html {
 }
 
 body {
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "Manrope", sans-serif;
   font-size: 1rem;
   font-weight: 500;
   font-style: normal;
@@ -288,10 +288,11 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Manrope", serif;
+  font-family: "Bona Nova SC", serif;
   font-style: normal;
   font-optical-sizing: auto;
   font-weight: 700;
+  text-transform: uppercase;
   line-height: 1.5;
   color: #000b20;
   position: relative;
@@ -411,12 +412,12 @@ input[type=number] {
 }
 .btn.btn-warning {
   color: #000b20 !important;
-  background-color: #f6c500;
-  border-color: rgba(246, 197, 0, 0.3);
+  background-color: #ffa501;
+  border-color: rgba(255, 165, 1, 0.3);
 }
 .btn.btn-warning:hover {
-  background-color: rgb(195, 156.1585365854, 0);
-  border-color: rgb(169.5, 135.737804878, 0);
+  background-color: rgb(205, 132.3622047244, 0);
+  border-color: rgb(179.5, 115.8976377953, 0);
 }
 .btn.btn-danger {
   color: #ffffff !important;
@@ -486,11 +487,11 @@ input[type=number] {
   color: #ffffff !important;
 }
 .btn.btn-outline-warning {
-  color: #f6c500;
-  border-color: #f6c500;
+  color: #ffa501;
+  border-color: #ffa501;
 }
 .btn.btn-outline-warning:hover {
-  background-color: #f6c500;
+  background-color: #ffa501;
   color: #000b20 !important;
 }
 .btn.btn-outline-danger {
@@ -590,6 +591,20 @@ section:not(.hero) .wrapper .contentCard .content p {
   text-align: justify;
   -moz-text-align-last: left;
        text-align-last: left;
+}
+section:not(.hero) .wrapper .contentCard .note {
+  background-color: rgba(255, 165, 1, 0.1);
+  padding: 3rem;
+  border: 0.125rem dashed #ffa501;
+  border-radius: 0.5rem;
+}
+section:not(.hero) .wrapper .contentCard .note p {
+  font-size: 1.125rem;
+  margin: 0;
+}
+section:not(.hero) .wrapper .contentCard .note p strong,
+section:not(.hero) .wrapper .contentCard .note p span {
+  color: #000b20;
 }
 
 .pgHeader {
@@ -851,7 +866,7 @@ section:not(.hero) .wrapper .contentCard .content p {
   color: #ffffff;
 }
 .breadcrumbs .breadcrumbContent .breadcrumb .breadcrumb-item a {
-  color: #f6c500;
+  color: #ffa501;
 }
 .breadcrumbs .breadcrumbContent .breadcrumb .breadcrumb-item.active {
   color: #ffffff;

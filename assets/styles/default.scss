@@ -34,7 +34,7 @@ html {
 }
 
 body {
-    font-family: "Plus Jakarta Sans", sans-serif;
+    font-family: "Manrope", sans-serif;
     font-size: $large;
     font-weight: 500;
     font-style: normal;
@@ -75,10 +75,11 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Manrope", serif;
+    font-family: "Bona Nova SC", serif;
     font-style: normal;
     font-optical-sizing: auto;
     font-weight: 700;
+    text-transform: uppercase;
     line-height: 1.5;
     color: $dark;
     position: relative;
@@ -414,6 +415,22 @@ section:not(.hero) {
                 p {
                     text-align: justify;
                     text-align-last: left;
+                }
+            }
+            .note {
+                background-color: rgba($color: $warning, $alpha: 0.1);
+                padding: $commonUnit * 2;
+                border: 0.125rem dashed $warning;
+                border-radius: $cardRadius / 2;
+
+                p {
+                    font-size: $xLarge;
+                    margin: 0;
+
+                    strong,
+                    span {
+                        color: $dark;
+                    }
                 }
             }
         }
