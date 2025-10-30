@@ -92,6 +92,20 @@
     });
 </script>
 <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var offcanvasEl = document.getElementById('desktopMenu');
+        if (!offcanvasEl) return;
+        offcanvasEl.addEventListener('show.bs.offcanvas', function () {
+            document.body.classList.add('overflow-hidden');
+            console.log('Offcanvas shown'); // debugging
+        });
+        offcanvasEl.addEventListener('hidden.bs.offcanvas', function () {
+            document.body.classList.remove('overflow-hidden');
+            console.log('Offcanvas hidden'); // debugging
+        });
+    });
+</script>
+<script>
     var currentYear = new Date().getFullYear();
     document.getElementById("year").textContent = currentYear;
 </script>

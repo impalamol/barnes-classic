@@ -1,5 +1,5 @@
 <?php
-$currentPage = 'principals-desk';
+$currentPage = 'teaching-staff';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +11,7 @@ $currentPage = 'principals-desk';
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php include 'includes/styles.php'; ?>
-    <title>Barnes School & Junior College | Principal's Desk</title>
+    <title>Barnes School & Junior College | Teaching Staff</title>
 </head>
 
 <body>
@@ -28,7 +28,7 @@ $currentPage = 'principals-desk';
                                 <li class="breadcrumb-item"><a href="index"><i
                                             class="ph-duotone ph-house-simple"></i></a></li>
                                 <li class="breadcrumb-item"><a href="about">About Us</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Principal's Desk</li>
+                                <li class="breadcrumb-item active" aria-current="page">Teaching Staff</li>
                             </ol>
                         </nav>
                     </div>
@@ -36,7 +36,7 @@ $currentPage = 'principals-desk';
             </div>
         </section>
 
-        <section class="aboutUs presidentsDesk">
+        <section class="aboutUs teachingStaff">
             <div class="container">
                 <div class="row">
                     <div class="wrapper flex-wrap flex-lg-nowrap">
@@ -44,32 +44,61 @@ $currentPage = 'principals-desk';
                             <div class="content">
                                 <div class="pgHeader">
                                     <div class="pgTitle">
-                                        <h6 class="pgSection">Message by President</h6>
-                                        <h2>Principal's Desk</h2>
+                                        <h6 class="pgSection">Leadership</h6>
+                                        <h2>The Principal</h2>
                                         <hr>
                                     </div>
                                 </div>
-                                <figure>
-                                   <img src="assets/media/avatars/principal.jpg" alt="Miss. Uttara Kulkarni">
-                                </figure>
-                                <p>At Barnes English School & Jr. College, we believe that education is the foundation
-                                    of human progress and the key to a sustainable future. As a lifelong educator, I've
-                                    had the privilege of witnessing the incredible moment when a young person grasps a
-                                    new idea or solves a difficult problem. This flash of insight is truly remarkable,
-                                    and it's what inspires future inventors, scientists, artists, leaders, and social
-                                    reformers. Since our founding, we've been dedicated to producing such successful
-                                    individuals. Our alumni have gone on to achieve great things in various fields
-                                    around the world, and I am confident this legacy will continue for many years to
-                                    come.</p>
-                                <p>Our success stems from our balanced approach. We are committed to providing an ideal
-                                    mix of academic rigor, athletic development, extracurricular activities, and
-                                    personality building. Our curriculum is designed to foster critical life skills,
-                                    creativity, and analytical thinking. Most importantly, we instill in every student
-                                    the highest human and social values. We don't just teach the difference between
-                                    right and wrong; we guide our students to live with integrity and virtue. We
-                                    emphasize the importance of compassion, inclusion, and generosity, helping each
-                                    student understand their responsibilities as a citizen and a future leader of our
-                                    nation.</p>
+                                <div class="row">
+                                    <div class="col-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 mb-4">
+                                        <div class="card avatarCard">
+                                            <figure>
+                                                <img src="assets/media/avatars/principal.jpg"
+                                                    alt="Miss. Uttara Kulkarni">
+                                            </figure>
+                                            <div class="cardContent">
+                                                <h3>Miss. Uttara Kulkarni</h3>
+                                                <p>Hon. Principal</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <div class="pgHeader">
+                                    <div class="pgTitle">
+                                        <h6 class="pgSection">Teaching Staff</h6>
+                                        <h2>Senior School & Junior College</h2>
+                                        <span class="grade">Instructors Guiding Grades 9 through 12</span>
+                                        <hr>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 mb-4">
+                                        <div class="card avatarCard">
+                                            <figure>
+                                                <img src="assets/media/avatars/avatar2.jpg" alt="">
+                                            </figure>
+                                            <div class="cardContent">
+                                                <h3>Mr. Deepak Rajput</h3>
+                                                <p>Section head- Senior and Junior College</p>
+                                                <p class="department">Department: Commerce</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 mb-4">
+                                        <div class="card avatarCard">
+                                            <figure>
+                                                <img src="assets/media/avatars/avatar3.jpg" alt="">
+                                            </figure>
+                                           <div class="cardContent">
+                                                <h3>Mr Ashutosh Jadhav</h3>
+                                                <p>HOD Art</p>
+                                                <p class="department">Department: Art</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <?php include 'includes/sidebar.php'; ?>

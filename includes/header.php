@@ -54,8 +54,8 @@
                                 Calendar</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link btn-link" data-bs-toggle="offcanvas" href="#desktopMenu" role="button"
-                                aria-controls="desktopMenu"><i class="ph-duotone ph-list"></i></a>
+                            <a class="btn btn-primary" id="desktopMenuToggle" data-bs-toggle="offcanvas" href="#desktopMenu" role="button"
+                                aria-controls="desktopMenu"><i class="ph-duotone ph-list"></i> Menu</a>
                         </li>
                     </ul>
                 </div>
@@ -89,11 +89,11 @@
 <!-- Desktop Offcanvas Menu -->
 <div class="offcanvas offcanvas-end" tabindex="-1" id="desktopMenu" aria-labelledby="desktopMenuLabel">
     <div class="offcanvas-header border-bottom">
-        <h6 class="offcanvas-title" id="desktopMenuLabel">Menu</h6>
+        <h3 class="offcanvas-title" id="desktopMenuLabel">Menu</h3>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-end flex-grow-1">
+        <ul class="navbar-nav justify-content-end gap-3  flex-grow-1">
 
             <li class="nav-item">
                 <a class="nav-link <?php echo ($currentPage === 'home') ? 'active' : ''; ?>" href="index">Home</a>

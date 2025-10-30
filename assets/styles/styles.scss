@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Manrope:wght@200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=Manrope:wght@200..800&display=swap");
 @import "default.scss";
 
 .progressLoader {
@@ -210,6 +210,39 @@ header {
         }
     }
 }
+#desktopMenu {
+    background-color: $dark;
+
+    .offcanvas-header {
+        background-color: $tertiary;
+        h3 {
+            font-size: $h5;
+            text-align: center;
+            color: $white !important;
+            margin-bottom: 0;
+        }
+    }
+    .offcanvas-body {
+        padding: $commonUnit;
+        li {
+            .nav-link {
+                font-size: $medium;
+                text-transform: uppercase;
+                color: $white;
+                background-color: rgba($color: $primary, $alpha: 0.15);
+                padding: $commonUnit / 2 $commonUnit;
+                border-radius: $cardRadius / 3;
+                &:hover,
+                &.active {
+                    background-color: $primary;
+                }
+                span {
+                    margin-left: $commonUnit / 3;
+                }
+            }
+        }
+    }
+}
 // Menu
 .menu {
     background-color: $dark;
@@ -402,11 +435,14 @@ header {
                 text-transform: uppercase;
                 color: $white;
                 background-color: rgba($color: $primary, $alpha: 0.15);
-                padding: $commonUnit / 3;
+                padding: $commonUnit / 2 $commonUnit;
                 border-radius: $cardRadius / 3;
                 &:hover,
                 &.active {
                     background-color: $primary;
+                }
+                span {
+                    margin-left: $commonUnit / 3;
                 }
             }
         }
@@ -719,19 +755,30 @@ header {
                 margin-bottom: 0;
             }
             h3 {
-                font-size: $xLarge;
-                font-weight: 500;
+                font-size: $h5;
+                font-weight: 600;
                 color: $white;
             }
             p {
                 font-size: $medium;
                 color: $white;
                 opacity: 0.5;
+                &.department {
+                    color: $warning;
+                    opacity: 1;
+                }
             }
         }
         &:hover {
             .cardContent {
                 background-color: lighten($primary, 10%);
+
+                p {
+                    opacity: 1;
+                    &.department {
+                        color: $white;
+                    }
+                }
             }
             figure img {
                 transform: scale(1.1) rotate(2deg);
