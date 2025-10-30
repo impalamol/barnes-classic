@@ -288,11 +288,11 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Bona Nova SC", serif;
+  font-family: "Bona Nova", serif;
   font-style: normal;
   font-optical-sizing: auto;
   font-weight: 700;
-  text-transform: uppercase;
+  text-transform: capitalize;
   line-height: 1.5;
   color: #000b20;
   position: relative;
@@ -628,13 +628,23 @@ section:not(.hero) .wrapper .contentCard .note p span {
   margin: 0;
 }
 .pgHeader .pgTitle h2 {
-  font-size: 3.375rem;
+  font-family: "Bona Nova SC", serif;
+  font-size: 3rem;
   font-weight: 700;
+  text-transform: uppercase;
   color: #0071bf;
   margin: 0;
 }
 .pgHeader .pgTitle h2 span {
   color: #fc6e30;
+}
+.pgHeader .pgTitle .grade {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000b20;
+  background-color: rgba(0, 113, 191, 0.1);
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.3333333333rem;
 }
 .pgHeader.centered {
   margin-left: auto;
@@ -838,7 +848,6 @@ section:not(.hero) .wrapper .contentCard .note p span {
 .breadcrumbs {
   background-position: top !important;
   background-attachment: fixed !important;
-  background-size: cover !important;
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
   flex-direction: column;

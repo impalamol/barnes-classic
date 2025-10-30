@@ -75,11 +75,11 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Bona Nova SC", serif;
+    font-family: "Bona Nova", serif;
     font-style: normal;
     font-optical-sizing: auto;
     font-weight: 700;
-    text-transform: uppercase;
+    text-transform: capitalize;
     line-height: 1.5;
     color: $dark;
     position: relative;
@@ -460,15 +460,24 @@ section:not(.hero) {
             margin: 0;
         }
         h2 {
-            font-size: $h1;
+            font-family: "Bona Nova SC", serif;
+            font-size: $h2;
             font-weight: 700;
-            // text-transform: uppercase;
+            text-transform: uppercase;
             color: $primary;
             margin: 0;
 
             span {
                 color: $tertiary;
             }
+        }
+        .grade {
+            font-size: $large;
+            font-weight: 500;
+            color: $dark;
+            background-color: rgba($color: $primary, $alpha: 0.1);
+            padding: $commonUnit / 4 $commonUnit / 2;
+            border-radius: $cardRadius / 3;
         }
     }
     &.centered {
@@ -715,7 +724,7 @@ section:not(.hero) {
 .breadcrumbs {
     background-position: top !important;
     background-attachment: fixed !important;
-    background-size: cover !important;
+    // background-size: cover !important;
     image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;
     @extend .flex-start-center;
