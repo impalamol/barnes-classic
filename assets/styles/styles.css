@@ -73,7 +73,7 @@ textarea:not([rows]) {
   display: flex;
 }
 
-.flex-center, .contactUs .contactCard .contactChip .icon, .blogDetails .blogSidebar .sidebarContent .recentPost, .about figure, .hero .paginationContainer .navigation .swiper-button-next,
+.flex-center, .contactUs .contactCard .contactChip .icon, .blogDetails .blogSidebar .sidebarContent .recentPost, .barnicles .barnicleCard figure, .about figure, .hero .paginationContainer .navigation .swiper-button-next,
 .hero .paginationContainer .navigation .swiper-button-prev, .hero .paginationContainer .navigation, .hero .heroSlide, .videoBtn, header .navbar .nav-item .nav-link, .progressLoader .loaderContent .imgContainer, .progressLoader, .searchModal .nrs, .searchModal .searchResult .resultItem a .productIcon img, .pgHeader.centered .pgTitle,
 .pgHeader.centered .pgSection, .pgHeader.centered {
   display: flex;
@@ -571,6 +571,7 @@ section:not(.hero) .wrapper {
 section:not(.hero) .wrapper .contentCard {
   flex-direction: column;
   gap: 1.5rem;
+  flex-grow: 1;
 }
 section:not(.hero) .wrapper .contentCard .content {
   flex-grow: 1;
@@ -580,8 +581,8 @@ section:not(.hero) .wrapper .contentCard .content {
   border: 0.0625rem solid #e4e4e4;
   border-radius: 1rem;
 }
-section:not(.hero) .wrapper .contentCard .content .pgHeader {
-  margin-bottom: 0 !important;
+section:not(.hero) .wrapper .contentCard .content .pgHeader.bottomMargin {
+  margin-bottom: 1.5rem !important;
 }
 section:not(.hero) .wrapper .contentCard .content figure {
   margin: 3rem 0;
@@ -1312,6 +1313,61 @@ header .notification .notificationsContainer .notificationListContainer .notific
   }
 }
 
+.avatarCard {
+  background-color: #0071bf;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: none;
+  position: relative;
+}
+.avatarCard figure {
+  margin: 0 !important;
+  border-radius: 0 !important;
+  position: relative;
+}
+.avatarCard figure .videoBtn {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 4rem;
+  height: 4rem;
+}
+.avatarCard .cardContent {
+  background-color: #000b20;
+  padding: 1.5rem;
+}
+.avatarCard .cardContent h3,
+.avatarCard .cardContent p {
+  margin-bottom: 0;
+}
+.avatarCard .cardContent h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+.avatarCard .cardContent p {
+  font-size: 0.875rem;
+  color: #ffffff;
+  opacity: 0.5;
+}
+.avatarCard .cardContent p.department {
+  color: #ffa501;
+  opacity: 1;
+}
+.avatarCard:hover .cardContent {
+  background-color: rgb(0, 143.1727748691, 242);
+}
+.avatarCard:hover .cardContent p {
+  opacity: 1;
+}
+.avatarCard:hover .cardContent p.department {
+  color: #ffffff;
+}
+.avatarCard:hover figure img {
+  transform: scale(1.1) rotate(2deg);
+}
+
 .hero .heroSlide {
   position: relative;
   min-height: 85vh;
@@ -1493,51 +1549,6 @@ header .notification .notificationsContainer .notificationListContainer .notific
 .aboutUs dl dd {
   margin-left: 3rem;
 }
-.aboutUs .avatarCard {
-  background-color: #0071bf;
-  border-radius: 1rem;
-  overflow: hidden;
-  border: none;
-}
-.aboutUs .avatarCard figure {
-  margin: 0 !important;
-  border-radius: 0 !important;
-  position: relative;
-}
-.aboutUs .avatarCard .cardContent {
-  background-color: #000b20;
-  padding: 1.5rem;
-}
-.aboutUs .avatarCard .cardContent h3,
-.aboutUs .avatarCard .cardContent p {
-  margin-bottom: 0;
-}
-.aboutUs .avatarCard .cardContent h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #ffffff;
-}
-.aboutUs .avatarCard .cardContent p {
-  font-size: 0.875rem;
-  color: #ffffff;
-  opacity: 0.5;
-}
-.aboutUs .avatarCard .cardContent p.department {
-  color: #ffa501;
-  opacity: 1;
-}
-.aboutUs .avatarCard:hover .cardContent {
-  background-color: rgb(0, 143.1727748691, 242);
-}
-.aboutUs .avatarCard:hover .cardContent p {
-  opacity: 1;
-}
-.aboutUs .avatarCard:hover .cardContent p.department {
-  color: #ffffff;
-}
-.aboutUs .avatarCard:hover figure img {
-  transform: scale(1.1) rotate(2deg);
-}
 
 .blogs .blogCard {
   background-color: #ffffff;
@@ -1581,6 +1592,66 @@ header .notification .notificationsContainer .notificationListContainer .notific
 }
 .academics .contentCard .content .subjectList li:last-child {
   flex-grow: 0;
+}
+
+.admission.admissionProcess .admissionProcessList {
+  counter-reset: listItem;
+  list-style-type: none;
+  padding-left: 0;
+  margin: 3rem 0 0;
+}
+.admission.admissionProcess .admissionProcessList li:not(:last-child) {
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 0.0625rem dashed #e4e4e4;
+}
+.admission.admissionProcess .admissionProcessList h4 {
+  font-size: 1.5rem;
+  color: #000b20;
+  margin-bottom: 0;
+}
+.admission.admissionProcess .admissionProcessList h4::before {
+  counter-increment: listItem;
+  content: counter(listItem) ". ";
+}
+
+.schoolCalendar figure img {
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 0.0625rem solid #e4e4e4;
+  border-radius: 1rem;
+}
+
+.barnicles .barnicleCard {
+  background-color: #ffffff;
+  height: 100%;
+  display: block;
+  padding: 0.75rem;
+  border: 2px outset #0071bf;
+  border-radius: 1rem;
+}
+.barnicles .barnicleCard figure {
+  margin: 0 0 0.75rem !important;
+  min-height: 20rem;
+}
+.barnicles .barnicleCard figure img {
+  width: 100% !important;
+  height: 100% !important;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.8s ease;
+  border: 0.0625rem solid #e4e4e4;
+  border-radius: 1rem;
+}
+.barnicles .barnicleCard h6 {
+  font-size: 1rem;
+  text-align: center;
+  margin: 0;
+}
+.barnicles .barnicleCard:hover {
+  box-shadow: rgba(0, 11, 32, 0.1) 0rem 0.4375rem 1.8125rem 0rem;
 }
 
 footer {

@@ -40,22 +40,19 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 gap-3">
                         <li class="nav-item">
-                            <a class="nav-link <?php echo ($currentPage === 'admissions') ? 'active' : ''; ?>"
-                                href="index">Admissions</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link <?php echo ($currentPage === 'news') ? 'active' : ''; ?>"
                                 href="about">What's
                                 in the News </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link <?php echo ($currentPage === 'school-calendar') ? 'active' : ''; ?>"
-                                href="products">School
+                                href="school-calendar">School
                                 Calendar</a>
                         </li>
                         <li class="nav-item">
-                            <a class="btn btn-primary" id="desktopMenuToggle" data-bs-toggle="offcanvas" href="#desktopMenu" role="button"
-                                aria-controls="desktopMenu"><i class="ph-duotone ph-list"></i> Menu</a>
+                            <a class="btn btn-primary" id="desktopMenuToggle" data-bs-toggle="offcanvas"
+                                href="#desktopMenu" role="button" aria-controls="desktopMenu"><i
+                                    class="ph-duotone ph-list"></i> Menu</a>
                         </li>
                     </ul>
                 </div>
