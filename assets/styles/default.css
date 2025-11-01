@@ -567,6 +567,7 @@ section:not(.hero) .wrapper {
 section:not(.hero) .wrapper .contentCard {
   flex-direction: column;
   gap: 1.5rem;
+  flex-grow: 1;
 }
 section:not(.hero) .wrapper .contentCard .content {
   flex-grow: 1;
@@ -576,8 +577,8 @@ section:not(.hero) .wrapper .contentCard .content {
   border: 0.0625rem solid #e4e4e4;
   border-radius: 1rem;
 }
-section:not(.hero) .wrapper .contentCard .content .pgHeader {
-  margin-bottom: 0 !important;
+section:not(.hero) .wrapper .contentCard .content .pgHeader.bottomMargin {
+  margin-bottom: 1.5rem !important;
 }
 section:not(.hero) .wrapper .contentCard .content figure {
   margin: 3rem 0;

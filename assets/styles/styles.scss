@@ -488,6 +488,67 @@ header {
         }
     }
 }
+// Avatar Card
+.avatarCard {
+    background-color: $primary;
+    border-radius: $cardRadius;
+    overflow: hidden;
+    border: none;
+    position: relative;
+    figure {
+        margin: 0 !important;
+        border-radius: 0 !important;
+        position: relative;
+
+        .videoBtn {
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            $wh: 4rem;
+            width: $wh;
+            height: $wh;
+        }
+    }
+    .cardContent {
+        background-color: $dark;
+        padding: $commonUnit;
+
+        h3,
+        p {
+            margin-bottom: 0;
+        }
+        h3 {
+            font-size: $h5;
+            font-weight: 600;
+            color: $white;
+        }
+        p {
+            font-size: $medium;
+            color: $white;
+            opacity: 0.5;
+            &.department {
+                color: $warning;
+                opacity: 1;
+            }
+        }
+    }
+    &:hover {
+        .cardContent {
+            background-color: lighten($primary, 10%);
+
+            p {
+                opacity: 1;
+                &.department {
+                    color: $white;
+                }
+            }
+        }
+        figure img {
+            transform: scale(1.1) rotate(2deg);
+        }
+    }
+}
 // Main
 
 // Hero
@@ -736,55 +797,6 @@ header {
             margin-left: $commonUnit * 2;
         }
     }
-    .avatarCard {
-        background-color: $primary;
-        border-radius: $cardRadius;
-        overflow: hidden;
-        border: none;
-        figure {
-            margin: 0 !important;
-            border-radius: 0 !important;
-            position: relative;
-        }
-        .cardContent {
-            background-color: $dark;
-            padding: $commonUnit;
-
-            h3,
-            p {
-                margin-bottom: 0;
-            }
-            h3 {
-                font-size: $h5;
-                font-weight: 600;
-                color: $white;
-            }
-            p {
-                font-size: $medium;
-                color: $white;
-                opacity: 0.5;
-                &.department {
-                    color: $warning;
-                    opacity: 1;
-                }
-            }
-        }
-        &:hover {
-            .cardContent {
-                background-color: lighten($primary, 10%);
-
-                p {
-                    opacity: 1;
-                    &.department {
-                        color: $white;
-                    }
-                }
-            }
-            figure img {
-                transform: scale(1.1) rotate(2deg);
-            }
-        }
-    }
 }
 
 // Blogs
@@ -838,6 +850,80 @@ header {
                     flex-grow: 0;
                 }
             }
+        }
+    }
+}
+// Admission
+.admission {
+    &.admissionProcess {
+        .admissionProcessList {
+            counter-reset: listItem;
+            list-style-type: none;
+            padding-left: 0;
+            margin: $commonUnit * 2 0 0;
+
+            li:not(:last-child) {
+                padding-bottom: $commonUnit / 2;
+                margin-bottom: $commonUnit;
+                border-bottom: 0.0625rem dashed $border;
+            }
+            h4 {
+                font-size: $h5;
+                color: $dark;
+                margin-bottom: 0;
+                &::before {
+                    counter-increment: listItem;
+                    content: counter(listItem) ". ";
+                }
+            }
+        }
+    }
+}
+// School Calendar
+.schoolCalendar {
+    figure {
+        img {
+            padding: $commonUnit;
+            margin-bottom: $commonUnit;
+            border: $commonBorder;
+            border-radius: $cardRadius;
+        }
+    }
+}
+// barnicles
+.barnicles {
+    .barnicleCard {
+        background-color: $white;
+        height: 100%;
+        display: block;
+        padding: $commonUnit / 2;
+        border: 2px outset $primary;
+        border-radius: $cardRadius;
+
+        figure {
+            @extend .flex-center;
+            margin: 0 0 $commonUnit / 2 !important;
+            min-height: 20rem;
+            // max-height: 20rem;
+            img {
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: cover;
+                display: block;
+                margin: 0 auto;
+                transition: transform 0.8s ease;
+                border: $commonBorder;
+                border-radius: $cardRadius;
+            }
+        }
+
+        h6 {
+            font-size: $large;
+            text-align: center;
+            margin: 0;
+        }
+        &:hover {
+            box-shadow: $cardShadow;
         }
     }
 }

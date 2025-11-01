@@ -391,6 +391,7 @@ section:not(.hero) {
             @extend .flex-start;
             flex-direction: column;
             gap: $commonUnit;
+            flex-grow: 1;
             .content {
                 flex-grow: 1;
                 width: 100%;
@@ -400,7 +401,9 @@ section:not(.hero) {
                 border-radius: $cardRadius;
 
                 .pgHeader {
-                    margin-bottom: 0 !important;
+                    &.bottomMargin {
+                        margin-bottom: $commonUnit !important;
+                    }
                 }
 
                 figure {
