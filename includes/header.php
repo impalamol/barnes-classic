@@ -118,7 +118,7 @@
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="admission-process">Admission Process</a></li>
                     <li><a class="dropdown-item" href="apply-to-barnes">Apply To Barnes</a></li>
-                    <li><a class="dropdown-item" href="apply-for-school-visit">Apply for school visit</a></li>
+                    <li><a class="dropdown-item" href="school-visit">Apply for school visit</a></li>
                     <li><a class="dropdown-item" href="fees-structure">Fees Structure</a></li>
                     <li><a class="dropdown-item" href="testimonial">Testimonial</a></li>
                 </ul>
