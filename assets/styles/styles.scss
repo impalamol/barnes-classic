@@ -927,6 +927,48 @@ header {
         }
     }
 }
+.feeStructure {
+    .feeCard {
+        @extend .flex-center-between;
+        gap: $commonUnit;
+        flex-wrap: wrap;
+        background: $white;
+        padding: $commonUnit / 2 $commonUnit;
+        margin-bottom: $commonUnit / 2;
+        height: 100%;
+        border: $commonBorder;
+        border-radius: $cardRadius / 2;
+        // box-shadow: 0 2px 12px rgba(110, 140, 170, 0.1);
+
+        h3 {
+            font-size: $xLarge;
+            color: $dark;
+            margin: 0;
+        }
+        .subTitle {
+            font-size: $large;
+            color: $gray;
+            opacity: 0.6;
+            margin-bottom: 0;
+        }
+        .fee {
+            font-size: $h5;
+            font-weight: 700;
+            text-align: right;
+            color: $primary;
+            display: block;
+            margin: 0;
+            line-height: normal;
+        }
+        .info {
+            font-size: $small;
+            font-weight: 700;
+            color: $dark;
+            opacity: 0.8;
+        }
+    }
+}
+
 //   Footer {
 footer {
     background: $dark;
@@ -1053,9 +1095,18 @@ footer {
 // Pages Scss Starts
 
 // Enquiry Modal
-#enquiryModal {
-    .modal-body {
-        padding: $commonUnit * 2 !important;
+.modal {
+    .modal-header {
+        .modal-title {
+            font-size: $h6;
+            font-weight: 600;
+            color: $white;
+        }
+    }
+    &#enquiryModal {
+        .modal-body {
+            padding: $commonUnit * 2 !important;
+        }
     }
 }
 

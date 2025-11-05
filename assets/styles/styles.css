@@ -81,7 +81,7 @@ textarea:not([rows]) {
   justify-content: center;
 }
 
-.flex-center-between, .downloads .downloadCard .downloadCardFooter .dropdown .dropdown-menu li a, .downloads .downloadCard .downloadCardFooter .dropdown .btn, footer .copyright .copyrightContent, .hero .paginationContainer, .topbar .topbarContent, .searchModal .searchResult .resultItem, .searchModal .searchBar {
+.flex-center-between, .downloads .downloadCard .downloadCardFooter .dropdown .dropdown-menu li a, .downloads .downloadCard .downloadCardFooter .dropdown .btn, footer .copyright .copyrightContent, .feeStructure .feeCard, .hero .paginationContainer, .topbar .topbarContent, .searchModal .searchResult .resultItem, .searchModal .searchBar {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -292,7 +292,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Bona Nova", serif;
+  font-family: "Manrope", sans-serif;
   font-style: normal;
   font-optical-sizing: auto;
   font-weight: 700;
@@ -634,7 +634,7 @@ section:not(.hero) .wrapper .contentCard .note p span {
 }
 .pgHeader .pgTitle h2 {
   font-family: "Bona Nova SC", serif;
-  font-size: 3rem;
+  font-size: 2.625rem;
   font-weight: 700;
   text-transform: uppercase;
   color: #0071bf;
@@ -1654,6 +1654,43 @@ header .notification .notificationsContainer .notificationListContainer .notific
   box-shadow: rgba(0, 11, 32, 0.1) 0rem 0.4375rem 1.8125rem 0rem;
 }
 
+.feeStructure .feeCard {
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  background: #ffffff;
+  padding: 0.75rem 1.5rem;
+  margin-bottom: 0.75rem;
+  height: 100%;
+  border: 0.0625rem solid #e4e4e4;
+  border-radius: 0.5rem;
+}
+.feeStructure .feeCard h3 {
+  font-size: 1.125rem;
+  color: #000b20;
+  margin: 0;
+}
+.feeStructure .feeCard .subTitle {
+  font-size: 1rem;
+  color: #343e45;
+  opacity: 0.6;
+  margin-bottom: 0;
+}
+.feeStructure .feeCard .fee {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: right;
+  color: #0071bf;
+  display: block;
+  margin: 0;
+  line-height: normal;
+}
+.feeStructure .feeCard .info {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #000b20;
+  opacity: 0.8;
+}
+
 footer {
   background: #000b20;
   position: relative;
@@ -1763,7 +1800,12 @@ footer .copyright .copyrightContent .copyrightLinks {
   gap: commonUnit/2;
 }
 
-#enquiryModal .modal-body {
+.modal .modal-header .modal-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+.modal#enquiryModal .modal-body {
   padding: 3rem !important;
 }
 
