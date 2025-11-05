@@ -75,7 +75,8 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Bona Nova", serif;
+    // font-family: "Bona Nova", serif;
+    font-family: "Manrope", sans-serif;
     font-style: normal;
     font-optical-sizing: auto;
     font-weight: 700;
@@ -464,7 +465,7 @@ section:not(.hero) {
         }
         h2 {
             font-family: "Bona Nova SC", serif;
-            font-size: $h2;
+            font-size: $h3;
             font-weight: 700;
             text-transform: uppercase;
             color: $primary;

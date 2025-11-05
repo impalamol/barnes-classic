@@ -288,7 +288,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Bona Nova", serif;
+  font-family: "Manrope", sans-serif;
   font-style: normal;
   font-optical-sizing: auto;
   font-weight: 700;
@@ -630,7 +630,7 @@ section:not(.hero) .wrapper .contentCard .note p span {
 }
 .pgHeader .pgTitle h2 {
   font-family: "Bona Nova SC", serif;
-  font-size: 3rem;
+  font-size: 2.625rem;
   font-weight: 700;
   text-transform: uppercase;
   color: #0071bf;
