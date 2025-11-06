@@ -38,7 +38,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 gap-3">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 ">
                         <li class="nav-item">
                             <a class="nav-link <?php echo ($currentPage === 'news') ? 'active' : ''; ?>"
                                 href="about">What's
@@ -90,7 +90,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-end gap-3  flex-grow-1">
+        <ul class="navbar-nav justify-content-end flex-grow-1">
 
             <li class="nav-item">
                 <a class="nav-link <?php echo ($currentPage === 'home') ? 'active' : ''; ?>" href="index">Home</a>
