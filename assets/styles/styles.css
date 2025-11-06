@@ -73,7 +73,7 @@ textarea:not([rows]) {
   display: flex;
 }
 
-.flex-center, .contactUs .contactCard .contactChip .icon, .blogDetails .blogSidebar .sidebarContent .recentPost, .barnicles .barnicleCard figure, .about figure, .hero .paginationContainer .navigation .swiper-button-next,
+.flex-center, .contactUs .contactCard .contactChip .icon, .blogDetails .blogSidebar .sidebarContent .recentPost, .documents .documentCard figure, .barnicles .barnicleCard figure, .about figure, .hero .paginationContainer .navigation .swiper-button-next,
 .hero .paginationContainer .navigation .swiper-button-prev, .hero .paginationContainer .navigation, .hero .heroSlide, .videoBtn, header .navbar .nav-item .nav-link, .progressLoader .loaderContent .imgContainer, .progressLoader, .searchModal .nrs, .searchModal .searchResult .resultItem a .productIcon img, .pgHeader.centered .pgTitle,
 .pgHeader.centered .pgSection, .pgHeader.centered {
   display: flex;
@@ -292,7 +292,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Manrope", sans-serif;
+  font-family: "Bona Nova", serif;
   font-style: normal;
   font-optical-sizing: auto;
   font-weight: 700;
@@ -1098,19 +1098,49 @@ header .notification .notificationsContainer .notificationListContainer .notific
 #desktopMenu .offcanvas-body {
   padding: 1.5rem;
 }
-#desktopMenu .offcanvas-body li .nav-link {
+#desktopMenu .offcanvas-body .nav-item .nav-link,
+#desktopMenu .offcanvas-body .nav-item .dropdown-item,
+#desktopMenu .offcanvas-body .dropdown-menu .nav-link,
+#desktopMenu .offcanvas-body .dropdown-menu .dropdown-item {
   font-size: 0.875rem;
   text-transform: uppercase;
   color: #ffffff;
-  background-color: rgba(0, 113, 191, 0.15);
+  background-color: rgba(255, 255, 255, 0.1);
   padding: 0.75rem 1.5rem;
+  margin-bottom: 0.375rem;
   border-radius: 0.3333333333rem;
 }
-#desktopMenu .offcanvas-body li .nav-link:hover, #desktopMenu .offcanvas-body li .nav-link.active {
+#desktopMenu .offcanvas-body .nav-item .nav-link:hover, #desktopMenu .offcanvas-body .nav-item .nav-link.active,
+#desktopMenu .offcanvas-body .nav-item .dropdown-item:hover,
+#desktopMenu .offcanvas-body .nav-item .dropdown-item.active,
+#desktopMenu .offcanvas-body .dropdown-menu .nav-link:hover,
+#desktopMenu .offcanvas-body .dropdown-menu .nav-link.active,
+#desktopMenu .offcanvas-body .dropdown-menu .dropdown-item:hover,
+#desktopMenu .offcanvas-body .dropdown-menu .dropdown-item.active {
   background-color: #0071bf;
 }
-#desktopMenu .offcanvas-body li .nav-link span {
+#desktopMenu .offcanvas-body .nav-item .nav-link span,
+#desktopMenu .offcanvas-body .nav-item .dropdown-item span,
+#desktopMenu .offcanvas-body .dropdown-menu .nav-link span,
+#desktopMenu .offcanvas-body .dropdown-menu .dropdown-item span {
   margin-left: 0.5rem;
+}
+#desktopMenu .offcanvas-body .dropdown-menu {
+  position: static !important;
+  width: 100%;
+  margin: 0.25rem 0 0 !important;
+  padding: 0.75rem;
+  box-shadow: none;
+  border: none !important;
+}
+#desktopMenu .offcanvas-body .dropdown-menu.show {
+  background-color: #fc6e30;
+  display: block;
+  transform: translate(0) !important;
+  transition: all 1s linear !important;
+}
+#desktopMenu .offcanvas-body .dropdown-menu.show .dropdown-item:hover {
+  background-color: #000b20;
 }
 
 .menu {
@@ -1689,6 +1719,43 @@ header .notification .notificationsContainer .notificationListContainer .notific
   font-weight: 700;
   color: #000b20;
   opacity: 0.8;
+}
+
+.documents .documentCard {
+  background-color: #ffffff;
+  height: 100%;
+  display: block;
+  padding: 1.5rem;
+  border: 0.0625rem solid #e4e4e4;
+  border-radius: 1rem;
+}
+.documents .documentCard figure {
+  margin: 0 0 0.75rem !important;
+}
+.documents .documentCard figure img {
+  width: 100% !important;
+  height: 100% !important;
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  border-radius: 1rem;
+}
+.documents .documentCard h6 {
+  font-size: 1.125rem;
+  text-align: center;
+  margin: 1.5rem 0;
+}
+.documents .documentCard .btnGroup {
+  gap: 0.375rem;
+}
+.documents .documentCard .btnGroup .btn {
+  font-size: 0.75rem !important;
+  flex-grow: 1;
+  padding: 0.5rem !important;
+}
+.documents .documentCard:hover {
+  box-shadow: rgba(0, 11, 32, 0.1) 0rem 0.4375rem 1.8125rem 0rem;
 }
 
 footer {

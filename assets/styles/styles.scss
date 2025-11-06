@@ -224,13 +224,16 @@ header {
     }
     .offcanvas-body {
         padding: $commonUnit;
-        li {
-            .nav-link {
+        .nav-item,
+        .dropdown-menu {
+            .nav-link,
+            .dropdown-item {
                 font-size: $medium;
                 text-transform: uppercase;
                 color: $white;
-                background-color: rgba($color: $primary, $alpha: 0.15);
+                background-color: rgba($color: $white, $alpha: 0.1);
                 padding: $commonUnit / 2 $commonUnit;
+                margin-bottom: $commonUnit / 4;
                 border-radius: $cardRadius / 3;
                 &:hover,
                 &.active {
@@ -238,6 +241,25 @@ header {
                 }
                 span {
                     margin-left: $commonUnit / 3;
+                }
+            }
+        }
+        .dropdown-menu {
+            position: static !important;
+            width: 100%;
+            margin: 0.25rem 0 0 !important;
+            padding: $commonUnit / 2;
+            box-shadow: none;
+            border: none !important;
+
+            &.show {
+                background-color: $tertiary;
+                display: block;
+                transform: translate(0) !important;
+                transition: all 1s linear !important;
+
+                .dropdown-item:hover {
+                    background-color: $dark;
                 }
             }
         }
@@ -968,7 +990,49 @@ header {
         }
     }
 }
+// documents
+.documents {
+    .documentCard {
+        background-color: $white;
+        height: 100%;
+        display: block;
+        padding: $commonUnit;
+        border: $commonBorder;
+        border-radius: $cardRadius;
 
+        figure {
+            @extend .flex-center;
+            margin: 0 0 $commonUnit / 2 !important;
+            // min-height: 25rem;
+            // max-height: 25rem;
+            img {
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: contain;
+                display: block;
+                margin: 0 auto;
+                border-radius: $cardRadius;
+            }
+        }
+
+        h6 {
+            font-size: $xLarge;
+            text-align: center;
+            margin: $commonUnit 0;
+        }
+        .btnGroup {
+            gap: $commonUnit / 4;
+            .btn {
+                font-size: $small !important;
+                flex-grow: 1;
+                padding: $commonUnit / 3 !important;
+            }
+        }
+        &:hover {
+            box-shadow: $cardShadow;
+        }
+    }
+}
 //   Footer {
 footer {
     background: $dark;
