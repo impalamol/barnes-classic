@@ -52,12 +52,12 @@ $currentPage = 'circulars';
                                             <figure>
                                                 <img src="assets/media/pdf.svg" alt="documents">
                                             </figure>
-                                            <h6>Circlular 1</h6>
+                                            <h6>Circular 1</h6>
                                             <div class="btnGroup">
-                                                <a href="assets/media/documents/circlular.pdf" target="_blank"
+                                                <a href="assets/media/documents/circular.pdf" target="_blank"
                                                     class="btn btn-outline-primary btn-sm"><i
                                                         class="ph-duotone ph-eye"></i> View</a>
-                                                <a href="assets/media/documents/circlular.pdf" download
+                                                <a href="assets/media/documents/circular.pdf" download
                                                     class="btn btn-primary btn-sm"><i
                                                         class="ph-duotone ph-download"></i> Download</a>
                                             </div>
@@ -68,12 +68,12 @@ $currentPage = 'circulars';
                                             <figure>
                                                 <img src="assets/media/pdf.svg" alt="documents">
                                             </figure>
-                                            <h6>Circlular 2</h6>
+                                            <h6>Circular 2</h6>
                                             <div class="btnGroup">
-                                                <a href="assets/media/documents/circlular.pdf" target="_blank"
+                                                <a href="assets/media/documents/circular.pdf" target="_blank"
                                                     class="btn btn-outline-primary btn-sm"><i
                                                         class="ph-duotone ph-eye"></i> View</a>
-                                                <a href="assets/media/documents/circlular.pdf" download
+                                                <a href="assets/media/documents/circular.pdf" download
                                                     class="btn btn-primary btn-sm"><i
                                                         class="ph-duotone ph-download"></i> Download</a>
                                             </div>
@@ -84,12 +84,12 @@ $currentPage = 'circulars';
                                             <figure>
                                                 <img src="assets/media/pdf.svg" alt="documents">
                                             </figure>
-                                            <h6>Circlular 3</h6>
+                                            <h6>Circular 3</h6>
                                             <div class="btnGroup">
-                                                <a href="assets/media/documents/circlular.pdf" target="_blank"
+                                                <a href="assets/media/documents/circular.pdf" target="_blank"
                                                     class="btn btn-outline-primary btn-sm"><i
                                                         class="ph-duotone ph-eye"></i> View</a>
-                                                <a href="assets/media/documents/circlular.pdf" download
+                                                <a href="assets/media/documents/circular.pdf" download
                                                     class="btn btn-primary btn-sm"><i
                                                         class="ph-duotone ph-download"></i> Download</a>
                                             </div>
@@ -100,12 +100,12 @@ $currentPage = 'circulars';
                                             <figure>
                                                 <img src="assets/media/pdf.svg" alt="documents">
                                             </figure>
-                                            <h6>Circlular 4</h6>
+                                            <h6>Circular 4</h6>
                                             <div class="btnGroup">
-                                                <a href="assets/media/documents/circlular.pdf" target="_blank"
+                                                <a href="assets/media/documents/circular.pdf" target="_blank"
                                                     class="btn btn-outline-primary btn-sm"><i
                                                         class="ph-duotone ph-eye"></i> View</a>
-                                                <a href="assets/media/documents/circlular.pdf" download
+                                                <a href="assets/media/documents/circular.pdf" download
                                                     class="btn btn-primary btn-sm"><i
                                                         class="ph-duotone ph-download"></i> Download</a>
                                             </div>
