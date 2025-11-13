@@ -1758,6 +1758,16 @@ header .notification .notificationsContainer .notificationListContainer .notific
   box-shadow: rgba(0, 11, 32, 0.1) 0rem 0.4375rem 1.8125rem 0rem;
 }
 
+.testimonials .testimonialCard {
+  background-color: #ffffff;
+  padding: 0.75rem;
+  border: 0.0625rem solid #e4e4e4;
+  border-radius: 1rem;
+}
+.testimonials .testimonialCard video {
+  max-width: 100% !important;
+}
+
 footer {
   background: #000b20;
   position: relative;

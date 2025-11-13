@@ -1033,6 +1033,19 @@ header {
         }
     }
 }
+// Testimonials
+.testimonials {
+    .testimonialCard {
+        background-color: $white;
+        padding: $commonUnit / 2;
+        border: $commonBorder;
+        border-radius: $cardRadius;
+
+        video {
+            max-width: 100% !important;
+        }
+    }
+}
 //   Footer {
 footer {
     background: $dark;
