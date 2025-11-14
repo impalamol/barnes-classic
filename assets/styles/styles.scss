@@ -1,5 +1,4 @@
-// @import url("https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=Manrope:wght@200..800&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=Poppins:wght@200..800&display=swap");
 @import "default.scss";
 
 .progressLoader {
@@ -232,7 +231,6 @@ header {
                 font-size: $medium;
                 text-transform: uppercase;
                 color: $white;
-                background-color: rgba($color: $white, $alpha: 0.1);
                 padding: $commonUnit / 2 $commonUnit;
                 margin-bottom: $commonUnit / 4;
                 border-radius: $cardRadius / 3;
@@ -243,6 +241,12 @@ header {
                 span {
                     margin-left: $commonUnit / 3;
                 }
+            }
+            .nav-link {
+                background-color: rgba($color: $primary, $alpha: 0.15);
+            }
+            .dropdown-item {
+                background-color: rgba($color: $white, $alpha: 0.15);
             }
         }
         .dropdown-menu {
