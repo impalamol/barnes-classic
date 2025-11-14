@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=Manrope:wght@200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 /* Box sizing rules */
 *,
 *::before,
@@ -254,7 +254,7 @@ html {
 }
 
 body {
-  font-family: "Manrope", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 1rem;
   font-weight: 500;
   font-style: normal;
@@ -292,7 +292,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Bona Nova", serif;
+  font-family: "PT Serif", serif;
   font-style: normal;
   font-optical-sizing: auto;
   font-weight: 700;
@@ -633,7 +633,6 @@ section:not(.hero) .wrapper .contentCard .note p span {
   margin: 0;
 }
 .pgHeader .pgTitle h2 {
-  font-family: "Bona Nova SC", serif;
   font-size: 2.625rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -650,6 +649,9 @@ section:not(.hero) .wrapper .contentCard .note p span {
   background-color: rgba(0, 113, 191, 0.1);
   padding: 0.375rem 0.75rem;
   border-radius: 0.3333333333rem;
+}
+.pgHeader .pgTitle hr {
+  margin-bottom: 0 !important;
 }
 .pgHeader.centered {
   margin-left: auto;
@@ -1554,8 +1556,8 @@ header .notification .notificationsContainer .notificationListContainer .notific
   transform: translate(-50%, -50%);
   transition: transform 0.3s cubic-bezier(0.19, 1, 0.22, 1);
   pointer-events: none;
-  width: 250px;
-  height: 250px;
+  width: 15.625rem;
+  height: 15.625rem;
 }
 .videoSection .playBtn h3 {
   font-size: 1.5rem;
@@ -1657,7 +1659,7 @@ header .notification .notificationsContainer .notificationListContainer .notific
   height: 100%;
   display: block;
   padding: 0.75rem;
-  border: 2px outset #0071bf;
+  border: 0.125rem outset #0071bf;
   border-radius: 1rem;
 }
 .barnicles .barnicleCard figure {
@@ -1768,6 +1770,58 @@ header .notification .notificationsContainer .notificationListContainer .notific
   max-width: 100% !important;
 }
 
+.gridGallery {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  grid-auto-rows: 1rem auto;
+}
+.gridGallery figure {
+  overflow: hidden;
+  position: relative;
+  margin: 0 !important;
+}
+.gridGallery figure img {
+  opacity: 1;
+  transition: linear 1s;
+  width: 100% !important;
+}
+.gridGallery figure img[data-src] {
+  opacity: 0;
+}
+.gridGallery figure:hover img {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+.gridGallery figure .projectCaption {
+  position: absolute;
+  left: 0;
+  bottom: 1.25rem;
+  content: "";
+  z-index: 2;
+  min-width: 80%;
+  padding: 1.5625rem 1.5625rem 1.5625rem 0.9375rem;
+  background-color: #000b20;
+  transform: translateX(-110%);
+  transition: all 0.4s;
+  display: none;
+}
+.gridGallery figure .projectCaption span {
+  color: #0071bf;
+}
+.gridGallery figure .projectCaption h4 {
+  font-size: 1.25rem;
+  color: #ffffff;
+  margin: 0;
+}
+.gridGallery figure:hover .projectCaption {
+  transform: translateX(0%);
+}
+
+img.mfp-img {
+  height: 100% !important;
+}
+
 footer {
   background: #000b20;
   position: relative;
@@ -1786,7 +1840,7 @@ footer::after {
   opacity: 0.1;
 }
 footer .footerContent {
-  padding: 50px 50px 0;
+  padding: 3.125rem 3.125rem 0;
 }
 footer .footerContent .footerCard {
   position: relative;
@@ -1799,7 +1853,7 @@ footer .footerContent .footerCard .footerLogo {
   height: 100%;
 }
 footer .footerContent .footerCard .footerLogo img {
-  max-width: 150px !important;
+  max-width: 9.375rem !important;
   margin: auto;
 }
 footer .footerContent .footerCard h6 {
@@ -1814,7 +1868,7 @@ footer .footerContent .footerCard h6::after {
   bottom: -1.5rem;
   left: 0;
   width: 100%;
-  height: 2px;
+  height: 0.125rem;
   content: "";
   z-index: 2;
   background: url(../media/stroke.svg) no-repeat;
@@ -1854,9 +1908,9 @@ footer .copyright {
   z-index: 4;
   background: linear-gradient(132.78deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.02) 100%);
   -webkit-backdrop-filter: blur(commonUnit/2);
-          backdrop-filter: blur(commonUnit/2);
+  backdrop-filter: blur(commonUnit/2);
   padding: 1.5rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 0.0625rem solid rgba(255, 255, 255, 0.1);
 }
 footer .copyright .copyrightContent {
   flex-wrap: wrap;
@@ -2146,7 +2200,7 @@ footer .copyright .copyrightContent .copyrightLinks {
 .downloads .downloadCard .downloadCardFooter .dropdown .dropdown-menu .dropend .dropdown-menu {
   top: 0;
   left: 100%;
-  margin-top: -1px;
+  margin-top: -0.0625rem;
 }
 @media (max-width: 1919.98px) {
   .downloads .downloadCard .downloadCardFooter .dropdown .dropdown-menu .dropend .dropdown-menu {

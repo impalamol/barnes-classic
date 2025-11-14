@@ -106,6 +106,86 @@
     });
 </script>
 <script>
+    $(document).ready(function () {
+        $('.popupGallery').magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            gallery: {
+                enabled: true,
+                navigateByImgClick: true,
+                preload: [0, 1] // Preload 1 image before and after the current one
+            },
+            keyboard: {
+                enabled: true,
+                left: true,
+                right: true,
+                escKey: true,
+                up: false,
+                down: false
+            },
+            navigation: {
+                arrowEl: true
+            },
+            mainClass: 'mfp-fade', // Add a smooth fade transition between slides
+            removalDelay: 300, // Delay removal to allow the fade-out effect
+        });
+    });
+</script>
+<script>
+    function resizeGridItem(item) {
+        grid = document.getElementsByClassName("gridGallery")[0];
+        rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
+        rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
+        rowSpan = Math.ceil((item.querySelector('figure').getBoundingClientRect().height + rowGap) / (rowHeight +
+            rowGap));
+        item.style.gridRowEnd = "span " + rowSpan;
+    }
+
+    function resizeAllGridItems() {
+        allItems = document.getElementsByClassName("item");
+        for (x = 0; x < allItems.length; x++) {
+            resizeGridItem(allItems[x]);
+        }
+    }
+
+    function resizeInstance(instance) {
+        item = instance.elements[0];
+        resizeGridItem(item);
+    }
+
+    window.onload = resizeAllGridItems();
+    window.addEventListener("resize", resizeAllGridItems);
+
+    allItems = document.getElementsByClassName("item");
+    for (x = 0; x < allItems.length; x++) {
+        imagesLoaded(allItems[x], resizeInstance);
+    }
+</script>
+<script>
+    (function () {
+        var elements = document.querySelectorAll('img[data-src]');
+        var index = 0;
+        var lazyLoad = function () {
+            if (index >= elements.length) return;
+            var item = elements[index];
+            if ((this.scrollY + this.innerHeight) > item.offsetTop) {
+                var src = item.getAttribute("data-src");
+                item.src = src;
+                item.addEventListener('load', function () {
+                    item.removeAttribute('data-src');
+                });
+                index++;
+                lazyLoad();
+            }
+        };
+        var init = function () {
+            window.addEventListener('scroll', lazyLoad);
+            lazyLoad();
+        };
+        return init();
+    })();
+</script>
+<script>
     var currentYear = new Date().getFullYear();
     document.getElementById("year").textContent = currentYear;
 </script>
