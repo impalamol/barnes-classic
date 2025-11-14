@@ -46,7 +46,7 @@ $currentPage = 'work-with-us';
                                         <hr>
                                     </div>
                                 </div>
-                                <h1>Barnes School & Junior College — Highlights 2024–25</h1>
+                                <h1>Barnes School & Junior College — Highlights 2024-25</h1>
 
                                 <h4>International English Olympiad 2024-25 Award Ceremony</h4>
                                 <p>What an unforgettable day it has been at Barnes School! The International English
@@ -316,7 +316,6 @@ $currentPage = 'work-with-us';
                                     Drawing; Nilanjan earned a medal in Debate. The camp instilled discipline,
                                     leadership, and patriotism among cadets.</p>
                             </div>
-
                             <div class="content">
                                 <h4>Inter-House Cultural Fest – Dance Competition</h4>
                                 <p>Held on 5th August 2025, this vibrant event saw stunning folk dances: Green House
@@ -413,6 +412,17 @@ $currentPage = 'work-with-us';
                                 <p>On 5th November, awards for English Proficiency, Discipline, and Cleanliness were
                                     presented to outstanding classes across Primary, Middle, and Senior School.</p>
                             </div>
+                            <nav aria-label="...">
+                                <ul class="pagination">
+                                    <li class="page-item"><a href="#" class="page-link">Previous</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2024-2025</a></li>
+                                    <li class="page-item active">
+                                        <a class="page-link" href="#" aria-current="page">2023-2024</a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">2022-2023</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                </ul>
+                            </nav>
                         </div>
                         <?php include 'includes/sidebar.php'; ?>
                     </div>
