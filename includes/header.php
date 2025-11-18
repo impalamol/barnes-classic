@@ -27,8 +27,8 @@
             <a class="navbar-brand" href="index">
                 <img src="assets/media/barnes-logo2.png" alt="Barnes School & Junior College">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#desktopMenu"
+                aria-controls="desktopMenu" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
@@ -39,12 +39,12 @@
                 </div>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 ">
-                        <li class="nav-item">
+                        <li class="nav-item d-none d-lg-block">
                             <a class="nav-link <?php echo ($currentPage === 'news') ? 'active' : ''; ?>"
                                 href="about">What's
                                 in the News </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item d-none d-lg-block">
                             <a class="nav-link <?php echo ($currentPage === 'school-calendar') ? 'active' : ''; ?>"
                                 href="school-calendar">School
                                 Calendar</a>
