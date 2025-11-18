@@ -517,16 +517,27 @@ header {
 }
 // Avatar Card
 .avatarCard {
+    @extend .flex-center-start;
+    flex-direction: column;
+    gap: 0;
     background-color: $primary;
     border-radius: $cardRadius;
     overflow: hidden;
-    border: none;
     position: relative;
+    height: 100%;
+    border: none;
+    figure,
+    .cardContent {
+        width: 100%;
+    }
     figure {
         margin: 0 !important;
         border-radius: 0 !important;
         position: relative;
 
+        img {
+            filter: grayscale(0.5);
+        }
         .videoBtn {
             position: absolute;
             top: 80%;
@@ -540,13 +551,14 @@ header {
     .cardContent {
         background-color: $dark;
         padding: $commonUnit;
+        flex-grow: 1;
 
         h3,
         p {
             margin-bottom: 0;
         }
         h3 {
-            font-size: $h5;
+            font-size: $large;
             font-weight: 600;
             color: $white;
         }
@@ -572,7 +584,12 @@ header {
             }
         }
         figure img {
-            transform: scale(1.1) rotate(2deg);
+            filter: grayscale(0);
+        }
+    }
+    &.highlight {
+        figure img {
+            filter: grayscale(0);
         }
     }
 }

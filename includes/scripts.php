@@ -186,6 +186,155 @@
     })();
 </script>
 <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const allCards = document.querySelectorAll(".avatarCard");
+        let highlighted = false;
+
+        const observer = new IntersectionObserver((entries) => {
+            const visibleCards = [];
+
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    visibleCards.push(entry.target);
+                }
+            });
+
+            if (!highlighted && visibleCards.length > 0) {
+                highlighted = true;
+                highlightVisibleCardsOnly(visibleCards);
+            }
+        }, {
+            threshold: 0.4 // card must be 40% visible
+        });
+
+        allCards.forEach(card => observer.observe(card));
+    });
+
+
+    function highlightVisibleCardsOnly(cards) {
+        let index = 0;
+
+        function next() {
+            if (index >= cards.length) return;
+
+            const card = cards[index];
+
+            card.classList.add("highlight");
+
+            setTimeout(() => {
+                card.classList.remove("highlight");
+                index++;
+                next();
+            }, 3000); // ⬅ 3 seconds highlight duration
+        }
+
+        next();
+    }
+
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const videoSection = document.querySelector('.videoSection');
+        const playBtn = document.querySelector('.playBtn');
+
+        videoSection.addEventListener('mousemove', function (e) {
+            const rect = videoSection.getBoundingClientRect();
+
+            // 1. Find the center point of the video section (in screen coordinates)
+            const centerX = rect.left + rect.width / 2;
+            const centerY = rect.top + rect.height / 2;
+
+            // 2. Calculate the cursor's offset from the center point
+            // This gives us the precise amount we need to translate the already-centered button.
+            const xOffset = e.clientX - centerX;
+            const yOffset = e.clientY - centerY;
+
+            // 3. Apply the offset using 'calc' to combine the initial -50% centering shift with the new pixel offset.
+            playBtn.style.transform = `translate(calc(-50% + ${xOffset}px), calc(-50% + ${yOffset}px))`;
+        });
+
+        // Reset position when mouse leaves section
+        videoSection.addEventListener('mouseleave', function () {
+            // Slower transition for a graceful return
+            playBtn.style.transition = 'transform 0.5s cubic-bezier(0.19, 1, 0.22, 1)';
+
+            // Return to the initial centered state
+            playBtn.style.transform = 'translate(-50%, -50%)';
+        });
+
+        // On mouseenter, reset the faster transition for tracking
+        videoSection.addEventListener('mouseenter', function () {
+            // Switch back to the faster tracking transition defined in CSS
+            playBtn.style.transition = 'transform 0.3s cubic-bezier(0.19, 1, 0.22, 1)';
+        });
+    });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+        const videoModal = document.getElementById('videoModal');
+        const youtubeIframe = document.getElementById('youtube-video');
+
+        // Store original video URL
+        const defaultSrc = youtubeIframe.getAttribute('src');
+
+        // When modal closes → stop video
+        videoModal.addEventListener('hidden.bs.modal', function () {
+            youtubeIframe.setAttribute('src', '');      // stop the video immediately
+            youtubeIframe.setAttribute('src', defaultSrc); // reload for next open
+        });
+
+    });
+</script>
+<script>
+    function enhanceTables(root = document) {
+        root.querySelectorAll('table').forEach(table => {
+
+            // Add table classes if not already present
+            table.classList.add('table', 'table-striped', 'table-bordered');
+
+            // If already wrapped, skip
+            if (table.parentElement.classList.contains('table-responsive')) return;
+
+            // Wrap inside .table-responsive
+            const wrapper = document.createElement('div');
+            wrapper.className = 'table-responsive';
+
+            table.parentNode.insertBefore(wrapper, table);
+            wrapper.appendChild(table);
+        });
+    }
+
+    // Run once for existing tables
+    enhanceTables();
+
+    // Observe ANY DOM changes anywhere in the page
+    const observer = new MutationObserver(mutations => {
+        mutations.forEach(m => {
+            m.addedNodes.forEach(node => {
+
+                if (node.nodeType !== 1) return; // Only elements
+
+                // If the added node IS a table
+                if (node.tagName === 'TABLE') {
+                    enhanceTables(node.parentElement);
+                }
+
+                // If the added node CONTAINS tables inside
+                if (node.querySelectorAll) {
+                    enhanceTables(node);
+                }
+            });
+        });
+    });
+
+    observer.observe(document.body, {
+        childList: true,
+        subtree: true
+    });
+
+</script>
+<script>
     var currentYear = new Date().getFullYear();
     document.getElementById("year").textContent = currentYear;
 </script>

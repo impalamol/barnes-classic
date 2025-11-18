@@ -261,22 +261,3 @@
         </ul>
     </div>
 </div>
-<!-- Modal -->
-<div class="modal fade" id="aboutVideo" tabindex="-1" aria-labelledby="aboutVideoLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="aboutVideoLabel">Video Title</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="ratio ratio-16x9">
-                    <iframe src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" title="YouTube video"
-                        allowfullscreen></iframe>
-                    <iframe id="youtubeIframe" width="100%" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
-                        title="YouTube video" frameborder="0" allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>

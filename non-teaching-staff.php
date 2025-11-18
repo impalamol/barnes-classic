@@ -49,7 +49,7 @@ $currentPage = 'non-teaching-staff';
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 mb-4">
+                                    <div class="col-12 col-md-12 col-lg-6 col-xl-4 col-xxl-4 mb-4">
                                         <div class="card avatarCard">
                                             <figure>
                                                 <img src="assets/media/avatars/avatar2.jpg" alt="">
@@ -60,7 +60,7 @@ $currentPage = 'non-teaching-staff';
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 mb-4">
+                                    <div class="col-12 col-md-12 col-lg-6 col-xl-4 col-xxl-4 mb-4">
                                         <div class="card avatarCard">
                                             <figure>
                                                 <img src="assets/media/avatars/avatar3.jpg" alt="">
