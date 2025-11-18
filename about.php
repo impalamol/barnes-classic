@@ -66,6 +66,63 @@ $currentPage = 'about';
                                     proud record, meting out distinguished educational service while catering to
                                     students from all castes and creed.</p>
                             </div>
+                            <div class="content ">
+                                <div class="pgHeader lefted">
+                                    <div class="pgTitle">
+                                        <h2>Why Barnes?</h2>
+                                    </div>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped">
+                                        <tbody>
+                                            <tr>
+                                                <td>Consistently achieving 100% academic results across disciplines.
+                                                </td>
+                                                <td>Rooted in tradition but also encouraging inclusive learning
+                                                    practices.
+                                                </td>
+                                                <td>A sprawling campus nestled in the scenic Sahyadri ranges of the
+                                                    Western
+                                                    Ghats.</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>Highly qualified and reputed faculties from all around.</td>
+                                                <td>Fosters instilling values in students that lasts a lifetime.</td>
+                                                <td>Spacious, comfortable, and well-supervised dormitories for both boys
+                                                    and
+                                                    girls.</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>Career counselling and mentorship programs to guide students toward
+                                                    their aspirations.</td>
+                                                <td>Multilingual education including French and Japanese to foster
+                                                    global
+                                                    competencies.</td>
+                                                <td>Smart classrooms and campus-wide Wi-Fi ensure a future-ready
+                                                    learning
+                                                    environment.</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>Our co-scholastic programs are designed to nurture creativity,
+                                                    leadership, collaboration, and personal growth.</td>
+                                                <td>Our Foreign Cultural Exchange Programs are designed to immerse
+                                                    students
+                                                    in diverse international environments, fostering empathy,
+                                                    adaptability,
+                                                    and global citizenship.</td>
+                                                <td>Strong performance in sports, with structured training and
+                                                    inter-school
+                                                    achievements.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>                                
+                                <p>This is just a snippet of what you can get for your child at Barnes. There’s much
+                                    more!</p>
+                            </div>
                         </div>
                         <?php include 'includes/sidebar.php'; ?>
                     </div>

@@ -38,7 +38,7 @@ body {
     font-size: $large;
     font-weight: 500;
     font-style: normal;
-    line-height: 2;
+    line-height: 2.2;
     letter-spacing: 0.0375rem;
     color: $gray;
     background-color: $white;
@@ -388,11 +388,13 @@ section:not(.hero) {
         @extend .flex-start-between;
         flex-wrap: wrap;
         gap: $commonUnit * 2;
+        overflow-x: visible !important;
         .contentCard {
             @extend .flex-start;
             flex-direction: column;
             gap: $commonUnit;
             flex-grow: 1;
+            width: 100%;
             .content {
                 flex-grow: 1;
                 width: 100%;
@@ -419,6 +421,28 @@ section:not(.hero) {
                 p {
                     text-align: justify;
                     text-align-last: left;
+                }
+                .table-responsive {
+                    width: 100% !important;
+                    overflow-x: auto !important;
+                    overflow-y: hidden;
+                    -webkit-overflow-scrolling: touch;
+
+                    .table {
+                        width: max-content;
+                        min-width: 600px;
+                        width: 100%;
+                        display: table !important;
+                        td,
+                        th {
+                            font-size: $medium;
+                            padding: $commonUnit;
+                        }
+                        &.table-striped > tbody > tr:nth-of-type(odd) > * {
+                            background-color: $light;
+                            --bs-table-bg-type: $light;
+                        }
+                    }
                 }
             }
             .note {

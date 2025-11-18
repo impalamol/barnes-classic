@@ -197,7 +197,7 @@ $currentPage = 'home';
         </section>
         <section class="videoSection"
             style="background: url('assets/media/video-bg.jpg') no-repeat center center / cover;" data-bs-toggle="modal"
-            data-bs-target="#aboutVideo">
+            data-bs-target="#videoModal">
             <div class="container">
                 <div class="row">
                     <div class="playBtn">
@@ -247,43 +247,7 @@ $currentPage = 'home';
 
     <?php include 'includes/footer.php'; ?>
     <?php include 'includes/scripts.php'; ?>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const videoSection = document.querySelector('.videoSection');
-            const playBtn = document.querySelector('.playBtn');
 
-            videoSection.addEventListener('mousemove', function (e) {
-                const rect = videoSection.getBoundingClientRect();
-
-                // 1. Find the center point of the video section (in screen coordinates)
-                const centerX = rect.left + rect.width / 2;
-                const centerY = rect.top + rect.height / 2;
-
-                // 2. Calculate the cursor's offset from the center point
-                // This gives us the precise amount we need to translate the already-centered button.
-                const xOffset = e.clientX - centerX;
-                const yOffset = e.clientY - centerY;
-
-                // 3. Apply the offset using 'calc' to combine the initial -50% centering shift with the new pixel offset.
-                playBtn.style.transform = `translate(calc(-50% + ${xOffset}px), calc(-50% + ${yOffset}px))`;
-            });
-
-            // Reset position when mouse leaves section
-            videoSection.addEventListener('mouseleave', function () {
-                // Slower transition for a graceful return
-                playBtn.style.transition = 'transform 0.5s cubic-bezier(0.19, 1, 0.22, 1)';
-
-                // Return to the initial centered state
-                playBtn.style.transform = 'translate(-50%, -50%)';
-            });
-
-            // On mouseenter, reset the faster transition for tracking
-            videoSection.addEventListener('mouseenter', function () {
-                // Switch back to the faster tracking transition defined in CSS
-                playBtn.style.transition = 'transform 0.3s cubic-bezier(0.19, 1, 0.22, 1)';
-            });
-        });
-    </script>
 </body>
 
 </html>
