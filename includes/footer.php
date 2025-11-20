@@ -45,9 +45,9 @@
                                 <i class="ph-duotone ph-envelope"></i>
                                 Email
                             </h5>
-                            <a href="mailto:info@chillmed.com">
+                            <span>
                                 <a href="mailto:administrator@barnesschool.in">administrator@barnesschool.in</a>
-                            </a>
+                            </span>
                         </div>
                     </div>
                 </div>

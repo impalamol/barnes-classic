@@ -219,10 +219,10 @@ textarea:not([rows]) {
 }
 @keyframes marquee {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-60%);
   }
 }
 /* Custom Scrollbar */
@@ -230,19 +230,14 @@ textarea:not([rows]) {
   width: 0.5rem;
 }
 
-::-webkit-scrollbar-track {
-  background: #343e45;
-}
-
 ::-webkit-scrollbar-thumb {
-  background: #f5f9fd;
-  border: 0.0625rem solid #e4e4e4;
+  background: #0071bf;
   border-radius: 0.25rem;
-  max-height: 3.125rem;
+  max-height: 100px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(0, 82.8272251309, 140);
+  background: rgb(0, 52.6544502618, 89);
 }
 
 html {
@@ -289,7 +284,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Bona Nova", serif;
+  font-family: "Sora", serif;
   font-style: normal;
   font-optical-sizing: auto;
   font-weight: 700;
@@ -596,27 +591,50 @@ section:not(.hero) .wrapper .contentCard .content p {
   -moz-text-align-last: left;
        text-align-last: left;
 }
+section:not(.hero) .wrapper .contentCard .content p:last-child {
+  margin-bottom: 0 !important;
+}
 section:not(.hero) .wrapper .contentCard .content .table-responsive {
   width: 100% !important;
   overflow-x: auto !important;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
+  margin-bottom: 1.5rem;
 }
 section:not(.hero) .wrapper .contentCard .content .table-responsive .table {
   width: -moz-max-content;
   width: max-content;
-  min-width: 600px;
   width: 100%;
   display: table !important;
+  margin: 0;
+  overflow: hidden;
 }
 section:not(.hero) .wrapper .contentCard .content .table-responsive .table td,
 section:not(.hero) .wrapper .contentCard .content .table-responsive .table th {
   font-size: 0.875rem;
-  padding: 1.5rem;
+  padding: 0.75rem 1.5rem;
+}
+section:not(.hero) .wrapper .contentCard .content .table-responsive .table > :not(caption) > * > * {
+  background-color: #000b20;
+  color: #ffffff;
+}
+section:not(.hero) .wrapper .contentCard .content .table-responsive .table.table-striped > tbody > tr:nth-of-type(odd) {
+  border-color: rgba(0, 11, 32, 0.2);
 }
 section:not(.hero) .wrapper .contentCard .content .table-responsive .table.table-striped > tbody > tr:nth-of-type(odd) > * {
-  background-color: #f5f9fd;
-  --bs-table-bg-type: $light;
+  color: #000b20;
+  background: linear-gradient(180deg, #f5f9fd 0%, #ffffff 100%);
+  --bs-table-bg-type: $dark;
+  border-color: rgba(0, 11, 32, 0.2);
+}
+section:not(.hero) .wrapper .contentCard .content .table-responsive .table.table-striped > tbody > tr:nth-of-type(even) {
+  border-color: rgba(0, 11, 32, 0.2);
+}
+section:not(.hero) .wrapper .contentCard .content .table-responsive .table.table-striped > tbody > tr:nth-of-type(even) > * {
+  color: #000b20;
+  background: linear-gradient(180deg, #ffffff 0%, #f5f9fd 100%);
+  --bs-table-bg-type: $dark;
+  border-color: rgba(0, 11, 32, 0.2);
 }
 section:not(.hero) .wrapper .contentCard .note {
   background-color: rgba(255, 165, 1, 0.1);
@@ -654,8 +672,7 @@ section:not(.hero) .wrapper .contentCard .note p span {
   margin: 0;
 }
 .pgHeader .pgTitle h2 {
-  font-family: "Bona Nova SC", serif;
-  font-size: 2.625rem;
+  font-size: 2.25rem;
   font-weight: 700;
   text-transform: uppercase;
   color: #0071bf;
@@ -674,6 +691,7 @@ section:not(.hero) .wrapper .contentCard .note p span {
 }
 .pgHeader .pgTitle hr {
   margin-bottom: 0 !important;
+  display: none;
 }
 .pgHeader.centered {
   margin-left: auto;

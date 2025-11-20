@@ -67,10 +67,39 @@ $currentPage = 'about';
                                     students from all castes and creed.</p>
                             </div>
                             <div class="content ">
-                                <div class="pgHeader lefted">
+                                <div class="pgHeader ">
                                     <div class="pgTitle">
                                         <h2>Why Barnes?</h2>
                                     </div>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-bordered">
+                                        <thead class="table-dark">
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Position</th>
+                                                <th>Department</th>
+                                                <th>Type (Boarding cum Day)</th>
+                                                
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Social Studies Teacher</td>
+                                                <td>Middle Section</td>
+                                                <td>Full-time</td>
+                                                
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Dance Teacher</td>
+                                                <td>-</td>
+                                                <td>Full-time</td>
+                                                
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                                 <div class="table-responsive">
                                     <table class="table table-bordered table-striped">
