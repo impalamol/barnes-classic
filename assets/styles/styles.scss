@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=Poppins:wght@200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100..800&display=swap");
 @import "default.scss";
 
 .progressLoader {
@@ -177,7 +177,7 @@ header {
             gap: $commonUnit / 2;
 
             .title {
-                font-size: $large;
+                font-size: $medium;
                 font-weight: 600;
                 color: $white;
                 @extend .flex-center-start;
@@ -204,6 +204,11 @@ header {
                         i {
                             color: $warning;
                         }
+                    }
+                }
+                &:hover {
+                    .notificationList {
+                        animation: none !important;
                     }
                 }
             }
@@ -455,6 +460,8 @@ header {
     }
     .sidebarContent {
         padding: $commonUnit;
+        max-height: calc(100vh - 15.625rem);
+        overflow: auto;
 
         li {
             .nav-link {
@@ -564,6 +571,7 @@ header {
         }
         p {
             font-size: $medium;
+            text-align: left !important;
             color: $white;
             opacity: 0.5;
             &.department {
@@ -641,7 +649,7 @@ header {
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(180deg, rgba($color: $dark, $alpha: 0.2) 40%, $light 86%);
+            background: linear-gradient(180deg, rgba($color: $dark, $alpha: 0.2) 0%, $dark 86%);
             content: "";
             z-index: 0;
         }
@@ -741,9 +749,14 @@ header {
             }
 
             p {
+                font-size: $medium;
                 opacity: 0;
                 max-height: 0;
+                -webkit-line-clamp: 4;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
                 overflow: hidden;
+                text-overflow: ellipsis;
                 margin-top: $commonUnit / 2;
                 transition:
                     opacity 0.3s ease-out,
@@ -1069,6 +1082,58 @@ header {
     }
 }
 // Gallery
+.albums {
+    .albumCard {
+        background-color: $white;
+        padding: $commonUnit;
+        border: $commonBorder;
+        border-radius: $cardRadius;
+        display: block;
+
+        .cover {
+            margin: 0 0 $commonUnit / 2 !important;
+            border-radius: $cardRadius / 2 !important;
+            img {
+                width: 100% !important;
+                height: 15rem !important;
+                object-fit: cover;
+            }
+        }
+        .albumThumbs {
+            @extend .flex-center-start;
+            gap: $commonUnit / 2;
+
+            figure {
+                width: calc(25% - (#{$commonUnit} / 3));
+                margin: 0 !important;
+                border-radius: $cardRadius / 2 !important;
+
+                img {
+                    width: 100% !important;
+                    height: 5rem !important;
+                    object-fit: cover;
+                    border-radius: $cardRadius / 4 !important;
+                }
+            }
+        }
+        .albumMeta {
+            @extend .flex-center-between;
+            gap: $commonUnit;
+            margin-top: $commonUnit;
+            h3 {
+                font-size: $large;
+                -webkit-line-clamp: 1;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-width: 80%;
+                margin: 0;
+            }
+        }
+    }
+}
+// Grid Gallery
 .gridGallery {
     display: grid;
     grid-gap: 1rem;
@@ -1205,11 +1270,14 @@ footer {
                     margin-bottom: $commonUnit / 3;
                 }
                 span {
+                    display: block;
+                    margin-left: 1.875rem;
+                }
+                span {
                     color: $white;
                     margin-bottom: 0;
                 }
-                p,
-                a {
+                p {
                     margin: 0;
                 }
             }

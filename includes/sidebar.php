@@ -3,7 +3,7 @@
         <h3>About Us</h3>
     </div>
     <div class="sidebarContent">
-        <ul class="nav flex-column gap-3">
+        <ul class="nav flex-column gap-2">
             <li class="nav-item">
                 <a class="nav-link <?php echo ($currentPage === 'about') ? 'active' : ''; ?>" aria-current="page" href="about">
                     <i class="ph-duotone ph-church"></i>

@@ -14,19 +14,18 @@ $cardShadow: rgba($dark, 0.1) 0rem 0.4375rem 1.8125rem 0rem;
     width: 0.5rem;
 }
 
-::-webkit-scrollbar-track {
-    background: $gray;
-}
+// ::-webkit-scrollbar-track {
+//     background: $light;
+// }
 
 ::-webkit-scrollbar-thumb {
-    background: $light;
-    border: $commonBorder;
+    background: $primary;
     border-radius: 0.25rem;
-    max-height: 3.125rem;
+    max-height: 100px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: darken($primary, 10%);
+    background: darken($primary, 20%);
 }
 
 html {
@@ -76,7 +75,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Bona Nova", serif;
+    font-family: "Sora", serif;
     font-style: normal;
     font-optical-sizing: auto;
     font-weight: 700;
@@ -421,26 +420,51 @@ section:not(.hero) {
                 p {
                     text-align: justify;
                     text-align-last: left;
+                    &:last-child {
+                        margin-bottom: 0 !important;
+                    }
                 }
                 .table-responsive {
                     width: 100% !important;
                     overflow-x: auto !important;
                     overflow-y: hidden;
                     -webkit-overflow-scrolling: touch;
+                    margin-bottom: $commonUnit;
 
                     .table {
                         width: max-content;
-                        min-width: 600px;
+                        // min-width: 600px;
                         width: 100%;
                         display: table !important;
+                        margin: 0;
+                        overflow: hidden;
                         td,
                         th {
                             font-size: $medium;
-                            padding: $commonUnit;
+                            padding: $commonUnit/2 $commonUnit;
                         }
-                        &.table-striped > tbody > tr:nth-of-type(odd) > * {
-                            background-color: $light;
-                            --bs-table-bg-type: $light;
+                        & > :not(caption) > * > * {
+                            background-color: $dark;
+                            color: $white;
+                        }
+                        &.table-striped > tbody > tr:nth-of-type(odd) {
+                            border-color: rgba($color: $dark, $alpha: 0.2);
+
+                            & > * {
+                                color: $dark;
+                                background: linear-gradient(180deg, $light 0%, $white 100%);
+                                --bs-table-bg-type: $dark;
+                                border-color: rgba($color: $dark, $alpha: 0.2);
+                            }
+                        }
+                        &.table-striped > tbody > tr:nth-of-type(even) {
+                            border-color: rgba($color: $dark, $alpha: 0.2);
+                            & > * {
+                                color: $dark;
+                                background: linear-gradient(180deg, $white 0%, $light 100%);
+                                --bs-table-bg-type: $dark;
+                                border-color: rgba($color: $dark, $alpha: 0.2);
+                            }
                         }
                     }
                 }
@@ -488,8 +512,8 @@ section:not(.hero) {
             margin: 0;
         }
         h2 {
-            font-family: "Bona Nova SC", serif;
-            font-size: $h3;
+            // font-family: "Bona Nova SC", serif;
+            font-size: $h4;
             font-weight: 700;
             text-transform: uppercase;
             color: $primary;
@@ -509,6 +533,7 @@ section:not(.hero) {
         }
         hr {
             margin-bottom: 0 !important;
+            display: none;
         }
     }
     &.centered {

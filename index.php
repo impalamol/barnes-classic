@@ -15,7 +15,7 @@ $currentPage = 'home';
 </head>
 
 <body>
-    <!-- <?php include 'includes/loader.php'; ?> -->
+    <?php include 'includes/loader.php'; ?>
     <?php include 'includes/header.php'; ?>
 
     <main>
@@ -188,8 +188,25 @@ $currentPage = 'home';
                                     </div>
                                 </div>
                             </div>
+                            <div class="swiper-slide">
+                                <div class="departmentCard">
+                                    <figure>
+                                        <img src="assets/media/departments/activities.jpg" alt="Activities">
+                                    </figure>
+                                    <div class="departmentContent">
+                                        <h3>Activities</h3>
+                                        <p>Teaching is not limited to textbooks and blackboards. With our School
+                                            activities, learning becomes an interesting and enjoyable exercise. There
+                                            are lots of different School activities for all kind of choices which
+                                            includes Guitar, Piano, other musical instruments, Western dance, Indian
+                                            dance and many more.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
                     </div>
 
                 </div>

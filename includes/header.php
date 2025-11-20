@@ -93,169 +93,170 @@
         <ul class="navbar-nav justify-content-end flex-grow-1">
 
             <li class="nav-item">
-                <a class="nav-link <?php echo ($currentPage === 'home') ? 'active' : ''; ?>" href="index">Home</a>
+            <a class="nav-link <?php echo ($currentPage === 'home') ? 'active' : ''; ?>" href="index">Home</a>
             </li>
 
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle <?php echo ($currentPage === 'about') ? 'active' : ''; ?>" href="#"
-                    data-bs-toggle="dropdown" aria-expanded="false">About us</a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="who-we-are">Who we are</a></li>
-                    <li><a class="dropdown-item" href="history">History</a></li>
-                    <li><a class="dropdown-item" href="vision-mission">Vision & Mission</a></li>
-                    <li><a class="dropdown-item" href="presidents-desk">President’s Desk</a></li>
-                    <li><a class="dropdown-item" href="principals-desk">Principal’s Desk</a></li>
-                    <li><a class="dropdown-item" href="school-management">School Management</a></li>
-                    <li><a class="dropdown-item" href="student-council">Student Council</a></li>
-                    <li><a class="dropdown-item" href="teaching-staff">Teaching Staff</a></li>
-                    <li><a class="dropdown-item" href="non-teaching-staff">Non-teaching staff</a></li>
-                </ul>
+            <a class="nav-link dropdown-toggle <?php echo ($currentPage === 'about') ? 'active' : ''; ?>" href="#"
+                data-bs-toggle="dropdown" aria-expanded="false">About us</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item <?php echo ($currentPage === 'who-we-are') ? 'active' : ''; ?>"
+                     href="who-we-are">Who we are</a></li>
+                <li><a class="dropdown-item <?php echo ($currentPage === 'history') ? 'active' : ''; ?>" href="history">History</a></li>
+                <li><a class="dropdown-item <?php echo ($currentPage === 'vision-mission') ? 'active' : ''; ?>" href="vision-mission">Vision & Mission</a></li>
+                <li><a class="dropdown-item <?php echo ($currentPage === 'presidents-desk') ? 'active' : ''; ?>" href="presidents-desk">President’s Desk</a></li>
+                <li><a class="dropdown-item <?php echo ($currentPage === 'principals-desk') ? 'active' : ''; ?>" href="principals-desk">Principal’s Desk</a></li>
+                <li><a class="dropdown-item <?php echo ($currentPage === 'school-management') ? 'active' : ''; ?>" href="school-management">School Management</a></li>
+                <li><a class="dropdown-item <?php echo ($currentPage === 'student-council') ? 'active' : ''; ?>" href="student-council">Student Council</a></li>
+                <li><a class="dropdown-item <?php echo ($currentPage === 'teaching-staff') ? 'active' : ''; ?>" href="teaching-staff">Teaching Staff</a></li>
+                <li><a class="dropdown-item <?php echo ($currentPage === 'non-teaching-staff') ? 'active' : ''; ?>" href="non-teaching-staff">Non-teaching staff</a></li>
+            </ul>
             </li>
 
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle <?php echo ($currentPage === 'admissions') ? 'active' : ''; ?>"
-                    href="index" data-bs-toggle="dropdown" aria-expanded="false">Admissions</a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="admission-process">Admission Process</a></li>
-                    <li><a class="dropdown-item" href="apply-to-barnes">Apply To Barnes</a></li>
-                    <li><a class="dropdown-item" href="school-visit">Apply for school visit</a></li>
-                    <li><a class="dropdown-item" href="fees-structure">Fees Structure</a></li>
-                    <li><a class="dropdown-item" href="testimonial">Testimonial</a></li>
-                </ul>
+            <a class="nav-link dropdown-toggle <?php echo ($currentPage === 'admissions') ? 'active' : ''; ?>"
+                href="index" data-bs-toggle="dropdown" aria-expanded="false">Admissions</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item <?php echo ($currentPage === 'admission-process') ? 'active' : ''; ?>" href="admission-process">Admission Process</a></li>
+                <li><a class="dropdown-item <?php echo ($currentPage === 'apply-to-barnes') ? 'active' : ''; ?>" href="apply-to-barnes">Apply To Barnes</a></li>
+                <li><a class="dropdown-item <?php echo ($currentPage === 'school-visit') ? 'active' : ''; ?>" href="school-visit">Apply for school visit</a></li>
+                <li><a class="dropdown-item <?php echo ($currentPage === 'fees-structure') ? 'active' : ''; ?>" href="fees-structure">Fees Structure</a></li>
+                <li><a class="dropdown-item <?php echo ($currentPage === 'testimonial') ? 'active' : ''; ?>" href="testimonial">Testimonial</a></li>
+            </ul>
             </li>
 
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle <?php echo ($currentPage === 'academics') ? 'active' : ''; ?>"
-                    href="#" data-bs-toggle="dropdown" aria-expanded="false">Academics</a>
+            <a class="nav-link dropdown-toggle <?php echo ($currentPage === 'academics') ? 'active' : ''; ?>"
+                href="#" data-bs-toggle="dropdown" aria-expanded="false">Academics</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item <?php echo ($currentPage === 'day-scholar') ? 'active' : ''; ?>" href="day-scholar">Day Scholar</a></li>
+                <li class="dropdown-submenu">
+                <a class="dropdown-item dropdown-toggle <?php echo ($currentPage === 'boarder') ? 'active' : ''; ?>" href="#">Boarder</a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="day-scholar">Day Scholar</a></li>
-                    <li class="dropdown-submenu">
-                        <a class="dropdown-item dropdown-toggle" href="#">Boarder</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="routine">Routine</a></li>
-                            <li><a class="dropdown-item" href="rules">Rules</a></li>
-                            <li><a class="dropdown-item" href="in-charges">In charges</a></li>
-                            <li><a class="dropdown-item" href="houses">Houses</a></li>
-                            <li><a class="dropdown-item" href="meal">Meal</a></li>
-                        </ul>
-                    </li>
+                    <li><a class="dropdown-item <?php echo ($currentPage === 'routine') ? 'active' : ''; ?>" href="routine">Routine</a></li>
+                    <li><a class="dropdown-item <?php echo ($currentPage === 'rules') ? 'active' : ''; ?>" href="rules">Rules</a></li>
+                    <li><a class="dropdown-item <?php echo ($currentPage === 'in-charges') ? 'active' : ''; ?>" href="in-charges">In charges</a></li>
+                    <li><a class="dropdown-item <?php echo ($currentPage === 'houses') ? 'active' : ''; ?>" href="houses">Houses</a></li>
+                    <li><a class="dropdown-item <?php echo ($currentPage === 'meal') ? 'active' : ''; ?>" href="meal">Meal</a></li>
                 </ul>
+                </li>
+            </ul>
             </li>
 
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle <?php echo ($currentPage === 'examinations') ? 'active' : ''; ?>"
-                    href="#" data-bs-toggle="dropdown" aria-expanded="false">Examinations</a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="examination-skims">Examination Skims</a></li>
-                    <li><a class="dropdown-item" href="schedule">Schedule</a></li>
-                    <li><a class="dropdown-item" href="circulars">Circulars</a></li>
-                    <li><a class="dropdown-item" href="results">Results</a></li>
-                </ul>
+            <a class="nav-link dropdown-toggle <?php echo ($currentPage === 'examinations') ? 'active' : ''; ?>"
+                href="#" data-bs-toggle="dropdown" aria-expanded="false">Examinations</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item <?php echo ($currentPage === 'examination-skims') ? 'active' : ''; ?>" href="examination-skims">Examination Skims</a></li>
+                <li><a class="dropdown-item <?php echo ($currentPage === 'schedule') ? 'active' : ''; ?>" href="schedule">Schedule</a></li>
+                <li><a class="dropdown-item <?php echo ($currentPage === 'circulars') ? 'active' : ''; ?>" href="circulars">Circulars</a></li>
+                <li><a class="dropdown-item <?php echo ($currentPage === 'results') ? 'active' : ''; ?>" href="results">Results</a></li>
+            </ul>
             </li>
 
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle <?php echo ($currentPage === 'achievements') ? 'active' : ''; ?>"
-                    href="#" data-bs-toggle="dropdown" aria-expanded="false">Achievements</a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="post-achievements">Post Achievements</a></li>
-                    <li><a class="dropdown-item" href="present-achievements">Present Achievements</a></li>
-                    <li><a class="dropdown-item" href="achievements-results">Results</a></li>
-                </ul>
+            <a class="nav-link dropdown-toggle <?php echo ($currentPage === 'achievements') ? 'active' : ''; ?>"
+                href="#" data-bs-toggle="dropdown" aria-expanded="false">Achievements</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item <?php echo ($currentPage === 'post-achievements') ? 'active' : ''; ?>" href="post-achievements">Post Achievements</a></li>
+                <li><a class="dropdown-item <?php echo ($currentPage === 'present-achievements') ? 'active' : ''; ?>" href="present-achievements">Present Achievements</a></li>
+                <li><a class="dropdown-item <?php echo ($currentPage === 'achievements-results') ? 'active' : ''; ?>" href="achievements-results">Results</a></li>
+            </ul>
             </li>
 
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle <?php echo ($currentPage === 'gallery') ? 'active' : ''; ?>" href="#"
-                    data-bs-toggle="dropdown" aria-expanded="false">Gallery</a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="photo-gallery">Photo Gallery</a></li>
-                    <li><a class="dropdown-item" href="video-gallery">Video Gallery</a></li>
-                </ul>
+            <a class="nav-link dropdown-toggle <?php echo ($currentPage === 'gallery') ? 'active' : ''; ?>" href="#"
+                data-bs-toggle="dropdown" aria-expanded="false">Gallery</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item <?php echo ($currentPage === 'photo-gallery') ? 'active' : ''; ?>" href="photo-gallery">Photo Gallery</a></li>
+                <li><a class="dropdown-item <?php echo ($currentPage === 'video-gallery') ? 'active' : ''; ?>" href="video-gallery">Video Gallery</a></li>
+            </ul>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="barnicles">Down the memory lane(Barnicles)</a>
+            <a class="nav-link <?php echo ($currentPage === 'barnicles') ? 'active' : ''; ?>" href="barnicles">Down the memory lane(Barnicles)</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="alumni">Alumni</a>
+            <a class="nav-link <?php echo ($currentPage === 'alumni') ? 'active' : ''; ?>" href="alumni">Alumni</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="we-in-the-print">We in the print</a>
+            <a class="nav-link <?php echo ($currentPage === 'we-in-the-print') ? 'active' : ''; ?>" href="we-in-the-print">We in the print</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link <?php echo ($currentPage === 'news') ? 'active' : ''; ?>" href="about">What's in the
-                    News</a>
+            <a class="nav-link <?php echo ($currentPage === 'news') ? 'active' : ''; ?>" href="about">What's in the
+                News</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link <?php echo ($currentPage === 'school-calendar') ? 'active' : ''; ?>"
-                    href="products">School Calendar</a>
+            <a class="nav-link <?php echo ($currentPage === 'school-calendar') ? 'active' : ''; ?>"
+                href="products">School Calendar</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="tenders">Tenders</a>
+            <a class="nav-link <?php echo ($currentPage === 'tenders') ? 'active' : ''; ?>" href="tenders">Tenders</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="work-with-us">Work with us</a>
+            <a class="nav-link <?php echo ($currentPage === 'work-with-us') ? 'active' : ''; ?>" href="work-with-us">Work with us</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="quick-payment">Quick Payment</a>
+            <a class="nav-link <?php echo ($currentPage === 'quick-payment') ? 'active' : ''; ?>" href="quick-payment">Quick Payment</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="publications">Publications</a>
+            <a class="nav-link <?php echo ($currentPage === 'publications') ? 'active' : ''; ?>" href="publications">Publications</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="student-corner">Student Corner</a>
+            <a class="nav-link <?php echo ($currentPage === 'student-corner') ? 'active' : ''; ?>" href="student-corner">Student Corner</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="case-studies">Case studies</a>
+            <a class="nav-link <?php echo ($currentPage === 'case-studies') ? 'active' : ''; ?>" href="case-studies">Case studies</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="school-tour">School Tour</a>
+            <a class="nav-link <?php echo ($currentPage === 'school-tour') ? 'active' : ''; ?>" href="school-tour">School Tour</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="inquiry-forms">Inquiry Forms</a>
+            <a class="nav-link <?php echo ($currentPage === 'inquiry-forms') ? 'active' : ''; ?>" href="inquiry-forms">Inquiry Forms</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="whatsapp-button">WhatsApp Button</a>
+            <a class="nav-link <?php echo ($currentPage === 'whatsapp-button') ? 'active' : ''; ?>" href="whatsapp-button">WhatsApp Button</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="call-button">Call Button</a>
+            <a class="nav-link <?php echo ($currentPage === 'call-button') ? 'active' : ''; ?>" href="call-button">Call Button</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="request-call-back">Request call back feature</a>
+            <a class="nav-link <?php echo ($currentPage === 'request-call-back') ? 'active' : ''; ?>" href="request-call-back">Request call back feature</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="blogs">Blogs</a>
+            <a class="nav-link <?php echo ($currentPage === 'blogs') ? 'active' : ''; ?>" href="blogs">Blogs</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="vlogs">Vlogs</a>
+            <a class="nav-link <?php echo ($currentPage === 'vlogs') ? 'active' : ''; ?>" href="vlogs">Vlogs</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="privacy-policy">Privacy Policy</a>
+            <a class="nav-link <?php echo ($currentPage === 'privacy-policy') ? 'active' : ''; ?>" href="privacy-policy">Privacy Policy</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="school-rules">School rules</a>
+            <a class="nav-link <?php echo ($currentPage === 'school-rules') ? 'active' : ''; ?>" href="school-rules">School rules</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="contact-us">Contact Us (With how to reach us)</a>
+            <a class="nav-link <?php echo ($currentPage === 'contact-us') ? 'active' : ''; ?>" href="contact-us">Contact Us (With how to reach us)</a>
             </li>
 
         </ul>

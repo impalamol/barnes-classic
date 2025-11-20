@@ -13,6 +13,120 @@
 <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
 
 <script>
+    'use strict';
+
+    document.addEventListener('DOMContentLoaded', function () {
+
+        /* Progress loader using native image loading events */
+        (function () {
+            const progressBar = document.querySelector('.progress-bar');
+            const loader = document.querySelector('.progressLoader');
+
+            if (!progressBar || !loader) return;
+
+            const setProgress = (p) => {
+                const pct = Math.min(100, Math.max(0, Math.round(p)));
+                progressBar.style.width = pct + '%';
+                if (progressBar.parentElement) {
+                    progressBar.parentElement.setAttribute('aria-valuenow', pct);
+                }
+            };
+
+            const hideLoader = () => {
+                // Ensure progress is 100% before hiding
+                setProgress(100);
+
+                // Use a short delay before fading out
+                setTimeout(() => {
+                    loader.style.transition = 'opacity 300ms ease';
+                    loader.style.opacity = '0';
+                    setTimeout(() => {
+                        loader.style.display = 'none';
+                    }, 350);
+                }, 100);
+            };
+
+            // --- Image Loading Logic ---
+
+            // Get all images (excluding the logo in .loaderContent, which loads fast)
+            const images = document.querySelectorAll('img:not(.loaderContent img)');
+            const totalImages = images.length;
+            let loadedCount = 0;
+
+            // If there are no images to track, hide the loader immediately
+            if (totalImages === 0) {
+                return hideLoader();
+            }
+
+            // Simple incremental progress while waiting for images
+            let incrementalProgress = 0;
+            const maxIncrementalProgress = 90; // Stop incremental at 90%
+
+            // **ADJUSTED SPEED HERE:** 56ms ensures the 0-90% animation takes a minimum of 5 seconds (90 steps * 56ms = 5040ms)
+            const ANIMATION_SPEED_MS = 56;
+
+            const incrementalInterval = setInterval(() => {
+                if (incrementalProgress < maxIncrementalProgress) {
+                    setProgress(++incrementalProgress);
+                } else {
+                    clearInterval(incrementalInterval);
+                }
+            }, ANIMATION_SPEED_MS);
+
+            const updateProgress = () => {
+                loadedCount++;
+
+                // Calculate real progress based on loaded images
+                let realProgress = (loadedCount / totalImages) * 100;
+
+                // Use the greater of incrementalProgress (up to 90) or realProgress
+                let finalProgress = Math.max(Math.min(incrementalProgress, maxIncrementalProgress), realProgress);
+
+                setProgress(finalProgress);
+
+                if (loadedCount === totalImages) {
+                    clearInterval(incrementalInterval);
+                    hideLoader();
+                }
+            };
+
+            // Attach load and error listeners to each image
+            images.forEach(img => {
+                // Check if the image is already complete (from cache)
+                if (img.complete) {
+                    updateProgress();
+                    return;
+                }
+
+                // Add listeners for images not yet loaded
+                img.addEventListener('load', updateProgress);
+                img.addEventListener('error', updateProgress); // Treat error as loaded to prevent hang
+            });
+
+            // Fallback Timeout: If images fail to trigger events, ensure the loader eventually hides.
+            window.addEventListener('load', () => {
+                // If all images haven't loaded after the full page load event, hide the loader
+                if (loadedCount < totalImages) {
+                    clearInterval(incrementalInterval);
+                    hideLoader();
+                }
+            });
+
+            const maxLoadTime = 10000; // 10 seconds timeout is still a good failsafe
+            setTimeout(() => {
+                if (loadedCount < totalImages) {
+                    console.warn('Loader timeout reached. Forcing loader hide.');
+                    clearInterval(incrementalInterval);
+                    hideLoader();
+                }
+            }, maxLoadTime);
+
+
+        })();
+
+    });
+</script>
+<script>
     var swiper = new Swiper(".heroSwiper", {
         autoplay: {
             delay: 5000,
@@ -56,8 +170,13 @@
     });
     // Swiper Gallery
     var swiper = new Swiper(".departmentSwiper", {
+        loop: true,
         slidesPerView: 4,
         spaceBetween: 30,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
@@ -334,6 +453,24 @@
     });
 
 </script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const container = document.querySelector(".sidebarContent");
+        const activeLink = container?.querySelector(".nav-link.active");
+
+        if (container && activeLink) {
+            // Scroll so active link is centered in the view
+            const offsetTop = activeLink.offsetTop;
+            const containerHeight = container.clientHeight;
+
+            container.scrollTo({
+                top: offsetTop - containerHeight / 2,
+                behavior: "instant" // or "smooth"
+            });
+        }
+    });
+</script>
+
 <script>
     var currentYear = new Date().getFullYear();
     document.getElementById("year").textContent = currentYear;
