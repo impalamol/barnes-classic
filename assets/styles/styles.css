@@ -1945,6 +1945,26 @@ img.mfp-img {
   height: 100% !important;
 }
 
+.academics .avatarCard {
+  overflow: hidden;
+}
+.academics .avatarCard figure {
+  position: relative;
+  overflow: hidden;
+  margin: 0 !important;
+}
+.academics .avatarCard figure .percentage {
+  font-size: 1rem;
+  line-height: normal;
+  color: #ffffff;
+  position: absolute;
+  top: 75%;
+  right: 0;
+  background-color: #000b20;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
 footer {
   background: #000b20;
   position: relative;

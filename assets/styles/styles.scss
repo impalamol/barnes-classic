@@ -1194,6 +1194,30 @@ header {
 img.mfp-img {
     height: 100% !important;
 }
+// Academics Achievements
+
+.academics {
+    .avatarCard {
+        overflow: hidden;
+        figure {
+            position: relative;
+            overflow: hidden;
+            margin: 0 !important;
+
+            .percentage {
+                font-size: $large;
+                line-height: normal;
+                color: $white;
+                position: absolute;
+                top: 75%;
+                right: 0;
+                background-color: $dark;
+                padding: $commonUnit / 2 $commonUnit;
+                border-radius: $cardRadius / 4 0 0 $cardRadius / 4;
+            }
+        }
+    }
+}
 //   Footer {
 footer {
     background: $dark;
