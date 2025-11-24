@@ -127,7 +127,7 @@ $currentPage = 'home';
                     <div class="swiper departmentSwiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <div class="departmentCard">
+                                <a href="day-at-barnes" class="departmentCard">
                                     <figure>
                                         <img src="assets/media/departments/education.jpg" alt="Education">
                                     </figure>
@@ -139,10 +139,10 @@ $currentPage = 'home';
                                             the same.
                                         </p>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                             <div class="swiper-slide">
-                                <div class="departmentCard">
+                                <a href="day-at-barnes" class="departmentCard">
                                     <figure>
                                         <img src="assets/media/departments/accommodation.jpg" alt="Accommodation">
                                     </figure>
@@ -154,10 +154,10 @@ $currentPage = 'home';
                                             been decorated to create a homely-feel.
                                         </p>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                             <div class="swiper-slide">
-                                <div class="departmentCard">
+                                <a href="day-at-barnes" class="departmentCard">
                                     <figure>
                                         <img src="assets/media/departments/sports.jpg" alt="Sports">
                                     </figure>
@@ -170,10 +170,10 @@ $currentPage = 'home';
 
                                         </p>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                             <div class="swiper-slide">
-                                <div class="departmentCard">
+                                <a href="day-at-barnes" class="departmentCard">
                                     <figure>
                                         <img src="assets/media/departments/activities.jpg" alt="Activities">
                                     </figure>
@@ -186,10 +186,10 @@ $currentPage = 'home';
                                             dance and many more.
                                         </p>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                             <div class="swiper-slide">
-                                <div class="departmentCard">
+                                <a href="day-at-barnes" class="departmentCard">
                                     <figure>
                                         <img src="assets/media/departments/activities.jpg" alt="Activities">
                                     </figure>
@@ -202,13 +202,12 @@ $currentPage = 'home';
                                             dance and many more.
                                         </p>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
                         <div class="swiper-button-next"></div>
                         <div class="swiper-button-prev"></div>
                     </div>
-
                 </div>
             </div>
         </section>
