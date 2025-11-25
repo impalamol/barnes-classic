@@ -1848,10 +1848,11 @@ header .notification .notificationsContainer .notificationListContainer:hover .n
 
 .albums .albumCard {
   background-color: #ffffff;
+  display: block;
+  height: 100%;
   padding: 1.5rem;
   border: 0.0625rem solid #e4e4e4;
   border-radius: 1rem;
-  display: block;
 }
 .albums .albumCard .cover {
   margin: 0 0 0.75rem !important;
