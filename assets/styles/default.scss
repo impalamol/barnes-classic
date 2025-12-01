@@ -37,8 +37,8 @@ body {
     font-size: $large;
     font-weight: 500;
     font-style: normal;
-    line-height: 2.2;
-    letter-spacing: 0.0375rem;
+    line-height: 1.8;
+    // letter-spacing: 0.0375rem;
     color: $gray;
     background-color: $white;
     position: relative;
@@ -75,7 +75,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Sora", serif;
+    font-family: "Be Vietnam Pro", sans-serif;
     font-style: normal;
     font-optical-sizing: auto;
     font-weight: 700;
@@ -517,7 +517,7 @@ section:not(.hero) {
             font-weight: 700;
             text-transform: uppercase;
             color: $primary;
-            margin: 0;
+            // margin: 0;
 
             span {
                 color: $tertiary;

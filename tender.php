@@ -53,6 +53,8 @@ $currentPage = 'tender';
                                     <td>Sr. No.</td>
                                     <td>Undertaking Project</td>
                                     <td>Published On</td>
+                                    <td>Valid Till</td>
+                                    <td>View Notification</td>
                                     <td>Submit Application</td>
                                 </tr>
                             </thead>
@@ -61,6 +63,8 @@ $currentPage = 'tender';
                                     <td>01</td>
                                     <td>Construction of Compound Wall</td>
                                     <td>30/10/2025</td>
+                                    <td>10/11/2025</td>
+                                    <td><a href="" class="btn btn-link" download>Download Notice </a></td>
                                     <td><a href="" class="btn btn-primary" data-bs-toggle="modal"
                                             data-bs-target="#tenderForm">Apply Now
                                             <i class="ph-duotone ph-arrow-bend-right-up"></i></a></td>
@@ -69,6 +73,8 @@ $currentPage = 'tender';
                                     <td>02</td>
                                     <td>Construction of internal asphalt road</td>
                                     <td>29/10/2025</td>
+                                    <td>05/11/2025</td>
+                                    <td><a href="" class="btn btn-link" download>Download Notice </a></td>
                                     <td><a href="" class="btn btn-primary" data-bs-toggle="modal"
                                             data-bs-target="#tenderForm">Apply Now
                                             <i class="ph-duotone ph-arrow-bend-right-up"></i></a></td>

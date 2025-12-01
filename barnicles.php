@@ -38,57 +38,57 @@ $currentPage = 'Barnicles';
         <section class="barnicles">
             <div class="container">
                 <div class="row">
-                    <div class="wrapper flex-wrap flex-lg-nowrap">
-                        <div class="contentCard">
-                            <div class="content">
-                                <div class="pgHeader">
-                                    <div class="pgTitle">
-                                        <h6 class="pgSection">Barnes Barnicles</h6>
-                                        <h2>Barnicles</h2>
-                                        <p>Sometimes you never know the value of moment until it becomes a memory</p>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mb-3">
-                                        <a href="#" target="_blank" class="barnicleCard">
-                                            <figure>
-                                                <img src="assets/media/barnicles/barnicle1.jpg"
-                                                    alt="barnicles">
-                                            </figure>
-                                            <h6>Barnicle 2025</h6>
-                                        </a>
-                                    </div>
-                                    <div class="col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mb-3">
-                                        <a href="#" target="_blank" class="barnicleCard">
-                                            <figure>
-                                                <img src="assets/media/barnicles/barnicle2.jpg"
-                                                    alt="barnicles">
-                                            </figure>
-                                            <h6>Barnicle 2024</h6>
-                                        </a>
-                                    </div>
-                                    <div class="col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mb-3">
-                                        <a href="#" target="_blank" class="barnicleCard">
-                                            <figure>
-                                                <img src="assets/media/barnicles/barnicle3.jpg"
-                                                    alt="barnicles">
-                                            </figure>
-                                            <h6>Barnicle 2023</h6>
-                                        </a>
-                                    </div>
-                                    <div class="col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mb-3">
-                                        <a href="#" target="_blank" class="barnicleCard">
-                                            <figure>
-                                                <img src="assets/media/barnicles/barnicle4.jpg"
-                                                    alt="barnicles">
-                                            </figure>
-                                            <h6>Barnicle 2022</h6>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="pgHeader">
+                        <div class="pgTitle">
+                            <h6 class="pgSection">Barnes Barnicles</h6>
+                            <h2>Barnicles</h2>
+                            <p>Sometimes you never know the value of moment until it becomes a memory</p>
                         </div>
                     </div>
+
+                    <div class="col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mb-3">
+                        <a href="#" target="_blank" class="barnicleCard">
+                            <figure>
+                                <img src="assets/media/barnicles/barnicle1.jpg" alt="barnicles">
+                            </figure>
+                            <h6>Barnicle 2025</h6>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mb-3">
+                        <a href="#" target="_blank" class="barnicleCard">
+                            <figure>
+                                <img src="assets/media/barnicles/barnicle2.jpg" alt="barnicles">
+                            </figure>
+                            <h6>Barnicle 2024</h6>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mb-3">
+                        <a href="#" target="_blank" class="barnicleCard">
+                            <figure>
+                                <img src="assets/media/barnicles/barnicle3.jpg" alt="barnicles">
+                            </figure>
+                            <h6>Barnicle 2023</h6>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mb-3">
+                        <a href="#" target="_blank" class="barnicleCard">
+                            <figure>
+                                <img src="assets/media/barnicles/barnicle4.jpg" alt="barnicles">
+                            </figure>
+                            <h6>Barnicle 2022</h6>
+                        </a>
+                    </div>
+                    <nav aria-label="...">
+                        <ul class="pagination justify-content-center mt-5">
+                            <li class="page-item"><a href="#" class="page-link">Previous</a></li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item active">
+                                <a class="page-link" href="#" aria-current="page">2</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </section>

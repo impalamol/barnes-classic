@@ -161,41 +161,115 @@ $currentPage = 'work-with-us';
                 </div>
             </div>
         </section>
-
-        <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal fade" id="careerModal" tabindex="-1" aria-labelledby="careerPopupLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-scrollable modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="videoModalLabel">Video Title</h5>
+                        <h1 class="modal-title fs-5" id="careerPopupLabel">Applying For : Senior UI/UX Designer</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body p-0">
-                        <div class="ratio ratio-16x9">
-                            <iframe id="youtube-video" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-lg-7 col-xl-7 col-xxl-7">
+                                <div class="careerPopupContent">
+                                    <h3>About the Role:</h3>
+                                    <p>As a Senior UI/UX Designer, you will play a crucial role in shaping the visual
+                                        and
+                                        interactive aspects of our digital products. You will collaborate closely with
+                                        product
+                                        managers, developers, and other designers to create intuitive, engaging, and
+                                        visually
+                                        appealing user interfaces.</p>
+                                    <h3>Responsibilities</h3>
+                                    <ul>
+                                        <li>Lead the design process for web and mobile applications, from initial
+                                            concept to
+                                            final
+                                            implementation.</li>
+                                        <li>Create wireframes, prototypes, and high-fidelity designs that effectively
+                                            communicate
+                                            design ideas and solutions.</li>
+                                        <li>Conduct user research and usability testing to gather feedback and iterate
+                                            on
+                                            designs.
+                                        </li>
+                                        <li>Collaborate with cross-functional teams, including product managers,
+                                            developers,
+                                            and
+                                            other designers, to ensure a cohesive and seamless user experience.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 col-xl-5 col-xxl-5">
+                                <div class="careerForm">
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-lg-12 col-xl-12 col-xxl-12 mb-3">
+                                                <div class="form-floating">
+                                                    <input type="text" id="fname" name="fname" class="form-control"
+                                                        placeholder="What is your name? *" required=""
+                                                        data-error="First Name is required." autocomplete="off">
+                                                    <label for="fName">Full Name *</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12 col-xl-12 col-xxl-12 mb-3">
+                                                <div class="form-floating">
+                                                    <input type="email" id="email" name="email" class="form-control"
+                                                        placeholder="Tell us your Email ID "
+                                                        data-error="Valid email is required." autocomplete="off">
+                                                    <label for="email">Email Address</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-12 col-xl-12 col-xxl-12 mb-3">
+                                                <div class="form-floating">
+                                                    <input name="mobile" id="mobile" type="tel" class="form-control"
+                                                        placeholder="Enter your mobile number" maxlength="10"
+                                                        data-error="Mobile No. is required." autocomplete="off">
+                                                    <label for="phone">Phone Number</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12 col-xl-12 col-xxl-12 mb-3">
+                                                <div class="form-floating">
+                                                    <input type="email" id="email" name="email" class="form-control"
+                                                        placeholder="Email " data-error="Valid email is required."
+                                                        autocomplete="off">
+                                                    <label for="email">Education</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12 col-xl-12 col-xxl-12 mb-3">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="inlineRadioOptions" id="experienced"
+                                                        value="I am Experienced">
+                                                    <label class="form-check-label" for="experienced">I am
+                                                        Experienced</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="inlineRadioOptions" id="fresher" value="I am Fresher">
+                                                    <label class="form-check-label" for="fresher">I am Fresher</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12 col-xl-12 col-xxl-12 mb-3">
+                                                <div class="formGroup">
+                                                    <input class="form-control" type="file" id="formFile">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <button type="submit" name="submit" id="submit"
+                                                    class="btn btn-primary">Submit</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="modal fade" id="highlightPopupModal" tabindex="-1" aria-labelledby="highlightPopupModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="highlightPopupModalLabel">Title</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <img src="assets/media/gallery/gallery.jpg" alt="Img Title" title="Img Title">
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <?php include 'includes/footer.php'; ?>
         <?php include 'includes/scripts.php'; ?>
 </body>
