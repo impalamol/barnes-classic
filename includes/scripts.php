@@ -472,6 +472,51 @@
 </script>
 
 <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Check if Intersection Observer is supported
+        if ('IntersectionObserver' in window) {
+            const images = document.querySelectorAll('img[data-src]');
+
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.removeAttribute('data-src');
+                        observer.unobserve(img);
+                    }
+                });
+            });
+
+            images.forEach(img => imageObserver.observe(img));
+        } else {
+            // Fallback for older browsers
+            const images = document.querySelectorAll('img[data-src]');
+            images.forEach(img => {
+                img.src = img.dataset.src;
+                img.removeAttribute('data-src');
+            });
+        }
+    });
+</script>
+<script>
+    var swiper = new Swiper(".collaborationSwiper", {
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        loop: true,
+        slidesPerView: 4,
+        spaceBetween: 10,
+        breakpoints: {
+            0: { slidesPerView: 2 },
+            576: { slidesPerView: 2 },
+            768: { slidesPerView: 3 },
+            992: { slidesPerView: 4 }
+        }
+    });
+</script>
+<script>
     var currentYear = new Date().getFullYear();
     document.getElementById("year").textContent = currentYear;
 </script>

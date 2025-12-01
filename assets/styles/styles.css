@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 /* Box sizing rules */
 *,
 *::before,
@@ -73,7 +73,7 @@ textarea:not([rows]) {
   display: flex;
 }
 
-.flex-center, .contactUs .contactCard .contactChip .icon, .blogDetails .blogSidebar .sidebarContent .recentPost, .documents .documentCard figure, .barnicles .barnicleCard figure, .about figure, .hero .paginationContainer .navigation .swiper-button-next,
+.flex-center, .contactUs .contactCard .contactChip .icon, .blogDetails .blogSidebar .sidebarContent .recentPost, .documents .documentCard figure, .barnicles .barnicleCard figure, .collaborations .affilationCard .collaborationCard, .about .aboutImgContainer figure, .hero .paginationContainer .navigation .swiper-button-next,
 .hero .paginationContainer .navigation .swiper-button-prev, .hero .paginationContainer .navigation, .hero .heroSlide, .videoBtn, header .navbar .nav-item .nav-link, .progressLoader .loaderContent .imgContainer, .progressLoader, .searchModal .nrs, .searchModal .searchResult .resultItem a .productIcon img, .pgHeader.centered .pgTitle,
 .pgHeader.centered .pgSection, .pgHeader.centered {
   display: flex;
@@ -94,7 +94,7 @@ textarea:not([rows]) {
 }
 
 .flex-center-start, .contactUs .contactCard .contactChip, .blogDetails .blogSidebar .sidebarContent ul.blogTags,
-.blogDetails .blogSidebar .sidebarContent ol.blogTags, footer .copyright .copyrightContent .copyrightLinks, .albums .albumCard .albumThumbs, .academics .contentCard .content .subjectList, .videoSection, .avatarCard, .menu .menuContact .contactDetail .social, .menu .menuContact .contactDetail .contactNumbers, .menu, header .notification .notificationsContainer .notificationListContainer .notificationList, header .notification .notificationsContainer .title, header .notification .notificationsContainer, .topbar .topbarContent .quickLinks a, .topbar .topbarContent .quickLinks, .topbar .topbarContent .social, .searchModal .searchResult .resultItem a, .pgHeader, .btnGroup {
+.blogDetails .blogSidebar .sidebarContent ol.blogTags, footer .copyright .copyrightContent .copyrightLinks, .albums .albumCard .albumThumbs, .academics .contentCard .content .subjectList, .videoSection, .avatarCard, .menu .menuContact .contactDetail .social, .menu .menuContact .contactDetail .contactNumbers, .menu, header .notification .notificationsContainer .title, header .notification .notificationsContainer, .topbar .topbarContent .quickLinks a, .topbar .topbarContent .quickLinks, .topbar .topbarContent .social, .searchModal .searchResult .resultItem a, .pgHeader, .btnGroup {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -155,7 +155,7 @@ textarea:not([rows]) {
   justify-content: flex-end;
 }
 
-.flex-end-start {
+.flex-end-start, .about .aboutImgContainer {
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
@@ -253,8 +253,7 @@ body {
   font-size: 1rem;
   font-weight: 500;
   font-style: normal;
-  line-height: 2.2;
-  letter-spacing: 0.0375rem;
+  line-height: 1.8;
   color: #343e45;
   background-color: #ffffff;
   position: relative;
@@ -288,7 +287,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Sora", serif;
+  font-family: "Be Vietnam Pro", sans-serif;
   font-style: normal;
   font-optical-sizing: auto;
   font-weight: 700;
@@ -680,7 +679,6 @@ section:not(.hero) .wrapper .contentCard .note p span {
   font-weight: 700;
   text-transform: uppercase;
   color: #0071bf;
-  margin: 0;
 }
 .pgHeader .pgTitle h2 span {
   color: #fc6e30;
@@ -1115,21 +1113,35 @@ header .notification .notificationsContainer .notificationListContainer {
   overflow: hidden;
   flex-grow: 1;
 }
-header .notification .notificationsContainer .notificationListContainer .notificationList {
-  list-style-type: none;
-  margin: 0;
-  gap: 0.75rem;
+header .notification .notificationsContainer .notificationListContainer .marquee {
+  overflow: hidden;
+}
+header .notification .notificationsContainer .notificationListContainer .marquee .marqueeTrack {
+  display: flex;
+  width: 200%;
+  animation: marquee 18s linear infinite;
+}
+header .notification .notificationsContainer .notificationListContainer .marquee .marqueeTrack:hover {
+  animation-play-state: paused;
+}
+header .notification .notificationsContainer .notificationListContainer .marquee .marqueeGroup {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+  padding: 0 1rem;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+header .notification .notificationsContainer .notificationListContainer .notificationList a {
   white-space: nowrap;
-  animation: marquee 20s linear -20s infinite forwards;
-}
-header .notification .notificationsContainer .notificationListContainer .notificationList li {
   color: #ffffff;
-}
-header .notification .notificationsContainer .notificationListContainer .notificationList li i {
-  color: #ffa501;
-}
-header .notification .notificationsContainer .notificationListContainer:hover .notificationList {
-  animation: none !important;
+  text-decoration: none;
 }
 
 #desktopMenu {
@@ -1539,12 +1551,17 @@ header .notification .notificationsContainer .notificationListContainer:hover .n
   font-weight: 600;
 }
 
-.about figure {
+.about .aboutImgContainer {
+  gap: 2.25rem;
+}
+.about .aboutImgContainer figure {
+  position: relative;
+  flex-direction: column;
+  flex-grow: 1;
   height: 100%;
 }
-.about figure img {
-  max-width: 60% !important;
-  margin: auto;
+.about .aboutImgContainer figure .aboutImg {
+  width: 100% !important;
 }
 .about .pgHeader {
   margin: 0 !important;
@@ -1640,6 +1657,34 @@ header .notification .notificationsContainer .notificationListContainer:hover .n
   color: #ffffff;
   text-align: center;
   margin: 0;
+}
+
+.collaborations {
+  padding: 0 !important;
+}
+.collaborations .affilationCard {
+  padding: 4.5rem;
+}
+.collaborations .affilationCard.card1 {
+  background-color: rgba(0, 113, 191, 0.1);
+}
+.collaborations .affilationCard.card2 {
+  background-color: #f5f9fd;
+}
+.collaborations .affilationCard .collaborationCard {
+  background-color: #ffffff;
+  padding: 0.75rem;
+  border: 0.0625rem solid #e4e4e4;
+  border-radius: 0.5rem;
+  aspect-ratio: 1/1;
+  min-height: 7.5rem;
+}
+.collaborations .affilationCard .collaborationCard img {
+  max-width: 70% !important;
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: block;
+  margin: auto;
 }
 
 .aboutUs dl {
@@ -2629,4 +2674,29 @@ footer .copyright .copyrightContent .copyrightLinks {
   .scrollingTabs .nav-tabs::-webkit-scrollbar {
     display: none;
   }
+}
+#careerModal .modal-body {
+  overflow: visible;
+  display: flex;
+}
+#careerModal .careerForm,
+#careerModal .careerPopupContent {
+  padding: 2.5rem;
+  height: 100%;
+}
+#careerModal .careerPopupContent {
+  overflow-y: auto;
+  max-height: calc(100vh - 10rem);
+  flex: 1;
+}
+#careerModal .careerPopupContent h1,
+#careerModal .careerPopupContent h2,
+#careerModal .careerPopupContent h3,
+#careerModal .careerPopupContent h4,
+#careerModal .careerPopupContent h5,
+#careerModal .careerPopupContent h6 {
+  margin-bottom: 0.75rem;
+}
+#careerModal .careerForm {
+  background-color: #f5f9fd;
 }/*# sourceMappingURL=styles.css.map */

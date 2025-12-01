@@ -45,15 +45,17 @@ $currentPage = 'alumni';
                                     <div class="pgTitle">
                                         <h6 class="pgSection">Barnes Alumni</h6>
                                         <h2>Forever a Part of Barnes</h2>
-                                        <p>Celebrating the journeys, milestones, and lasting connections of those who once walked the halls of Barnes.</p>
+                                        <p>Celebrating the journeys, milestones, and lasting connections of those who
+                                            once walked the halls of Barnes.</p>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-12 col-md-12 col-lg-6 col-xl-4 col-xxl-4 mb-4">
+                                    <div class="col-12 col-md-12 col-lg-6 col-xl-3 col-xxl-3 mb-4">
                                         <a href="#" data-bs-toggle="modal" data-bs-target="#alumniModal"
                                             class="card avatarCard">
                                             <figure>
-                                                <img src="assets/media/alumni/anil-tipnis.jpg" alt="Anil Yashwant Tipnis">
+                                                <img src="assets/media/alumni/anil-tipnis.jpg"
+                                                    alt="Anil Yashwant Tipnis">
                                                 <button class="videoBtn">
                                                     <i class="ph-duotone ph-play"></i>
                                                 </button>
@@ -64,11 +66,12 @@ $currentPage = 'alumni';
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="col-12 col-md-12 col-lg-6 col-xl-4 col-xxl-4 mb-4">
+                                    <div class="col-12 col-md-12 col-lg-6 col-xl-3 col-xxl-3 mb-4">
                                         <a href="#" data-bs-toggle="modal" data-bs-target="#alumniModal"
                                             class="card avatarCard">
                                             <figure>
-                                                <img src="assets/media/alumni/karambir-singh.jpg" alt="Admiral Karambir Singh">
+                                                <img src="assets/media/alumni/karambir-singh.jpg"
+                                                    alt="Admiral Karambir Singh">
                                                 <button class="videoBtn">
                                                     <i class="ph-duotone ph-play"></i>
                                                 </button>
@@ -79,7 +82,7 @@ $currentPage = 'alumni';
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="col-12 col-md-12 col-lg-6 col-xl-4 col-xxl-4 mb-4">
+                                    <div class="col-12 col-md-12 col-lg-6 col-xl-3 col-xxl-3 mb-4">
                                         <a href="#" data-bs-toggle="modal" data-bs-target="#alumniModal"
                                             class="card avatarCard">
                                             <figure>
@@ -95,7 +98,29 @@ $currentPage = 'alumni';
                                         </a>
                                     </div>
                                 </div>
+                                <nav aria-label="...">
+                                    <ul class="pagination justify-content-center mt-5">
+                                        <li class="page-item"><a href="#" class="page-link">Previous</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item active">
+                                            <a class="page-link" href="#" aria-current="page">2</a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                    </ul>
+                                </nav>
                             </div>
+                            <nav aria-label="...">
+                                <ul class="pagination justify-content-center mt-5">
+                                    <li class="page-item"><a href="#" class="page-link">Previous</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item active">
+                                        <a class="page-link" href="#" aria-current="page">2</a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                </ul>
+                            </nav>
                         </div>
                     </div>
                 </div>

@@ -249,8 +249,7 @@ body {
   font-size: 1rem;
   font-weight: 500;
   font-style: normal;
-  line-height: 2.2;
-  letter-spacing: 0.0375rem;
+  line-height: 1.8;
   color: #343e45;
   background-color: #ffffff;
   position: relative;
@@ -284,7 +283,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Sora", serif;
+  font-family: "Be Vietnam Pro", sans-serif;
   font-style: normal;
   font-optical-sizing: auto;
   font-weight: 700;
@@ -676,7 +675,6 @@ section:not(.hero) .wrapper .contentCard .note p span {
   font-weight: 700;
   text-transform: uppercase;
   color: #0071bf;
-  margin: 0;
 }
 .pgHeader .pgTitle h2 span {
   color: #fc6e30;
