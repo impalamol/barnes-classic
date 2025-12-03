@@ -559,9 +559,6 @@ header {
         border-radius: 0 !important;
         position: relative;
 
-        img {
-            filter: grayscale(0.5);
-        }
         .videoBtn {
             position: absolute;
             top: 80%;
@@ -607,14 +604,6 @@ header {
                     color: $white;
                 }
             }
-        }
-        figure img {
-            filter: grayscale(0);
-        }
-    }
-    &.highlight {
-        figure img {
-            filter: grayscale(0);
         }
     }
 }

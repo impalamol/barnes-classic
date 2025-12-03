@@ -1432,9 +1432,6 @@ header .notification .notificationsContainer .notificationListContainer .notific
   border-radius: 0 !important;
   position: relative;
 }
-.avatarCard figure img {
-  filter: grayscale(0.5);
-}
 .avatarCard figure .videoBtn {
   position: absolute;
   top: 80%;
@@ -1475,12 +1472,6 @@ header .notification .notificationsContainer .notificationListContainer .notific
 }
 .avatarCard:hover .cardContent p.department {
   color: #ffffff;
-}
-.avatarCard:hover figure img {
-  filter: grayscale(0);
-}
-.avatarCard.highlight figure img {
-  filter: grayscale(0);
 }
 
 .hero .heroSlide {
