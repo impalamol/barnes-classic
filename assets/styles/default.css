@@ -352,9 +352,10 @@ input[type=number] {
 
 .btn {
   font-size: 0.875rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  white-space: nowrap;
+  padding: 1rem;
   transition: all 0.3s ease;
   border-radius: 0.2rem;
   transition: all 0.6s ease-in-out;
@@ -526,6 +527,9 @@ input[type=number] {
 .btn i {
   font-weight: normal !important;
 }
+.btn.btn-sm {
+  padding: 0.5rem;
+}
 
 .btnGroup {
   gap: 1.5rem;
@@ -539,7 +543,7 @@ hr {
 }
 
 section:not(.hero) {
-  padding: 6.25rem 0;
+  padding: 3.75rem 0;
   position: relative;
 }
 section:not(.hero):nth-child(odd) {
@@ -655,7 +659,7 @@ section:not(.hero) .wrapper .contentCard .note p span {
   gap: 1.5rem;
   position: relative;
   z-index: 2;
-  margin-bottom: 3rem;
+  margin-bottom: 2.25rem;
 }
 .pgHeader .pgTitle {
   flex-direction: column;
@@ -675,6 +679,7 @@ section:not(.hero) .wrapper .contentCard .note p span {
   font-weight: 700;
   text-transform: uppercase;
   color: #0071bf;
+  margin: 0;
 }
 .pgHeader .pgTitle h2 span {
   color: #fc6e30;
@@ -943,4 +948,38 @@ section:not(.hero) .wrapper .contentCard .note p span {
 .nav-tabs .nav-link.active, .nav-tabs .nav-link:hover {
   color: #ffffff;
   background-color: #0071bf;
+}
+
+.checkList {
+  padding: 0;
+  margin-bottom: 3rem;
+}
+.checkList li {
+  list-style-type: none;
+  margin-bottom: 0.75rem;
+  margin-left: 1.5em;
+  position: relative;
+}
+.checkList li:before, .checkList li::after {
+  font-family: "Phosphor-Duotone" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  color: #0071bf;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+  top: 0.4rem;
+  left: 0;
+  margin-left: -1.5em;
+}
+.checkList li::before {
+  content: "\e606";
+  opacity: 0.2;
+}
+.checkList li::after {
+  content: "\e607";
 }/*# sourceMappingURL=default.css.map */

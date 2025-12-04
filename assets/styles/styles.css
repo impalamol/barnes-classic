@@ -125,7 +125,7 @@ textarea:not([rows]) {
 }
 
 .flex-start, .blogDetails .blogSidebar .sidebarContent ul,
-.blogDetails .blogSidebar .sidebarContent ol, .menu .menuContact .contactDetail, .menu .mainMenu ul, .enquiryModal .modal-body form .btnGroup, .pgHeader .pgTitle, section:not(.hero) .wrapper .contentCard {
+.blogDetails .blogSidebar .sidebarContent ol, footer .footerContent .footerCard ul, .menu .menuContact .contactDetail, .menu .mainMenu ul, .enquiryModal .modal-body form .btnGroup, .pgHeader .pgTitle, section:not(.hero) .wrapper .contentCard {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -356,9 +356,10 @@ input[type=number] {
 
 .btn {
   font-size: 0.875rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  white-space: nowrap;
+  padding: 1rem;
   transition: all 0.3s ease;
   border-radius: 0.2rem;
   transition: all 0.6s ease-in-out;
@@ -530,6 +531,9 @@ input[type=number] {
 .btn i {
   font-weight: normal !important;
 }
+.btn.btn-sm {
+  padding: 0.5rem;
+}
 
 .btnGroup {
   gap: 1.5rem;
@@ -543,7 +547,7 @@ hr {
 }
 
 section:not(.hero) {
-  padding: 6.25rem 0;
+  padding: 3.75rem 0;
   position: relative;
 }
 section:not(.hero):nth-child(odd) {
@@ -659,7 +663,7 @@ section:not(.hero) .wrapper .contentCard .note p span {
   gap: 1.5rem;
   position: relative;
   z-index: 2;
-  margin-bottom: 3rem;
+  margin-bottom: 2.25rem;
 }
 .pgHeader .pgTitle {
   flex-direction: column;
@@ -679,6 +683,7 @@ section:not(.hero) .wrapper .contentCard .note p span {
   font-weight: 700;
   text-transform: uppercase;
   color: #0071bf;
+  margin: 0;
 }
 .pgHeader .pgTitle h2 span {
   color: #fc6e30;
@@ -947,6 +952,40 @@ section:not(.hero) .wrapper .contentCard .note p span {
 .nav-tabs .nav-link.active, .nav-tabs .nav-link:hover {
   color: #ffffff;
   background-color: #0071bf;
+}
+
+.checkList {
+  padding: 0;
+  margin-bottom: 3rem;
+}
+.checkList li {
+  list-style-type: none;
+  margin-bottom: 0.75rem;
+  margin-left: 1.5em;
+  position: relative;
+}
+.checkList li:before, .checkList li::after {
+  font-family: "Phosphor-Duotone" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  color: #0071bf;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+  top: 0.4rem;
+  left: 0;
+  margin-left: -1.5em;
+}
+.checkList li::before {
+  content: "\e606";
+  opacity: 0.2;
+}
+.checkList li::after {
+  content: "\e607";
 }
 
 .progressLoader {
@@ -1555,7 +1594,14 @@ header .notification .notificationsContainer .notificationListContainer .notific
   width: 100% !important;
 }
 .about .pgHeader {
+  padding-left: 3rem;
   margin: 0 !important;
+  height: 100%;
+}
+.about .pgHeader p {
+  text-align: justify;
+  -moz-text-align-last: left;
+       text-align-last: left;
 }
 
 .departments .departmentCard {
@@ -2025,7 +2071,6 @@ footer .footerContent {
 footer .footerContent .footerCard {
   position: relative;
   z-index: 2;
-  padding: 1.5rem;
   height: 100%;
 }
 footer .footerContent .footerCard .footerLogo {
@@ -2068,7 +2113,8 @@ footer .footerContent .footerCard .contactChip {
   margin-bottom: 1.5rem;
 }
 footer .footerContent .footerCard .contactChip h5 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 500;
   color: #ffffff;
   display: block;
   margin-bottom: 0.5rem;
@@ -2082,6 +2128,11 @@ footer .footerContent .footerCard .contactChip span {
   margin-bottom: 0;
 }
 footer .footerContent .footerCard .contactChip p {
+  margin: 0;
+}
+footer .footerContent .footerCard ul {
+  flex-direction: column;
+  gap: 0.75rem;
   margin: 0;
 }
 footer .copyright {

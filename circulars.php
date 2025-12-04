@@ -46,7 +46,73 @@ $currentPage = 'circulars';
                                         <h2>Circulars</h2>
                                     </div>
                                 </div>
-                                <div class="row">
+                                <div class="table-responsive">
+                                    <table class="align-middle">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-center">#</th>
+                                                <th>File Name</th>
+                                                <th>Size</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-center">1</td>
+                                                <td>School Circular 2024 01.pdf</td>
+                                                <td>2.5 MB</td>
+                                                <td>
+                                                    <a href="assets/media/documents/circular.pdf" target=" blank"
+                                                        class="btn btn-outline-primary btn-sm me-2"><i
+                                                            class="ph-duotone ph-eye"></i> View</a>
+                                                    <a href="assets/media/documents/circular.pdf" download
+                                                        class="btn  btn-primary btn-sm me-2"><i
+                                                            class="ph-duotone ph-download"></i> Download</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">2</td>
+                                                <td>Academic Calendar 2024.pdf</td>
+                                                <td>1.8 MB</td>
+                                                <td>
+                                                    <a href="assets/media/documents/circular.pdf" target=" blank"
+                                                        class="btn btn-outline-primary btn-sm me-2"><i
+                                                            class="ph-duotone ph-eye"></i> View</a>
+                                                    <a href="assets/media/documents/circular.pdf" download
+                                                        class="btn  btn-primary btn-sm me-2"><i
+                                                            class="ph-duotone ph-download"></i> Download</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">3</td>
+                                                <td>Admission Notice Jan2024.pdf</td>
+                                                <td>3.2 MB</td>
+                                                <td>
+                                                    <a href="assets/media/documents/circular.pdf" target=" blank"
+                                                        class="btn btn-outline-primary btn-sm me-2"><i
+                                                            class="ph-duotone ph-eye"></i> View</a>
+                                                    <a href="assets/media/documents/circular.pdf" download
+                                                        class="btn  btn-primary btn-sm me-2"><i
+                                                            class="ph-duotone ph-download"></i> Download</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">4</td>
+                                                <td>Exam Schedule Term2.pdf</td>
+                                                <td>2.1 MB</td>
+                                                <td>
+                                                    <a href="assets/media/documents/circular.pdf" target="_blank"
+                                                        class="btn btn-outline-primary btn-sm me-2"><i
+                                                            class="ph-duotone ph-eye"></i> View</a>
+                                                    <a href="assets/media/documents/circular.pdf" download
+                                                        class="btn  btn-primary btn-sm me-2"><i
+                                                            class="ph-duotone ph-download"></i> Download</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- <div class="row">
                                     <div class="col-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4 mb-3">
                                         <div class="documentCard">
                                             <figure>
@@ -55,10 +121,10 @@ $currentPage = 'circulars';
                                             <h6>Circular 1</h6>
                                             <div class="btnGroup">
                                                 <a href="assets/media/documents/circular.pdf" target="_blank"
-                                                    class="btn btn-outline-primary btn-sm"><i
+                                                    class="btn btn-outline-primary btn-sm me-2"><i
                                                         class="ph-duotone ph-eye"></i> View</a>
                                                 <a href="assets/media/documents/circular.pdf" download
-                                                    class="btn btn-primary btn-sm"><i
+                                                    class="btn  btn-primary btn-sm me-2"><i
                                                         class="ph-duotone ph-download"></i> Download</a>
                                             </div>
                                         </div>
@@ -71,10 +137,10 @@ $currentPage = 'circulars';
                                             <h6>Circular 2</h6>
                                             <div class="btnGroup">
                                                 <a href="assets/media/documents/circular.pdf" target="_blank"
-                                                    class="btn btn-outline-primary btn-sm"><i
+                                                    class="btn btn-outline-primary btn-sm me-2"><i
                                                         class="ph-duotone ph-eye"></i> View</a>
                                                 <a href="assets/media/documents/circular.pdf" download
-                                                    class="btn btn-primary btn-sm"><i
+                                                    class="btn  btn-primary btn-sm me-2"><i
                                                         class="ph-duotone ph-download"></i> Download</a>
                                             </div>
                                         </div>
@@ -87,10 +153,10 @@ $currentPage = 'circulars';
                                             <h6>Circular 3</h6>
                                             <div class="btnGroup">
                                                 <a href="assets/media/documents/circular.pdf" target="_blank"
-                                                    class="btn btn-outline-primary btn-sm"><i
+                                                    class="btn btn-outline-primary btn-sm me-2"><i
                                                         class="ph-duotone ph-eye"></i> View</a>
                                                 <a href="assets/media/documents/circular.pdf" download
-                                                    class="btn btn-primary btn-sm"><i
+                                                    class="btn  btn-primary btn-sm me-2"><i
                                                         class="ph-duotone ph-download"></i> Download</a>
                                             </div>
                                         </div>
@@ -103,15 +169,15 @@ $currentPage = 'circulars';
                                             <h6>Circular 4</h6>
                                             <div class="btnGroup">
                                                 <a href="assets/media/documents/circular.pdf" target="_blank"
-                                                    class="btn btn-outline-primary btn-sm"><i
+                                                    class="btn btn-outline-primary btn-sm me-2"><i
                                                         class="ph-duotone ph-eye"></i> View</a>
                                                 <a href="assets/media/documents/circular.pdf" download
-                                                    class="btn btn-primary btn-sm"><i
+                                                    class="btn  btn-primary btn-sm me-2"><i
                                                         class="ph-duotone ph-download"></i> Download</a>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <?php include 'includes/sidebar.php'; ?>

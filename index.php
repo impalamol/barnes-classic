@@ -89,7 +89,7 @@ $currentPage = 'home';
         <section class="about">
             <div class="container">
                 <div class="row">
-                    <div class="col-12 col-lg-5 col-xl-5 col-xxl-5 mb-3">
+                    <div class="col-12 col-lg-6 col-xl-6 col-xxl-6 mb-3">
                         <div class="aboutImgContainer">
                             <figure>
                                 <img src="assets/media/about1.png" alt="About" class="aboutImg">
@@ -99,7 +99,7 @@ $currentPage = 'home';
                             </figure>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-6 col-xl-6 col-xxl-6 offset-lg-1 offset-xl-1 offset-xxl-1">
+                    <div class="col-12 col-lg-6 col-xl-6 col-xxl-6">
                         <div class="pgHeader">
                             <div class="pgTitle">
                                 <h6 class="pgSection">Why Choose</h6>
@@ -113,7 +113,7 @@ $currentPage = 'home';
                                     through and the wonder still holds "Awkward cubs they were when first they came to
                                     school. Then they grew in stature, strong they grew in mind, till came the time for
                                     parting, when onward they would go as men to face the world!"</p>
-                                <p><a href="about" class="btn btn-primary">Read More</a></p>
+                                <p><a href="about" class="btn btn-primary">Read More <i class="ph-duotone ph-arrow-up-right"></i></a></p>
                             </div>
                         </div>
                     </div>
