@@ -71,22 +71,31 @@
                         <div class="marquee notificationList" aria-label="Notifications">
                             <div class="marqueeTrack">
                                 <div class="marqueeGroup">
-                                    <span><a href=""><i class="ph-duotone ph-info"></i> Admission Test on 10th October
+                                    <span><a href="notification-details"><i class="ph-duotone ph-info"></i> Admission
+                                            Test on 10th October
                                             2025</a></span>
-                                    <span><a href=""><i class="ph-duotone ph-info"></i> Join us for Open Day - 20th
+                                    <span><a href="notification-details"><i class="ph-duotone ph-info"></i> Join us for
+                                            Open Day - 20th
                                             September 2025</a></span>
-                                    <span><a href=""><i class="ph-duotone ph-info"></i> Updated Important Dates at a
+                                    <span><a href="notification-details"><i class="ph-duotone ph-info"></i> Updated
+                                            Important Dates at a
                                             Glance</a></span>
-                                    <span><a href=""><i class="ph-duotone ph-info"></i> Admission Test on 10th October
+                                    <span><a href="notification-details"><i class="ph-duotone ph-info"></i> Admission
+                                            Test on 10th October
                                             2025</a></span>
-                                    <span><a href=""><i class="ph-duotone ph-info"></i> Join us for Open Day - 20th
+                                    <span><a href="notification-details"><i class="ph-duotone ph-info"></i> Join us for
+                                            Open Day - 20th
                                             September 2025</a></span>
-                                    <span><a href=""><i class="ph-duotone ph-info"></i> Updated Important Dates at a
+                                    <span><a href="notification-details"><i class="ph-duotone ph-info"></i> Updated
+                                            Important Dates at a
                                             Glance</a></span>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <a href="notifications" class="btn btn-secondary">
+                        View all <i class="ph-duotone ph-arrow-up-right"></i>
+                    </a>
                 </div>
             </div>
         </div>

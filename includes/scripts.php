@@ -410,7 +410,7 @@
         root.querySelectorAll('table').forEach(table => {
 
             // Add table classes if not already present
-            table.classList.add('table', 'table-striped', 'table-bordered');
+            table.classList.add('table', 'table-striped', 'table-bordered', 'table-hover');
 
             // If already wrapped, skip
             if (table.parentElement.classList.contains('table-responsive')) return;

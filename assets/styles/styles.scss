@@ -718,7 +718,14 @@ header {
         }
     }
     .pgHeader {
+        padding-left: $commonUnit * 2;
         margin: 0 !important;
+        height: 100%;
+
+        p {
+            text-align: justify;
+            text-align-last: left;
+        }
     }
 }
 // Departments
@@ -794,7 +801,6 @@ header {
 }
 
 // Video
-
 .videoSection {
     @extend .flex-center-start;
     min-height: 80vh;
@@ -878,6 +884,7 @@ header {
         }
     }
 }
+// About Us
 .aboutUs {
     dl {
         margin-bottom: $commonUnit;
@@ -1236,8 +1243,8 @@ header {
 img.mfp-img {
     height: 100% !important;
 }
-// Academics Achievements
 
+// Academics Achievements
 .academics {
     .avatarCard {
         overflow: hidden;
@@ -1284,7 +1291,7 @@ footer {
         .footerCard {
             position: relative;
             z-index: 2;
-            padding: $commonUnit;
+            // padding: $commonUnit;
             height: 100%;
 
             .footerLogo {
@@ -1330,7 +1337,8 @@ footer {
             .contactChip {
                 margin-bottom: $commonUnit;
                 h5 {
-                    font-size: $h5;
+                    font-size: $h6;
+                    font-weight: 500;
                     color: $white;
                     display: block;
                     margin-bottom: $commonUnit / 3;
@@ -1346,6 +1354,12 @@ footer {
                 p {
                     margin: 0;
                 }
+            }
+            ul {
+                @extend .flex-start;
+                flex-direction: column;
+                gap: $commonUnit / 2;
+                margin: 0;
             }
         }
     }
@@ -1388,7 +1402,10 @@ footer {
 }
 
 // Pages Scss Starts
+// Notifications
+.notifications {
 
+}
 // Enquiry Modal
 .modal {
     .modal-header {
