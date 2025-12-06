@@ -171,8 +171,14 @@
     // Swiper Gallery
     var swiper = new Swiper(".departmentSwiper", {
         loop: true,
-        slidesPerView: 4,
+        slidesPerView: 1,
         spaceBetween: 30,
+        breakpoints: {
+            0: { slidesPerView: 1 },
+            576: { slidesPerView: 2 },
+            768: { slidesPerView: 3 },
+            992: { slidesPerView: 5 }
+        },
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",

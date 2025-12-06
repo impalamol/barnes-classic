@@ -63,10 +63,10 @@ $currentPage = 'circulars';
                                                 <td>2.5 MB</td>
                                                 <td>
                                                     <a href="assets/media/documents/circular.pdf" target=" blank"
-                                                        class="btn btn-outline-primary btn-sm me-2"><i
+                                                        class="btn btn-outline-primary btn-sm me-2 mb-2"><i
                                                             class="ph-duotone ph-eye"></i> View</a>
                                                     <a href="assets/media/documents/circular.pdf" download
-                                                        class="btn  btn-primary btn-sm me-2"><i
+                                                        class="btn  btn-primary btn-sm me-2 mb-2"><i
                                                             class="ph-duotone ph-download"></i> Download</a>
                                                 </td>
                                             </tr>
@@ -76,10 +76,10 @@ $currentPage = 'circulars';
                                                 <td>1.8 MB</td>
                                                 <td>
                                                     <a href="assets/media/documents/circular.pdf" target=" blank"
-                                                        class="btn btn-outline-primary btn-sm me-2"><i
+                                                        class="btn btn-outline-primary btn-sm me-2 mb-2"><i
                                                             class="ph-duotone ph-eye"></i> View</a>
                                                     <a href="assets/media/documents/circular.pdf" download
-                                                        class="btn  btn-primary btn-sm me-2"><i
+                                                        class="btn  btn-primary btn-sm me-2 mb-2"><i
                                                             class="ph-duotone ph-download"></i> Download</a>
                                                 </td>
                                             </tr>
@@ -89,10 +89,10 @@ $currentPage = 'circulars';
                                                 <td>3.2 MB</td>
                                                 <td>
                                                     <a href="assets/media/documents/circular.pdf" target=" blank"
-                                                        class="btn btn-outline-primary btn-sm me-2"><i
+                                                        class="btn btn-outline-primary btn-sm me-2 mb-2"><i
                                                             class="ph-duotone ph-eye"></i> View</a>
                                                     <a href="assets/media/documents/circular.pdf" download
-                                                        class="btn  btn-primary btn-sm me-2"><i
+                                                        class="btn  btn-primary btn-sm me-2 mb-2"><i
                                                             class="ph-duotone ph-download"></i> Download</a>
                                                 </td>
                                             </tr>
@@ -102,10 +102,10 @@ $currentPage = 'circulars';
                                                 <td>2.1 MB</td>
                                                 <td>
                                                     <a href="assets/media/documents/circular.pdf" target="_blank"
-                                                        class="btn btn-outline-primary btn-sm me-2"><i
+                                                        class="btn btn-outline-primary btn-sm me-2 mb-2"><i
                                                             class="ph-duotone ph-eye"></i> View</a>
                                                     <a href="assets/media/documents/circular.pdf" download
-                                                        class="btn  btn-primary btn-sm me-2"><i
+                                                        class="btn  btn-primary btn-sm me-2 mb-2"><i
                                                             class="ph-duotone ph-download"></i> Download</a>
                                                 </td>
                                             </tr>
@@ -121,10 +121,10 @@ $currentPage = 'circulars';
                                             <h6>Circular 1</h6>
                                             <div class="btnGroup">
                                                 <a href="assets/media/documents/circular.pdf" target="_blank"
-                                                    class="btn btn-outline-primary btn-sm me-2"><i
+                                                    class="btn btn-outline-primary btn-sm me-2 mb-2"><i
                                                         class="ph-duotone ph-eye"></i> View</a>
                                                 <a href="assets/media/documents/circular.pdf" download
-                                                    class="btn  btn-primary btn-sm me-2"><i
+                                                    class="btn  btn-primary btn-sm me-2 mb-2"><i
                                                         class="ph-duotone ph-download"></i> Download</a>
                                             </div>
                                         </div>
@@ -137,10 +137,10 @@ $currentPage = 'circulars';
                                             <h6>Circular 2</h6>
                                             <div class="btnGroup">
                                                 <a href="assets/media/documents/circular.pdf" target="_blank"
-                                                    class="btn btn-outline-primary btn-sm me-2"><i
+                                                    class="btn btn-outline-primary btn-sm me-2 mb-2"><i
                                                         class="ph-duotone ph-eye"></i> View</a>
                                                 <a href="assets/media/documents/circular.pdf" download
-                                                    class="btn  btn-primary btn-sm me-2"><i
+                                                    class="btn  btn-primary btn-sm me-2 mb-2"><i
                                                         class="ph-duotone ph-download"></i> Download</a>
                                             </div>
                                         </div>
@@ -153,10 +153,10 @@ $currentPage = 'circulars';
                                             <h6>Circular 3</h6>
                                             <div class="btnGroup">
                                                 <a href="assets/media/documents/circular.pdf" target="_blank"
-                                                    class="btn btn-outline-primary btn-sm me-2"><i
+                                                    class="btn btn-outline-primary btn-sm me-2 mb-2"><i
                                                         class="ph-duotone ph-eye"></i> View</a>
                                                 <a href="assets/media/documents/circular.pdf" download
-                                                    class="btn  btn-primary btn-sm me-2"><i
+                                                    class="btn  btn-primary btn-sm me-2 mb-2"><i
                                                         class="ph-duotone ph-download"></i> Download</a>
                                             </div>
                                         </div>
@@ -169,10 +169,10 @@ $currentPage = 'circulars';
                                             <h6>Circular 4</h6>
                                             <div class="btnGroup">
                                                 <a href="assets/media/documents/circular.pdf" target="_blank"
-                                                    class="btn btn-outline-primary btn-sm me-2"><i
+                                                    class="btn btn-outline-primary btn-sm me-2 mb-2"><i
                                                         class="ph-duotone ph-eye"></i> View</a>
                                                 <a href="assets/media/documents/circular.pdf" download
-                                                    class="btn  btn-primary btn-sm me-2"><i
+                                                    class="btn  btn-primary btn-sm me-2 mb-2"><i
                                                         class="ph-duotone ph-download"></i> Download</a>
                                             </div>
                                         </div>
