@@ -94,7 +94,7 @@ textarea:not([rows]) {
 }
 
 .flex-center-start, .contactUs .contactCard .contactChip, .blogDetails .blogSidebar .sidebarContent ul.blogTags,
-.blogDetails .blogSidebar .sidebarContent ol.blogTags, footer .copyright .copyrightContent .copyrightLinks, .albums .albumCard .albumThumbs, .academics .contentCard .content .subjectList, .videoSection, .avatarCard, .menu .menuContact .contactDetail .social, .menu .menuContact .contactDetail .contactNumbers, .menu, header .notification .notificationsContainer .title, header .notification .notificationsContainer, .topbar .topbarContent .quickLinks a, .topbar .topbarContent .quickLinks, .topbar .topbarContent .social, .searchModal .searchResult .resultItem a, .pgHeader, .btnGroup {
+.blogDetails .blogSidebar .sidebarContent ol.blogTags, footer .copyright .copyrightContent .copyrightLinks, .albums .albumCard .albumThumbs, .academics .contentCard .content .subjectList, .videoSection, .menu .menuContact .contactDetail .social, .menu .menuContact .contactDetail .contactNumbers, .menu, header .notification .notificationsContainer .title, header .notification .notificationsContainer, .topbar .topbarContent .quickLinks a, .topbar .topbarContent .quickLinks, .topbar .topbarContent .social, .searchModal .searchResult .resultItem a, .pgHeader, .btnGroup {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -125,7 +125,7 @@ textarea:not([rows]) {
 }
 
 .flex-start, .blogDetails .blogSidebar .sidebarContent ul,
-.blogDetails .blogSidebar .sidebarContent ol, footer .footerContent .footerCard ul, .menu .menuContact .contactDetail, .menu .mainMenu ul, .enquiryModal .modal-body form .btnGroup, .pgHeader .pgTitle, section:not(.hero) .wrapper .contentCard {
+.blogDetails .blogSidebar .sidebarContent ol, footer .footerContent .footerCard ul, .avatarCard, .menu .menuContact .contactDetail, .menu .mainMenu ul, .enquiryModal .modal-body form .btnGroup, .pgHeader .pgTitle, section:not(.hero) .wrapper .contentCard {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -673,7 +673,6 @@ section:not(.hero) .wrapper .contentCard .note p span {
 .pgHeader .pgTitle .pgSection {
   font-size: 1.25rem;
   font-weight: 500;
-  text-transform: uppercase;
   line-height: normal;
   color: #000b20;
   margin: 0;
@@ -681,7 +680,6 @@ section:not(.hero) .wrapper .contentCard .note p span {
 .pgHeader .pgTitle h2 {
   font-size: 2.25rem;
   font-weight: 700;
-  text-transform: uppercase;
   color: #0071bf;
   margin: 0;
 }
@@ -1455,7 +1453,7 @@ header .notification .notificationsContainer .notificationListContainer .notific
 .avatarCard {
   flex-direction: column;
   gap: 0;
-  background-color: #0071bf;
+  background-color: #ffffff;
   border-radius: 1rem;
   overflow: hidden;
   position: relative;
@@ -1605,6 +1603,7 @@ header .notification .notificationsContainer .notificationListContainer .notific
 }
 
 .departments .departmentCard {
+  display: block;
   position: relative;
   border-radius: 1rem;
   overflow: hidden;
@@ -1777,7 +1776,8 @@ header .notification .notificationsContainer .notificationListContainer .notific
   color: #000b20;
   background-color: rgba(252, 110, 48, 0.05);
   border: 0.0625rem solid #fc6e30;
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem;
+  margin: 0;
   border-radius: 0.5rem;
 }
 .academics .contentCard .content .subjectList li:last-child {
@@ -2147,6 +2147,7 @@ footer .copyright {
   border-top: 0.0625rem solid rgba(255, 255, 255, 0.1);
 }
 footer .copyright .copyrightContent {
+  gap: 0.75rem;
   flex-wrap: wrap;
 }
 footer .copyright .copyrightContent p {
@@ -2603,142 +2604,133 @@ footer .copyright .copyrightContent .copyrightLinks {
   }
 }
 @media (max-width: 575.98px) {
+  body {
+    font-size: 0.875rem !important;
+  }
   section {
-    padding: 3.125rem 1.25rem !important;
+    padding: 1.25rem !important;
+  }
+  section.hero {
+    padding: 0 !important;
+  }
+  section .wrapper .contentCard .content {
+    padding: 1.5rem !important;
+  }
+  section .wrapper .contentCard .content figure {
+    margin: 0.75rem 0;
+  }
+  h1 {
+    font-size: 2.25rem !important;
+  }
+  h2 {
+    font-size: 2rem !important;
+  }
+  h3 {
+    font-size: 1.75rem !important;
+  }
+  h4 {
+    font-size: 1.5rem !important;
+  }
+  h5 {
+    font-size: 1rem !important;
+  }
+  h6 {
+    font-size: 0.8333333333rem !important;
+  }
+  .topbar {
+    padding: 0.5rem;
+  }
+  .topbar .topbarContent .quickLinks {
+    flex-wrap: wrap;
+  }
+  .topbar .topbarContent .quickLinks a {
+    font-size: 0.75rem;
   }
   .topbar .social {
+    display: none !important;
+  }
+  header .navbar .navbar-brand img {
+    max-width: 16rem !important;
+  }
+  .notification .btn {
     display: none !important;
   }
   .pgHeader {
     margin-bottom: 1.5rem !important;
   }
   .pgHeader h2 {
-    font-size: 2.25rem !important;
+    font-size: 2.25rem;
   }
-  .hero .heroSlide {
-    min-height: 100vh;
+  .hero .heroSlide .heroContent h1 {
+    font-size: 2.625rem;
   }
-  .hero .heroSlide .btnGroup {
+  .hero .heroSlide .heroContent .btnGroup {
     flex-wrap: wrap;
+    gap: 0.5rem;
   }
-  .hero .heroSlide .btnGroup .btn {
+  .hero .heroSlide .heroContent .btnGroup .btn {
     flex-grow: 1;
-    width: 100%;
   }
   .hero .paginationContainer {
     flex-wrap: wrap;
-    bottom: 1rem;
+    width: 80%;
   }
   .applicationIndustries .counterCard {
     flex-wrap: wrap;
-  }
-  .makeInIndia video {
-    width: 100%;
-  }
-  .revealContainer h2 {
-    font-size: 2.625rem !important;
-  }
-  .suryagharScheme .schemeContent {
-    padding: 1.5rem;
-  }
-  .suryagharScheme .schemeContent .schemeCard.cardBorder {
-    border-right: none !important;
-    border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.2);
-  }
-  .suryagharScheme .schemeContent .schemeCard .schemeCardList {
-    padding-bottom: 1.5rem;
   }
   .testimonials .testimonialCard {
     padding: 1.5rem !important;
     margin-left: 0 !important;
     height: auto !important;
   }
-  .newsletter .input-group input,
-  .newsletter .input-group .btn {
-    flex-grow: 1;
-    min-height: 3.4375rem !important;
-    width: 100%;
-  }
-  .about .radiusEmblem {
-    top: 2rem !important;
-    right: 1.2rem !important;
-    width: 8rem !important;
-  }
-  .director .pgHeader {
-    padding: 1.5rem;
-  }
-  .videoSection {
-    min-height: 70vh;
-    background-position: right;
-  }
-  .videoSection .videoContent .videoTitle {
-    margin-top: 2.5rem;
-  }
-  .missionVision .mvCard {
-    padding: 1.5rem !important;
-  }
-  .productDetails .swiper.swiperGallery .swiper-slide img {
-    height: 100% !important;
-  }
-  .productDetails .productInfo {
+  .about .pgHeader {
     padding-left: 0 !important;
   }
-  .productDetails .productInfo h1 {
-    font-size: 2.25rem;
+  .collaborations .affilationCard {
+    padding: 1.5rem;
   }
-  .blogDetails .blogSidebar {
-    padding-left: 0;
+  #careerModal .modal-body {
+    overflow: visible;
+    display: flex;
   }
-  .blogDetails .blogContent h1 {
-    font-size: 2.25rem !important;
+  #careerModal .careerForm,
+  #careerModal .careerPopupContent {
+    padding: 2.5rem;
+    height: 100%;
   }
-  .blogDetails .blogContent .blogHero {
-    margin: 1.5rem 0;
+  #careerModal .careerPopupContent {
+    overflow-y: auto;
+    max-height: calc(100vh - 10rem);
+    flex: 1;
   }
-  .blogDetails .blogContent .blogHero img {
-    border-radius: 1rem !important;
+  #careerModal .careerPopupContent h1,
+  #careerModal .careerPopupContent h2,
+  #careerModal .careerPopupContent h3,
+  #careerModal .careerPopupContent h4,
+  #careerModal .careerPopupContent h5,
+  #careerModal .careerPopupContent h6 {
+    margin-bottom: 0.75rem;
   }
-  .blogDetails .pagination .previous,
-  .blogDetails .pagination .next {
+  #careerModal .careerForm {
+    background-color: #f5f9fd;
+  }
+  footer .footerContent {
+    padding: 1.5rem;
+  }
+  .avatarCard figure {
+    margin: 0 !important;
+  }
+  .academics .contentCard .content .subjectList {
+    margin-bottom: 1.5rem;
+  }
+  .academics .contentCard .content .subjectList li {
+    flex-grow: 1 !important;
+  }
+  .academics .note {
+    padding: 1.5rem !important;
+  }
+  .academics .note p {
+    font-size: 1rem !important;
     text-align: left !important;
   }
-  .scrollingTabs {
-    overflow-x: auto;
-    overflow-y: hidden;
-    white-space: nowrap;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-  .scrollingTabs .nav-tabs {
-    display: inline-flex;
-    flex-wrap: nowrap;
-  }
-  .scrollingTabs .nav-tabs::-webkit-scrollbar {
-    display: none;
-  }
-}
-#careerModal .modal-body {
-  overflow: visible;
-  display: flex;
-}
-#careerModal .careerForm,
-#careerModal .careerPopupContent {
-  padding: 2.5rem;
-  height: 100%;
-}
-#careerModal .careerPopupContent {
-  overflow-y: auto;
-  max-height: calc(100vh - 10rem);
-  flex: 1;
-}
-#careerModal .careerPopupContent h1,
-#careerModal .careerPopupContent h2,
-#careerModal .careerPopupContent h3,
-#careerModal .careerPopupContent h4,
-#careerModal .careerPopupContent h5,
-#careerModal .careerPopupContent h6 {
-  margin-bottom: 0.75rem;
-}
-#careerModal .careerForm {
-  background-color: #f5f9fd;
 }/*# sourceMappingURL=styles.css.map */

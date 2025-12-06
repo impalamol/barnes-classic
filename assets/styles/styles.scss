@@ -541,10 +541,10 @@ header {
 }
 // Avatar Card
 .avatarCard {
-    @extend .flex-center-start;
+    @extend .flex-start;
     flex-direction: column;
     gap: 0;
-    background-color: $primary;
+    background-color: $white;
     border-radius: $cardRadius;
     overflow: hidden;
     position: relative;
@@ -731,6 +731,7 @@ header {
 // Departments
 .departments {
     .departmentCard {
+        display: block;
         position: relative;
         border-radius: $cardRadius;
         overflow: hidden;
@@ -949,7 +950,8 @@ header {
                 // flex-grow: 1;
                 background-color: rgba($color: $tertiary, $alpha: 0.05);
                 border: 0.0625rem solid $tertiary;
-                padding: $commonUnit / 2 $commonUnit;
+                padding: $commonUnit / 2;
+                margin: 0;
                 border-radius: $cardRadius / 2;
                 &:last-child {
                     flex-grow: 0;
@@ -1380,6 +1382,7 @@ footer {
 
         .copyrightContent {
             @extend .flex-center-between;
+            gap: $commonUnit / 2;
             flex-wrap: wrap;
             p {
                 font-size: $medium;
@@ -1404,7 +1407,6 @@ footer {
 // Pages Scss Starts
 // Notifications
 .notifications {
-
 }
 // Enquiry Modal
 .modal {
@@ -1924,62 +1926,105 @@ footer {
 }
 // Mobile
 @media (max-width: 575.98px) {
+    body {
+        font-size: $medium !important;
+    }
     section {
-        padding: 3.125rem 1.25rem !important ;
+        padding: 1.25rem !important ;
+
+        &.hero {
+            padding: 0 !important;
+        }
+        .wrapper .contentCard .content {
+            padding: $commonUnit !important;
+
+            figure {
+                margin: $commonUnit / 2 0;
+            }
+        }
+    }
+    h1 {
+        font-size: $h1 / 1.5 !important;
+    }
+
+    h2 {
+        font-size: $h2 / 1.5 !important;
+    }
+
+    h3 {
+        font-size: $h3 / 1.5 !important;
+    }
+
+    h4 {
+        font-size: $h4 / 1.5 !important;
+    }
+
+    h5 {
+        font-size: $h5 / 1.5 !important;
+    }
+
+    h6 {
+        font-size: $h6 / 1.5 !important;
     }
     .topbar {
+        padding: $commonUnit / 3;
+
+        .topbarContent {
+            .quickLinks {
+                flex-wrap: wrap;
+
+                a {
+                    font-size: $small;
+                }
+            }
+        }
         .social {
             display: none !important;
         }
     }
+    // Header
+    header .navbar .navbar-brand img {
+        max-width: 16rem !important;
+    }
+    // Notification
+    .notification {
+        .btn {
+            display: none !important;
+        }
+    }
+    // pgHeader
     .pgHeader {
         margin-bottom: $commonUnit !important;
         h2 {
-            font-size: $h4 !important;
+            font-size: $h4;
         }
     }
+
+    // Hero
     .hero {
         .heroSlide {
-            min-height: 100vh;
-            .btnGroup {
-                flex-wrap: wrap;
-                .btn {
-                    flex-grow: 1;
-                    width: 100%;
+            .heroContent {
+                h1 {
+                    font-size: $h3;
+                }
+                .btnGroup {
+                    flex-wrap: wrap;
+                    gap: $commonUnit / 3;
+
+                    .btn {
+                        flex-grow: 1;
+                    }
                 }
             }
         }
         .paginationContainer {
             flex-wrap: wrap;
-            bottom: 1rem;
+            width: 80%;
         }
     }
     .applicationIndustries {
         .counterCard {
             flex-wrap: wrap;
-        }
-    }
-    // Make In India
-    .makeInIndia {
-        video {
-            width: 100%;
-        }
-    }
-    .revealContainer {
-        h2 {
-            font-size: $h3 !important;
-        }
-    }
-    .suryagharScheme .schemeContent {
-        padding: $commonUnit;
-        .schemeCard {
-            &.cardBorder {
-                border-right: none !important;
-                border-bottom: 0.0625rem solid rgba($color: $white, $alpha: 0.2);
-            }
-            .schemeCardList {
-                padding-bottom: $commonUnit;
-            }
         }
     }
 
@@ -1990,116 +2035,73 @@ footer {
             height: auto !important;
         }
     }
-    .newsletter {
-        .input-group {
-            input,
-            .btn {
-                flex-grow: 1;
-                min-height: 3.4375rem !important;
-                width: 100%;
-            }
-        }
-    }
+
     // About us
     .about {
-        .radiusEmblem {
-            top: 2rem !important;
-            right: 1.2rem !important;
-            width: 8rem !important;
+        .pgHeader {
+            padding-left: 0 !important;
         }
     }
-    .director .pgHeader {
+    // collaborations {
+    .collaborations .affilationCard {
         padding: $commonUnit;
     }
-    .videoSection {
-        min-height: 70vh;
-        background-position: right;
-
-        .videoContent .videoTitle {
-            margin-top: 2.5rem;
+    #careerModal {
+        .modal-body {
+            overflow: visible;
+            display: flex;
         }
-    }
-    .missionVision .mvCard {
-        padding: $commonUnit !important;
-    }
-    // Product Details
-    .productDetails {
-        .swiper.swiperGallery .swiper-slide img {
-            height: 100% !important;
+        .careerForm,
+        .careerPopupContent {
+            padding: 2.5rem;
+            height: 100%;
         }
-        .productInfo {
-            padding-left: 0 !important;
+        .careerPopupContent {
+            overflow-y: auto;
+            max-height: calc(100vh - 10rem);
+            flex: 1;
 
-            h1 {
-                font-size: $h4;
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                margin-bottom: $commonUnit / 2;
             }
         }
-    }
-    // Blogs
-    .blogDetails {
-        .blogSidebar {
-            padding-left: 0;
+        .careerForm {
+            background-color: $light;
         }
-        .blogContent {
-            h1 {
-                font-size: $h4 !important;
-            }
-            .blogHero {
-                margin: $commonUnit 0;
-                img {
-                    border-radius: $cardRadius !important;
+    }
+    // Footer
+    footer {
+        .footerContent {
+            padding: $commonUnit;
+        }
+    }
+
+    // Pages
+    .avatarCard figure {
+        margin: 0 !important;
+    }
+    // academics
+    .academics {
+        .contentCard .content {
+            .subjectList {
+                margin-bottom: $commonUnit;
+
+                li {
+                    flex-grow: 1 !important;
                 }
             }
         }
-        .pagination {
-            .previous,
-            .next {
+        .note {
+            padding: $commonUnit !important;
+            p {
+                font-size: $large !important;
                 text-align: left !important;
             }
         }
-    }
-    .scrollingTabs {
-        overflow-x: auto;
-        overflow-y: hidden;
-        white-space: nowrap;
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-
-        .nav-tabs {
-            display: inline-flex;
-            flex-wrap: nowrap;
-
-            &::-webkit-scrollbar {
-                display: none;
-            }
-        }
-    }
-}
-#careerModal {
-    .modal-body {
-        overflow: visible;
-        display: flex;
-    }
-    .careerForm,
-    .careerPopupContent {
-        padding: 2.5rem;
-        height: 100%;
-    }
-    .careerPopupContent {
-        overflow-y: auto;
-        max-height: calc(100vh - 10rem);
-        flex: 1;
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            margin-bottom: $commonUnit / 2;
-        }
-    }
-    .careerForm {
-        background-color: $light;
     }
 }
