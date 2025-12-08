@@ -34,7 +34,7 @@ html {
 
 body {
     font-family: "Poppins", sans-serif;
-    font-size: $large;
+    font-size: $medium;
     font-weight: 500;
     font-style: normal;
     line-height: 1.8;
@@ -842,16 +842,17 @@ section:not(.hero) {
 }
 
 .checkList {
-    padding: 0;
+    padding: 0 0 0 $commonUnit;
     margin-bottom: $commonUnit * 2;
     li {
         list-style-type: none;
-        margin-bottom: $commonUnit / 2;
+        margin-bottom: $commonUnit;
         margin-left: 1.5em;
         position: relative;
         &:before,
         &::after {
             font-family: "Phosphor-Duotone" !important;
+            font-size: $xLarge + $small;
             speak: never;
             font-style: normal;
             font-weight: normal;
@@ -862,7 +863,7 @@ section:not(.hero) {
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             position: absolute;
-            top: 0.4rem;
+            top: 0;
             left: 0;
             margin-left: -1.5em;
         }
@@ -872,6 +873,30 @@ section:not(.hero) {
         }
         &::after {
             content: "\e607";
+        }
+        .listContent {
+            h5 {
+                font-size: $xLarge;
+                font-weight: 600;
+                margin-bottom: 0;
+            }
+            p {
+                font-size: $medium;
+                color: $gray;
+                margin: 0;
+            }
+        }
+    }
+}
+// Pagination
+.pagination {
+    .page-item {
+        .page-link {
+            color: $primary;
+        }
+        &.active .page-link {
+            color: $white;
+            background-color: $primary;
         }
     }
 }

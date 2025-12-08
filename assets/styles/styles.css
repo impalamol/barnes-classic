@@ -73,7 +73,7 @@ textarea:not([rows]) {
   display: flex;
 }
 
-.flex-center, .contactUs .contactCard .contactChip .icon, .blogDetails .blogSidebar .sidebarContent .recentPost, .documents .documentCard figure, .barnicles .barnicleCard figure, .collaborations .affilationCard .collaborationCard, .about .aboutImgContainer figure, .hero .paginationContainer .navigation .swiper-button-next,
+.flex-center, .contactUs .contactCard .contactChip .icon, .blogDetails .blogSidebar .sidebarContent .recentPost, .documents .documentCard figure, .barnicles .barnicleCard figure, .collaborations .affilationCard .collaborationCard, .videoSection .playBtn, .about .aboutImgContainer figure, .hero .paginationContainer .navigation .swiper-button-next,
 .hero .paginationContainer .navigation .swiper-button-prev, .hero .paginationContainer .navigation, .hero .heroSlide, .videoBtn, header .navbar .nav-item .nav-link, .progressLoader .loaderContent .imgContainer, .progressLoader, .searchModal .nrs, .searchModal .searchResult .resultItem a .productIcon img, .pgHeader.centered .pgTitle,
 .pgHeader.centered .pgSection, .pgHeader.centered {
   display: flex;
@@ -93,7 +93,7 @@ textarea:not([rows]) {
   justify-content: space-around;
 }
 
-.flex-center-start, .contactUs .contactCard .contactChip, .blogDetails .blogSidebar .sidebarContent ul.blogTags,
+.flex-center-start, .blogDetails .blogSidebar .sidebarContent ul.blogTags,
 .blogDetails .blogSidebar .sidebarContent ol.blogTags, footer .copyright .copyrightContent .copyrightLinks, .albums .albumCard .albumThumbs, .academics .contentCard .content .subjectList, .videoSection, .menu .menuContact .contactDetail .social, .menu .menuContact .contactDetail .contactNumbers, .menu, header .notification .notificationsContainer .title, header .notification .notificationsContainer, .topbar .topbarContent .quickLinks a, .topbar .topbarContent .quickLinks, .topbar .topbarContent .social, .searchModal .searchResult .resultItem a, .pgHeader, .btnGroup {
   display: flex;
   align-items: center;
@@ -124,7 +124,7 @@ textarea:not([rows]) {
   justify-content: flex-end;
 }
 
-.flex-start, .blogDetails .blogSidebar .sidebarContent ul,
+.flex-start, .contactUs .contactCard .contactChip, .blogDetails .blogSidebar .sidebarContent ul,
 .blogDetails .blogSidebar .sidebarContent ol, footer .footerContent .footerCard ul, .avatarCard, .menu .menuContact .contactDetail, .menu .mainMenu ul, .enquiryModal .modal-body form .btnGroup, .pgHeader .pgTitle, section:not(.hero) .wrapper .contentCard {
   display: flex;
   align-items: flex-start;
@@ -250,7 +250,7 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 500;
   font-style: normal;
   line-height: 1.8;
@@ -953,17 +953,18 @@ section:not(.hero) .wrapper .contentCard .note p span {
 }
 
 .checkList {
-  padding: 0;
+  padding: 0 0 0 1.5rem;
   margin-bottom: 3rem;
 }
 .checkList li {
   list-style-type: none;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
   margin-left: 1.5em;
   position: relative;
 }
 .checkList li:before, .checkList li::after {
   font-family: "Phosphor-Duotone" !important;
+  font-size: 1.875rem;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -974,7 +975,7 @@ section:not(.hero) .wrapper .contentCard .note p span {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: absolute;
-  top: 0.4rem;
+  top: 0;
   left: 0;
   margin-left: -1.5em;
 }
@@ -984,6 +985,24 @@ section:not(.hero) .wrapper .contentCard .note p span {
 }
 .checkList li::after {
   content: "\e607";
+}
+.checkList li .listContent h5 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+.checkList li .listContent p {
+  font-size: 0.875rem;
+  color: #343e45;
+  margin: 0;
+}
+
+.pagination .page-item .page-link {
+  color: #0071bf;
+}
+.pagination .page-item.active .page-link {
+  color: #ffffff;
+  background-color: #0071bf;
 }
 
 .progressLoader {
@@ -1130,6 +1149,9 @@ header .navbar .nav-item .nav-link.btn-link {
   background-color: rgba(0, 113, 191, 0.1);
   padding: 0.75rem 1.5rem;
   border-radius: 0.25rem;
+}
+header .navbar .nav-item .btn-primary {
+  padding: 0.5rem;
 }
 header .notification {
   background-color: #0071bf;
@@ -1453,7 +1475,7 @@ header .notification .notificationsContainer .notificationListContainer .notific
 .avatarCard {
   flex-direction: column;
   gap: 0;
-  background-color: #ffffff;
+  background: radial-gradient(86.45% 86.45% at 50.07% 50.07%, #0071bf 0%, #000b20 85%);
   border-radius: 1rem;
   overflow: hidden;
   position: relative;
@@ -1468,6 +1490,7 @@ header .notification .notificationsContainer .notificationListContainer .notific
   margin: 0 !important;
   border-radius: 0 !important;
   position: relative;
+  flex-grow: 1;
 }
 .avatarCard figure .videoBtn {
   position: absolute;
@@ -1513,7 +1536,7 @@ header .notification .notificationsContainer .notificationListContainer .notific
 
 .hero .heroSlide {
   position: relative;
-  min-height: 85vh;
+  min-height: 80vh;
   flex-direction: column;
 }
 .hero .heroSlide .heroContent {
@@ -1549,9 +1572,9 @@ header .notification .notificationsContainer .notificationListContainer .notific
 }
 .hero .paginationContainer {
   position: absolute;
-  bottom: 6.25rem;
-  width: 70%;
-  margin: 0 15%;
+  bottom: 3.125rem;
+  width: 80%;
+  margin: 0 10%;
 }
 .hero .paginationContainer .swiper-pagination {
   position: static !important;
@@ -2447,20 +2470,6 @@ footer .copyright .copyrightContent .copyrightLinks {
   transform: scale(1.1) rotate(0.5deg);
 }
 
-.contactUs .contactInfo {
-  background-color: #000b20;
-  border-radius: 1rem;
-  overflow: hidden;
-}
-.contactUs .contactInfo figure {
-  overflow: hidden;
-  max-height: 18.75rem;
-}
-.contactUs .contactInfo figure img {
-  width: 100%;
-  height: 100%;
-  transition: transform 0.5s ease;
-}
 .contactUs .contactInfo .contactInfoContent {
   padding: 1.5rem;
 }
@@ -2516,6 +2525,8 @@ footer .copyright .copyrightContent .copyrightLinks {
 }
 .contactUs .contactCard {
   background-color: #ffffff;
+  border: 0.0625rem solid #e4e4e4;
+  box-shadow: rgba(0, 11, 32, 0.1) 0rem 0.4375rem 1.8125rem 0rem;
   height: 100%;
   padding: 3rem;
   border-radius: 1rem;
@@ -2523,13 +2534,9 @@ footer .copyright .copyrightContent .copyrightLinks {
 .contactUs .contactCard .pgHeader {
   margin-bottom: 1.5rem;
 }
-.contactUs .contactCard.form {
-  background-color: #ffffff;
-  border: 0.0625rem solid #e4e4e4;
-  box-shadow: rgba(0, 11, 32, 0.1) 0rem 0.4375rem 1.8125rem 0rem;
-}
 .contactUs .contactCard h3 {
-  margin-bottom: 3rem;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 .contactUs .contactCard .contactChip {
   background-color: #f5f9fd;
@@ -2539,28 +2546,49 @@ footer .copyright .copyrightContent .copyrightLinks {
   border-radius: 1rem;
 }
 .contactUs .contactCard .contactChip .icon {
-  min-width: 4.375rem;
-  min-height: 4.375rem;
-  background-color: #0071bf;
-  border-radius: 1rem;
+  min-width: 3.125rem;
+  min-height: 3.125rem;
+  background-color: rgba(0, 113, 191, 0.05);
+  border: 0.0625rem solid rgba(0, 113, 191, 0.2);
+  border-radius: 50%;
+  transition: all 1s linear;
 }
 .contactUs .contactCard .contactChip .icon i {
-  font-size: 2.225rem;
-  color: #ffffff;
+  font-size: 1.85rem;
+  color: #0071bf;
+}
+.contactUs .contactCard .contactChip .contactDetail {
+  flex-grow: 1;
 }
 .contactUs .contactCard .contactChip .contactDetail h5 {
   font-size: 1.5rem;
-  color: #000b20;
+  color: #0071bf;
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 .contactUs .contactCard .contactChip .contactDetail span,
 .contactUs .contactCard .contactChip .contactDetail a {
-  font-weight: 500;
+  font-size: 0.875rem;
+  font-weight: 600;
   color: #000b20 !important;
   line-height: 1.3;
   display: block;
   margin-bottom: 0;
+}
+.contactUs .contactCard .contactChip .contactDetail a:hover {
+  color: #0071bf !important;
+}
+.contactUs .contactCard .contactChip .contactDetail span strong {
+  font-size: 1.125rem;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.contactUs .contactCard .contactChip:hover .icon {
+  background-color: #0071bf;
+}
+.contactUs .contactCard .contactChip:hover .icon i {
+  color: #ffffff;
 }
 
 .map {
@@ -2644,7 +2672,7 @@ footer .copyright .copyrightContent .copyrightLinks {
     flex-wrap: wrap;
   }
   .topbar .topbarContent .quickLinks a {
-    font-size: 0.75rem;
+    font-size: 0.625rem;
   }
   .topbar .social {
     display: none !important;
@@ -2661,6 +2689,9 @@ footer .copyright .copyrightContent .copyrightLinks {
   .pgHeader h2 {
     font-size: 2.25rem;
   }
+  .hero .heroSlide {
+    min-height: 0 !important;
+  }
   .hero .heroSlide .heroContent h1 {
     font-size: 2.625rem;
   }
@@ -2670,10 +2701,6 @@ footer .copyright .copyrightContent .copyrightLinks {
   }
   .hero .heroSlide .heroContent .btnGroup .btn {
     flex-grow: 1;
-  }
-  .hero .paginationContainer {
-    flex-wrap: wrap;
-    width: 80%;
   }
   .applicationIndustries .counterCard {
     flex-wrap: wrap;

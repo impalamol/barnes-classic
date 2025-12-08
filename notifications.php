@@ -46,14 +46,84 @@ $currentPage = 'notifications';
                                         <h2>Notifications</h2>
                                     </div>
                                 </div>
-                                <ul class="checkList">
-                                    <li><a href="notification-details"> Admission Test on 10th October 2025</a></li>
-                                    <li><a href="notification-details"> Join us for Open Day - 20th September 2025</a></li>
-                                    <li><a href="notification-details"> Updated Important Dates at a Glance</a></li>
-                                    <li><a href="notification-details"> Admission Test on 10th October 2025</a></li>
-                                    <li><a href="notification-details"> Join us for Open Day - 20th September 2025</a></li>
-                                    <li><a href="notification-details"> Updated Important Dates at a Glance</a></li>
-                                </ul>
+                                <div class="table-responsive">
+                                    <table class="align-middle">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-center">#</th>
+                                                <th>Notification</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-center">1</td>
+                                                <td>Admission Test on 10th October 2025</td>
+                                                <td>
+                                                    <a href="notification-details" target="_blank"
+                                                        class="btn btn-outline-primary btn-sm me-2 mb-2">
+                                                        <i class="ph-duotone ph-eye"></i> View
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-center">2</td>
+                                                <td>Join us for Open Day - 20th September 2025</td>
+                                                <td>
+                                                    <a href="notification-details" target="_blank"
+                                                        class="btn btn-outline-primary btn-sm me-2 mb-2">
+                                                        <i class="ph-duotone ph-eye"></i> View
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-center">3</td>
+                                                <td>Updated Important Dates at a Glance</td>
+                                                <td>
+                                                    <a href="notification-details" target="_blank"
+                                                        class="btn btn-outline-primary btn-sm me-2 mb-2">
+                                                        <i class="ph-duotone ph-eye"></i> View
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-center">4</td>
+                                                <td>Admission Test on 10th October 2025</td>
+                                                <td>
+                                                    <a href="notification-details" target="_blank"
+                                                        class="btn btn-outline-primary btn-sm me-2 mb-2">
+                                                        <i class="ph-duotone ph-eye"></i> View
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-center">5</td>
+                                                <td>Join us for Open Day - 20th September 2025</td>
+                                                <td>
+                                                    <a href="notification-details" target="_blank"
+                                                        class="btn btn-outline-primary btn-sm me-2 mb-2">
+                                                        <i class="ph-duotone ph-eye"></i> View
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-center">6</td>
+                                                <td>Updated Important Dates at a Glance</td>
+                                                <td>
+                                                    <a href="notification-details" target="_blank"
+                                                        class="btn btn-outline-primary btn-sm me-2 mb-2">
+                                                        <i class="ph-duotone ph-eye"></i> View
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                                 <nav aria-label="..." class="mt-5">
                                     <ul class="pagination">
                                         <li class="page-item "><a href="#" class="page-link">Previous</a></li>
