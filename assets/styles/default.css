@@ -246,7 +246,7 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 500;
   font-style: normal;
   line-height: 1.8;
@@ -949,17 +949,18 @@ section:not(.hero) .wrapper .contentCard .note p span {
 }
 
 .checkList {
-  padding: 0;
+  padding: 0 0 0 1.5rem;
   margin-bottom: 3rem;
 }
 .checkList li {
   list-style-type: none;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
   margin-left: 1.5em;
   position: relative;
 }
 .checkList li:before, .checkList li::after {
   font-family: "Phosphor-Duotone" !important;
+  font-size: 1.875rem;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -970,7 +971,7 @@ section:not(.hero) .wrapper .contentCard .note p span {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: absolute;
-  top: 0.4rem;
+  top: 0;
   left: 0;
   margin-left: -1.5em;
 }
@@ -980,4 +981,22 @@ section:not(.hero) .wrapper .contentCard .note p span {
 }
 .checkList li::after {
   content: "\e607";
+}
+.checkList li .listContent h5 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+.checkList li .listContent p {
+  font-size: 0.875rem;
+  color: #343e45;
+  margin: 0;
+}
+
+.pagination .page-item .page-link {
+  color: #0071bf;
+}
+.pagination .page-item.active .page-link {
+  color: #ffffff;
+  background-color: #0071bf;
 }/*# sourceMappingURL=default.css.map */

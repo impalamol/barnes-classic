@@ -77,13 +77,9 @@ $currentPage = 'home';
                         </div>
                     </div>
                 </div>
-                <div class="paginationContainer">
-                    <div class="swiper-pagination"></div>
-                    <div class="navigation">
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
-                    </div>
-                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
         </section>
         <section class="about">
@@ -113,6 +109,23 @@ $currentPage = 'home';
                                     through and the wonder still holds "Awkward cubs they were when first they came to
                                     school. Then they grew in stature, strong they grew in mind, till came the time for
                                     parting, when onward they would go as men to face the world!"</p>
+                                <ul class="checkList">
+                                    <li>
+                                        <div class="listContent">
+                                            <h5>Expert Installation</h5>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="listContent">
+                                            <h5>Premium Quality</h5>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="listContent">
+                                            <h5>Complete Support</h5>
+                                        </div>
+                                    </li>
+                                </ul>
                                 <p><a href="about" class="btn btn-primary">Read More <i
                                             class="ph-duotone ph-arrow-up-right"></i></a></p>
                             </div>
@@ -123,10 +136,10 @@ $currentPage = 'home';
         </section>
         <section class="departments">
             <div class="container-fluid">
-                <div class="row">
+                <div class="row mx-0 mx-md-4">
                     <div class="pgHeader centered">
                         <div class="pgTitle">
-                            <h6 class="pgSection">A DAY AT</h6>
+                            <h6 class="pgSection">A day at</h6>
                             <h2>Barnes</h2>
                         </div>
                     </div>
@@ -238,7 +251,7 @@ $currentPage = 'home';
                         <div class="affilationCard card1">
                             <div class="pgHeader">
                                 <div class="pgTitle">
-                                    <h3>School Affiliation</h3>
+                                    <h5>School Affiliation</h5>
                                 </div>
                             </div>
                             <div class="swiper collaborationSwiper">
@@ -279,7 +292,7 @@ $currentPage = 'home';
                         <div class="affilationCard card2">
                             <div class="pgHeader">
                                 <div class="pgTitle">
-                                    <h3>International & National Collaborations</h3>
+                                    <h5>International & National Collaborations</h5>
                                 </div>
                             </div>
                             <div class="swiper collaborationSwiper">

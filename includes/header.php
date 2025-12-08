@@ -93,9 +93,9 @@
                             </div>
                         </div>
                     </div>
-                    <a href="notifications" class="btn btn-secondary">
+                    <!-- <a href="notifications" class="btn btn-secondary">
                         View all <i class="ph-duotone ph-arrow-up-right"></i>
-                    </a>
+                    </a> -->
                 </div>
             </div>
         </div>
