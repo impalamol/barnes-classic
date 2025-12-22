@@ -299,19 +299,19 @@ h6 {
 }
 
 h1 {
-  font-size: 3.375rem;
+  font-size: 3.125rem;
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 2.75rem;
 }
 
 h3 {
-  font-size: 2.625rem;
+  font-size: 2.375rem;
 }
 
 h4 {
-  font-size: 2.25rem;
+  font-size: 2rem;
 }
 
 h5 {
@@ -360,7 +360,6 @@ input[type=number] {
   text-transform: capitalize;
   white-space: nowrap;
   padding: 1rem;
-  transition: all 0.3s ease;
   border-radius: 0.2rem;
   transition: all 0.6s ease-in-out;
 }
@@ -678,7 +677,7 @@ section:not(.hero) .wrapper .contentCard .note p span {
   margin: 0;
 }
 .pgHeader .pgTitle h2 {
-  font-size: 2.25rem;
+  font-size: 2rem;
   font-weight: 700;
   color: #0071bf;
   margin: 0;
@@ -817,7 +816,7 @@ section:not(.hero) .wrapper .contentCard .note p span {
   padding: 1.5rem;
 }
 .searchModal .nrs i {
-  font-size: 2.625rem;
+  font-size: 2.375rem;
   text-align: center;
   line-height: normal;
 }
@@ -1286,7 +1285,7 @@ header .notification .notificationsContainer .notificationListContainer .notific
   z-index: 2;
   content: "";
   cursor: pointer;
-  font-size: 5.25rem;
+  font-size: 4.75rem;
   text-decoration: none;
   line-height: normal;
   color: #ffffff;
@@ -1310,7 +1309,7 @@ header .notification .notificationsContainer .notificationListContainer .notific
   width: 100%;
 }
 .menu .mainMenu ul li a {
-  font-size: 2.625rem;
+  font-size: 2.375rem;
   font-weight: 400;
   text-transform: capitalize;
   text-decoration: none;
@@ -1387,7 +1386,7 @@ header .notification .notificationsContainer .notificationListContainer .notific
   background-color: #0071bf;
 }
 .menu .menuText {
-  font-size: 23.625rem;
+  font-size: 21.875rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: -0.625rem;
@@ -1454,7 +1453,7 @@ header .notification .notificationsContainer .notificationListContainer .notific
   animation: animateBtn 3s linear infinite;
 }
 .videoBtn i {
-  font-size: 2.25rem;
+  font-size: 2rem;
   color: #000b20;
 }
 @keyframes animateBtn {
@@ -1556,7 +1555,7 @@ header .notification .notificationsContainer .notificationListContainer .notific
   display: inline-block;
 }
 .hero .heroSlide .heroContent h1 {
-  font-size: 4.25rem;
+  font-size: 4rem;
   font-weight: 800;
   text-transform: uppercase;
 }
@@ -1751,7 +1750,7 @@ header .notification .notificationsContainer .notificationListContainer .notific
 }
 .aboutUs dl dt {
   font-family: "Bona Nova", serif;
-  font-size: 2.25rem;
+  font-size: 2rem;
   font-weight: 600;
   color: #000b20;
 }
@@ -2252,7 +2251,7 @@ footer .copyright .copyrightContent .copyrightLinks {
 }
 
 .blogDetails h1 {
-  font-size: 3rem;
+  font-size: 2.75rem;
   font-weight: 700;
 }
 .blogDetails .blogHero {
@@ -2554,7 +2553,7 @@ footer .copyright .copyrightContent .copyrightLinks {
   transition: all 1s linear;
 }
 .contactUs .contactCard .contactChip .icon i {
-  font-size: 1.85rem;
+  font-size: 1.6rem;
   color: #0071bf;
 }
 .contactUs .contactCard .contactChip .contactDetail {
@@ -2631,6 +2630,56 @@ footer .copyright .copyrightContent .copyrightLinks {
     max-height: 100vh !important;
   }
 }
+#careerModal .modal-body {
+  overflow: hidden;
+}
+#careerModal .careerForm,
+#careerModal .careerPopupContent {
+  position: relative;
+  padding: 2.5rem;
+  height: 100%;
+}
+#careerModal .careerPopupContent {
+  overflow-y: auto;
+  height: 100%;
+  max-height: 50rem;
+}
+#careerModal .careerPopupContent h1,
+#careerModal .careerPopupContent h2,
+#careerModal .careerPopupContent h3,
+#careerModal .careerPopupContent h4,
+#careerModal .careerPopupContent h5,
+#careerModal .careerPopupContent h6 {
+  margin-bottom: 0.75rem;
+}
+#careerModal .careerPopupContent h1 {
+  font-size: 2.0833333333rem;
+}
+#careerModal .careerPopupContent h2 {
+  font-size: 1.8333333333rem;
+}
+#careerModal .careerPopupContent h3 {
+  font-size: 1.5833333333rem;
+}
+#careerModal .careerPopupContent h4 {
+  font-size: 1.3333333333rem;
+}
+#careerModal .careerPopupContent h5 {
+  font-size: 1rem;
+}
+#careerModal .careerPopupContent h6 {
+  font-size: 0.8333333333rem;
+}
+#careerModal .careerForm {
+  background-color: #f5f9fd;
+}
+
+.modal .modal-header .modal-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
 @media (max-width: 575.98px) {
   body {
     font-size: 0.875rem !important;
@@ -2648,16 +2697,16 @@ footer .copyright .copyrightContent .copyrightLinks {
     margin: 0.75rem 0;
   }
   h1 {
-    font-size: 2.25rem !important;
+    font-size: 2.0833333333rem !important;
   }
   h2 {
-    font-size: 2rem !important;
+    font-size: 1.8333333333rem !important;
   }
   h3 {
-    font-size: 1.75rem !important;
+    font-size: 1.5833333333rem !important;
   }
   h4 {
-    font-size: 1.5rem !important;
+    font-size: 1.3333333333rem !important;
   }
   h5 {
     font-size: 1rem !important;
@@ -2687,13 +2736,13 @@ footer .copyright .copyrightContent .copyrightLinks {
     margin-bottom: 1.5rem !important;
   }
   .pgHeader h2 {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
   .hero .heroSlide {
     min-height: 0 !important;
   }
   .hero .heroSlide .heroContent h1 {
-    font-size: 2.625rem;
+    font-size: 2.375rem;
   }
   .hero .heroSlide .heroContent .btnGroup {
     flex-wrap: wrap;
