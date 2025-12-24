@@ -170,7 +170,7 @@ $currentPage = 'work-with-us';
                     </div>
                     <div class="modal-body">
                         <div class="row">
-                            <div class="col-lg-6 col-xl-6 col-xxl-6 mb-3">
+                            <div class="col-lg-6 col-xl-6 col-xxl-6">
                                 <div class="careerPopupContent">
                                     <h3>About the Role:</h3>
                                     <p>As a Senior UI/UX Designer, you will play a crucial role in shaping the visual
@@ -200,11 +200,11 @@ $currentPage = 'work-with-us';
                                     </ul>
                                 </div>
                             </div>
-                             <div class="col-lg-6 col-xl-6 col-xxl-6 mb-3">
+                             <div class="col-lg-6 col-xl-6 col-xxl-6">
                                 <div class="careerForm">
                                     <form>
                                         <div class="row">
-                                            <div class="col-lg-12 col-xl-12 col-xxl-12 mb-3">
+                                            <div class="col-lg-12 col-xl-12 col-xxl-12">
                                                 <div class="form-floating">
                                                     <input type="text" id="fname" name="fname" class="form-control"
                                                         placeholder="What is your name? *" required=""
@@ -212,7 +212,7 @@ $currentPage = 'work-with-us';
                                                     <label for="fName">Full Name *</label>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-12 col-xl-6 col-xxl-6 mb-3">
+                                            <div class="col-lg-12 col-xl-6 col-xxl-6">
                                                 <div class="form-floating">
                                                     <input type="email" id="email" name="email" class="form-control"
                                                         placeholder="Tell us your Email ID "
@@ -221,7 +221,7 @@ $currentPage = 'work-with-us';
                                                 </div>
                                             </div>
 
-                                            <div class="col-lg-12 col-xl-6 col-xxl-6 mb-3">
+                                            <div class="col-lg-12 col-xl-6 col-xxl-6">
                                                 <div class="form-floating">
                                                     <input name="mobile" id="mobile" type="tel" class="form-control"
                                                         placeholder="Enter your mobile number" maxlength="10"
@@ -229,7 +229,7 @@ $currentPage = 'work-with-us';
                                                     <label for="phone">Phone Number</label>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-12 col-xl-12 col-xxl-12 mb-3">
+                                            <div class="col-lg-12 col-xl-12 col-xxl-12">
                                                 <div class="form-floating">
                                                     <input type="text" id="education" name="education" class="form-control"
                                                         placeholder="Education " data-error="Valid email is required."
@@ -237,7 +237,7 @@ $currentPage = 'work-with-us';
                                                     <label for="education">Education</label>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-12 col-xl-12 col-xxl-12 mb-3">
+                                            <div class="col-lg-12 col-xl-12 col-xxl-12">
                                                 <div class="form-check form-check-inline">
                                                     <input class="form-check-input" type="radio"
                                                         name="inlineRadioOptions" id="experienced"
@@ -251,7 +251,7 @@ $currentPage = 'work-with-us';
                                                     <label class="form-check-label" for="fresher">I am Fresher</label>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-12 col-xl-12 col-xxl-12 mb-3">
+                                            <div class="col-lg-12 col-xl-12 col-xxl-12">
                                                 <!-- <div class="formGroup">
                                                     <input class="form-control" type="file" id="formFile">
                                                 </div> -->

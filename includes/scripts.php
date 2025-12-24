@@ -462,9 +462,9 @@
             });
         }
     });
-</script>
 
-<script>
+
+
     document.addEventListener('DOMContentLoaded', function () {
         // Check if Intersection Observer is supported
         if ('IntersectionObserver' in window) {
