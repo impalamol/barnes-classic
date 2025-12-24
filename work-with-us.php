@@ -161,8 +161,7 @@ $currentPage = 'work-with-us';
                 </div>
             </div>
         </section>
-        <div class="modal fade" id="careerModal" tabindex="-1" aria-labelledby="careerPopupLabel"
-            aria-hidden="true">
+        <div class="modal fade" id="careerModal" tabindex="-1" aria-labelledby="careerPopupLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl modal-dialog-scrollable modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -171,7 +170,7 @@ $currentPage = 'work-with-us';
                     </div>
                     <div class="modal-body">
                         <div class="row">
-                            <div class="col-lg-7 col-xl-7 col-xxl-7">
+                            <div class="col-lg-6 col-xl-6 col-xxl-6 mb-3">
                                 <div class="careerPopupContent">
                                     <h3>About the Role:</h3>
                                     <p>As a Senior UI/UX Designer, you will play a crucial role in shaping the visual
@@ -201,7 +200,7 @@ $currentPage = 'work-with-us';
                                     </ul>
                                 </div>
                             </div>
-                            <div class="col-lg-5 col-xl-5 col-xxl-5">
+                             <div class="col-lg-6 col-xl-6 col-xxl-6 mb-3">
                                 <div class="careerForm">
                                     <form>
                                         <div class="row">
@@ -213,7 +212,7 @@ $currentPage = 'work-with-us';
                                                     <label for="fName">Full Name *</label>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-12 col-xl-12 col-xxl-12 mb-3">
+                                            <div class="col-lg-12 col-xl-6 col-xxl-6 mb-3">
                                                 <div class="form-floating">
                                                     <input type="email" id="email" name="email" class="form-control"
                                                         placeholder="Tell us your Email ID "
@@ -222,7 +221,7 @@ $currentPage = 'work-with-us';
                                                 </div>
                                             </div>
 
-                                            <div class="col-lg-12 col-xl-12 col-xxl-12 mb-3">
+                                            <div class="col-lg-12 col-xl-6 col-xxl-6 mb-3">
                                                 <div class="form-floating">
                                                     <input name="mobile" id="mobile" type="tel" class="form-control"
                                                         placeholder="Enter your mobile number" maxlength="10"
@@ -232,10 +231,10 @@ $currentPage = 'work-with-us';
                                             </div>
                                             <div class="col-lg-12 col-xl-12 col-xxl-12 mb-3">
                                                 <div class="form-floating">
-                                                    <input type="email" id="email" name="email" class="form-control"
-                                                        placeholder="Email " data-error="Valid email is required."
+                                                    <input type="text" id="education" name="education" class="form-control"
+                                                        placeholder="Education " data-error="Valid email is required."
                                                         autocomplete="off">
-                                                    <label for="email">Education</label>
+                                                    <label for="education">Education</label>
                                                 </div>
                                             </div>
                                             <div class="col-lg-12 col-xl-12 col-xxl-12 mb-3">
@@ -253,12 +252,24 @@ $currentPage = 'work-with-us';
                                                 </div>
                                             </div>
                                             <div class="col-lg-12 col-xl-12 col-xxl-12 mb-3">
-                                                <div class="formGroup">
+                                                <!-- <div class="formGroup">
                                                     <input class="form-control" type="file" id="formFile">
+                                                </div> -->
+                                                <div class="formGroup uploadWrapper">
+                                                    <input type="file" id="fileInput" accept=".pdf,.doc,.docx" hidden />
+                                                    <div class="dropZone" id="dropZone">
+                                                        <div class="zoneContent">
+                                                            <span class="zoneIcon"><i class="ph-duotone ph-file-text"></i></span>
+                                                            <p>Drag & drop PDF or Word file</p>
+                                                            <small>or <strong>browse</strong></small>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="fileInfo" id="fileInfo"></div>
                                                 </div>
                                             </div>
                                             <div class="col-lg-12">
-                                                <button type="submit" name="submit" id="submit"
+                                                <button type="submit" name="submit" id="submit" 
                                                     class="btn btn-primary">Submit</button>
                                             </div>
                                         </div>

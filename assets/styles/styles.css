@@ -2630,19 +2630,49 @@ footer .copyright .copyrightContent .copyrightLinks {
     max-height: 100vh !important;
   }
 }
+#careerModal .modal-dialog {
+  max-width: 1200px;
+}
 #careerModal .modal-body {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
+}
+#careerModal .modal-body .row {
+  height: 100%;
+  margin: 0;
+  flex: 1;
+}
+#careerModal .modal-body .row > div[class*=col-] {
+  height: 100%;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 #careerModal .careerForm,
 #careerModal .careerPopupContent {
   position: relative;
   padding: 2.5rem;
   height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+#careerModal .careerForm::-webkit-scrollbar,
+#careerModal .careerPopupContent::-webkit-scrollbar {
+  width: 6px;
+}
+#careerModal .careerForm::-webkit-scrollbar-track,
+#careerModal .careerPopupContent::-webkit-scrollbar-track {
+  background: transparent;
+}
+#careerModal .careerForm::-webkit-scrollbar-thumb,
+#careerModal .careerPopupContent::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 #careerModal .careerPopupContent {
-  overflow-y: auto;
-  height: 100%;
-  max-height: 50rem;
+  background-color: #fff;
 }
 #careerModal .careerPopupContent h1,
 #careerModal .careerPopupContent h2,
@@ -2670,10 +2700,95 @@ footer .copyright .copyrightContent .copyrightLinks {
 #careerModal .careerPopupContent h6 {
   font-size: 0.8333333333rem;
 }
+#careerModal .careerPopupContent p {
+  line-height: 1.6;
+  color: #343e45;
+}
+#careerModal .careerPopupContent ul {
+  padding-left: 1.25rem;
+}
+#careerModal .careerPopupContent ul li {
+  margin-bottom: 0.5rem;
+}
 #careerModal .careerForm {
   background-color: #f5f9fd;
+  border-left: 1px solid #e4e4e4;
+}
+#careerModal .careerForm .form-floating {
+  margin-bottom: 1rem;
+}
+#careerModal .careerForm .uploadWrapper {
+  margin: 1.5rem 0;
+}
+#careerModal .careerForm .dropZone {
+  border: 2px dashed #e4e4e4;
+  border-radius: 1rem;
+  padding: 2.25rem;
+  text-align: center;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+#careerModal .careerForm .dropZone:hover {
+  border-color: #0071bf;
+  background: rgb(180.8, 224.6984293194, 255);
+}
+#careerModal .careerForm .dropZone.active {
+  border-color: #0071bf;
+  background: rgb(165.5, 218.4502617801, 255);
+  transform: scale(0.99);
+}
+#careerModal .careerForm .dropZone.error {
+  border-color: #d62828;
+  background: rgb(253.2362204724, 245.5637795276, 245.5637795276);
+}
+#careerModal .careerForm .zoneIcon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 10px;
+  color: #0071bf;
+}
+#careerModal .careerForm .zoneContent p {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1rem;
+}
+#careerModal .careerForm .zoneContent small {
+  color: #343e45;
+  font-size: 0.85rem;
+}
+#careerModal .careerForm .fileInfo {
+  margin-top: 1.5rem;
+  font-size: 0.875rem;
+  text-align: center;
+  color: #0071bf;
+  font-weight: 500;
+}
+#careerModal .careerForm .btn-primary {
+  width: 100%;
+  padding: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
+@media (max-width: 991.98px) {
+  #careerModal .modal-body {
+    height: auto;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+  #careerModal .careerForm,
+  #careerModal .careerPopupContent {
+    height: auto;
+    overflow-y: visible;
+    padding: 1.5rem;
+  }
+  #careerModal .careerForm {
+    border-left: none;
+    border-top: 1px solid #e4e4e4;
+  }
+}
 .modal .modal-header .modal-title {
   font-size: 1.25rem;
   font-weight: 600;

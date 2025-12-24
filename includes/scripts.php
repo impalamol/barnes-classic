@@ -125,8 +125,7 @@
         })();
 
     });
-</script>
-<script>
+
     var swiper = new Swiper(".heroSwiper", {
         autoplay: {
             delay: 5000,
@@ -140,8 +139,7 @@
             prevEl: ".swiper-button-prev",
         },
     });
-</script>
-<script>
+
     // === Thumbs Gallery ===
     const thumbs = new Swiper(".thumbs", {
         loop: true,
@@ -187,8 +185,7 @@
             clickable: true,
         },
     });
-</script>
-<script>
+
     var a = 0;
     $(window).scroll(function () {
         var oTop = $('.counter').offset().top - window.innerHeight;
@@ -214,8 +211,7 @@
             a = 1;
         }
     });
-</script>
-<script>
+
     document.addEventListener('DOMContentLoaded', function () {
         var offcanvasEl = document.getElementById('desktopMenu');
         if (!offcanvasEl) return;
@@ -228,8 +224,7 @@
             console.log('Offcanvas hidden'); // debugging
         });
     });
-</script>
-<script>
+
     $(document).ready(function () {
         $('.popupGallery').magnificPopup({
             delegate: 'a',
@@ -254,8 +249,7 @@
             removalDelay: 300, // Delay removal to allow the fade-out effect
         });
     });
-</script>
-<script>
+
     function resizeGridItem(item) {
         grid = document.getElementsByClassName("gridGallery")[0];
         rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
@@ -284,8 +278,7 @@
     for (x = 0; x < allItems.length; x++) {
         imagesLoaded(allItems[x], resizeInstance);
     }
-</script>
-<script>
+
     (function () {
         var elements = document.querySelectorAll('img[data-src]');
         var index = 0;
@@ -308,8 +301,7 @@
         };
         return init();
     })();
-</script>
-<script>
+
     document.addEventListener("DOMContentLoaded", () => {
         const allCards = document.querySelectorAll(".avatarCard");
         let highlighted = false;
@@ -355,8 +347,7 @@
         next();
     }
 
-</script>
-<script>
+
     document.addEventListener('DOMContentLoaded', function () {
         const videoSection = document.querySelector('.videoSection');
         const playBtn = document.querySelector('.playBtn');
@@ -392,8 +383,7 @@
             playBtn.style.transition = 'transform 0.3s cubic-bezier(0.19, 1, 0.22, 1)';
         });
     });
-</script>
-<script>
+
     document.addEventListener("DOMContentLoaded", function () {
 
         const videoModal = document.getElementById('videoModal');
@@ -409,8 +399,7 @@
         });
 
     });
-</script>
-<script>
+
     function enhanceTables(root = document) {
         root.querySelectorAll('table').forEach(table => {
 
@@ -457,8 +446,7 @@
         subtree: true
     });
 
-</script>
-<script>
+
     document.addEventListener("DOMContentLoaded", function () {
         const container = document.querySelector(".sidebarContent");
         const activeLink = container?.querySelector(".nav-link.active");
@@ -503,8 +491,7 @@
             });
         }
     });
-</script>
-<script>
+
     var swiper = new Swiper(".collaborationSwiper", {
         autoplay: {
             delay: 3000,
@@ -520,8 +507,57 @@
             992: { slidesPerView: 4 }
         }
     });
-</script>
-<script>
+
+    const dropZone = document.getElementById("dropZone");
+    const fileInput = document.getElementById("fileInput");
+    const fileInfo = document.getElementById("fileInfo");
+
+    const allowedTypes = [
+        "application/pdf",
+        "application/msword",
+        "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+    ];
+
+    dropZone.addEventListener("click", () => fileInput.click());
+
+    dropZone.addEventListener("dragover", (event) => {
+        event.preventDefault();
+        dropZone.classList.add("active");
+    });
+
+    dropZone.addEventListener("dragleave", () => {
+        dropZone.classList.remove("active");
+    });
+
+    dropZone.addEventListener("drop", (event) => {
+        event.preventDefault();
+        dropZone.classList.remove("active");
+        handleFile(event.dataTransfer.files[0]);
+    });
+
+    fileInput.addEventListener("change", () => {
+        handleFile(fileInput.files[0]);
+    });
+
+    function handleFile(file) {
+        if (!file) return;
+
+        if (!allowedTypes.includes(file.type)) {
+            showError("Only PDF or Word files are allowed");
+            return;
+        }
+
+        fileInfo.textContent = `Selected file: ${file.name} (${(file.size / 1024).toFixed(1)} KB)`;
+        dropZone.classList.remove("error");
+    }
+
+    function showError(message) {
+        fileInfo.textContent = message;
+        dropZone.classList.add("error");
+        fileInput.value = "";
+    }
+
+
     var currentYear = new Date().getFullYear();
     document.getElementById("year").textContent = currentYear;
 </script>
