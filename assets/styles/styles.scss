@@ -1940,36 +1940,16 @@ footer {
     }
 }
 #careerModal {
-    .modal-dialog {
-        max-width: 1200px;
-    }
-
     .modal-body {
-        // height: 70vh;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
+        max-height: 100vh;
         overflow: hidden;
-
-        .row {
-            height: 100%;
-            margin: 0;
-            flex: 1;
-
-            > div[class*="col-"] {
-                height: 100%;
-                padding: 0;
-                display: flex;
-                flex-direction: column;
-            }
-        }
     }
 
     .careerForm,
     .careerPopupContent {
         position: relative;
         padding: 2.5rem;
-        height: 100%;
+        max-height: calc(100vh - 6.25rem);
         overflow-y: auto;
         overflow-x: hidden;
 
@@ -1986,7 +1966,7 @@ footer {
     }
 
     .careerPopupContent {
-        background-color: #fff;
+        background-color: $white;
 
         h1,
         h2,
@@ -2042,12 +2022,12 @@ footer {
         }
 
         .dropZone {
+            text-align: center;
+            background: $white;
+            padding: $commonUnit * 1.5;
+            cursor: pointer;
             border: 2px dashed $border;
             border-radius: $cardRadius;
-            padding: $commonUnit * 1.5;
-            text-align: center;
-            background: #fff;
-            cursor: pointer;
             transition: all 0.3s ease-in-out;
 
             &:hover {
@@ -2068,17 +2048,17 @@ footer {
         }
 
         .zoneIcon {
-            font-size: 2rem;
+            font-size: $xLarge;
+            color: $primary;
             display: block;
             margin-bottom: 10px;
-            color: $primary;
         }
 
         .zoneContent {
             p {
+                font-size: $xLarge;
                 margin: 0;
                 font-weight: 600;
-                font-size: 1rem;
             }
 
             small {
@@ -2088,44 +2068,15 @@ footer {
         }
 
         .fileInfo {
-            margin-top: $commonUnit;
             font-size: $medium;
+            font-weight: 500;
             text-align: center;
             color: $primary;
-            font-weight: 500;
-        }
-
-        .btn-primary {
-            width: 100%;
-            padding: 0.8rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            margin-top: $commonUnit;
         }
     }
 }
 
-@media (max-width: 991.98px) {
-    #careerModal {
-        .modal-body {
-            height: auto;
-            max-height: 80vh;
-            overflow-y: auto;
-        }
-
-        .careerForm,
-        .careerPopupContent {
-            height: auto;
-            overflow-y: visible;
-            padding: 1.5rem;
-        }
-
-        .careerForm {
-            border-left: none;
-            border-top: 1px solid $border;
-        }
-    }
-}
 .modal {
     .modal-header {
         .modal-title {
