@@ -41,13 +41,16 @@ $currentPage = 'alumni';
                     <div class="wrapper flex-wrap flex-lg-nowrap">
                         <div class="contentCard">
                             <div class="content">
-                                <div class="pgHeader">
+                                <div class="pgHeader full">
                                     <div class="pgTitle">
                                         <h6 class="pgSection">Barnes Alumni</h6>
                                         <h2>Forever a Part of Barnes</h2>
                                         <p>Celebrating the journeys, milestones, and lasting connections of those who
                                             once walked the halls of Barnes.</p>
                                     </div>
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#alumniRegisterModal"
+                                        class="btn btn-primary"><i class="ph-duotone ph-user-plus"></i> Register As
+                                        Alumni</a>
                                 </div>
                                 <div class="row">
                                     <div class="col-12 col-md-12 col-lg-6 col-xl-3 col-xxl-3 mb-4">
@@ -136,16 +139,176 @@ $currentPage = 'alumni';
         </div>
     </div>
 
-    <div class="modal fade" id="highlightPopupModal" tabindex="-1" aria-labelledby="highlightPopupModalLabel"
+    <div class="modal fade" id="alumniRegisterModal" tabindex="-1" aria-labelledby="alumniRegisterModalLabel"
         aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="highlightPopupModalLabel">Title</h1>
+                    <h1 class="modal-title fs-5" id="alumniRegisterModalLabel">Register As Alumni</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <img src="assets/media/gallery/gallery.jpg" alt="Img Title" title="Img Title">
+                    <div class="p-5">
+                        <form class="row">
+
+                            <!-- Personal Details Heading -->
+                            <div class="col-12 mb-4">
+                                <h5>Personal Details</h5>
+                            </div>
+
+                            <!-- Alumni Name -->
+                            <div class="col-md-6 mb-3">
+                                <div class="formGroup">
+                                    <label class="form-label">Alumni Name <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" placeholder="Enter full name" required>
+                                </div>
+                            </div>
+
+                            <!-- Passout Year -->
+                            <div class="col-md-3 mb-3">
+                                <div class="formGroup">
+                                    <label class="form-label">Passout Year <span class="text-danger">*</span></label>
+                                    <input type="number" class="form-control" placeholder="YYYY" required>
+                                </div>
+                            </div>
+
+                            <!-- Years in Barnes -->
+                            <div class="col-md-3 mb-3">
+                                <div class="formGroup">
+                                    <label class="form-label">No. of Years in Barnes</label>
+                                    <input type="number" class="form-control" placeholder="Optional">
+                                </div>
+                            </div>
+
+                            <!-- Present Designation -->
+                            <div class="col-md-6 mb-3">
+                                <div class="formGroup">
+                                    <label class="form-label">Present Designation & Location</label>
+                                    <input type="text" class="form-control" placeholder="Designation, City">
+                                </div>
+                            </div>
+
+                            <!-- Profession -->
+                            <div class="col-md-6 mb-3">
+                                <div class="formGroup">
+                                    <label class="form-label">Profession / Occupation</label>
+                                    <input type="text" class="form-control" placeholder="Profession">
+                                </div>
+                            </div>
+                            <hr>
+                            <!-- School Memories Heading -->
+                            <div class="col-12 mb-4">
+                                <h5>School Memories</h5>
+                            </div>
+                            <!-- House Name -->
+                            <div class="col-md-4 mb-3">
+                                <div class="formGroup">
+                                    <label class="form-label">Your House Name</label>
+                                    <select class="form-select">
+                                        <option value="">Select House</option>
+                                        <option value="Green">Green</option>
+                                        <option value="Blue">Blue</option>
+                                        <option value="Red">Red</option>
+                                        <option value="Yellow">Yellow</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Boarder / Day Scholar -->
+                            <div class="col-md-4 mb-3">
+                                <div class="formGroup">
+                                    <label class="form-label">Boarder / Day-Scholar</label>
+                                    <select class="form-select">
+                                        <option value="">Select</option>
+                                        <option value="Boarder">Boarder</option>
+                                        <option value="Day-Scholar">Day-Scholar</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Favourite Teacher -->
+                            <div class="col-md-4 mb-3">
+                                <div class="formGroup">
+                                    <label class="form-label">Favourite Teacher at Barnes</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+
+                            <!-- Best Friends -->
+                            <div class="col-md-6 mb-3">
+                                <div class="formGroup">
+                                    <label class="form-label">Best Friend / Friends at Barnes</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+
+                            <!-- Favourite Place -->
+                            <div class="col-md-6 mb-3">
+                                <div class="formGroup">
+                                    <label class="form-label">Favourite Place at Barnes</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+
+                            <!-- School Memories -->
+                            <div class="col-12 mb-3">
+                                <div class="formGroup">
+                                    <label class="form-label">School Memories</label>
+                                    <textarea class="form-control" rows="3"></textarea>
+                                </div>
+                            </div>
+
+                            <!-- Unforgettable Memory -->
+                            <div class="col-12 mb-3">
+                                <div class="formGroup">
+                                    <label class="form-label">One Unforgettable Memory at Barnes</label>
+                                    <textarea class="form-control" rows="3"></textarea>
+                                </div>
+                            </div>
+
+                            <!-- Friends Contact -->
+                            <div class="col-12 mb-3">
+                                <div class="formGroup">
+                                    <label class="form-label">
+                                        Barnes Friends Contact Details (Optional)
+                                    </label>
+                                    <textarea class="form-control" rows="3" placeholder="Name, Phone, Email"></textarea>
+                                </div>
+                            </div>
+
+                            <!-- Upload Photo -->
+                            <div class="col-md-6 mb-3">
+                                <div class="formGroup">
+                                    <label class="form-label">Upload Recent / School Photograph</label>
+                                    <input type="file" class="form-control">
+                                </div>
+                            </div>
+                            <hr>
+                            <!-- School Memories Heading -->
+                            <div class="col-12 mb-4">
+                                <h5>Consent</h5>
+                            </div>
+                            <!-- Consent -->
+                            <div class="col-12 mb-4">
+                                <div class="formGroup form-check">
+                                    <input type="checkbox" class="form-check-input" id="consent">
+                                    <label class="form-check-label" for="consent">
+                                        I agree that my information can be used by Barnes School & Junior College
+                                        for alumni communication and event updates.
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Submit -->
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary px-5">
+                                    Submit Registration
+                                </button>
+                            </div>
+
+                        </form>
+
+                    </div>
                 </div>
             </div>
         </div>
