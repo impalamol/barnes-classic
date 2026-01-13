@@ -92,7 +92,22 @@
         }
     }
 }
+// Social
+.social {
+    @extend .flex-center-start;
+    gap: $commonUnit;
 
+    .socialIcon {
+        font-size: $xLarge !important;
+        color: $white;
+        line-height: normal;
+        transition: color 0.3s;
+
+        &:hover {
+            color: $secondary;
+        }
+    }
+}
 // Topbar
 .topbar {
     background: $dark !important;
@@ -105,19 +120,6 @@
         flex-wrap: wrap;
         padding: 0 !important;
 
-        .social {
-            @extend .flex-center-start;
-            gap: $commonUnit;
-
-            .socialIcon {
-                color: $white;
-                transition: color 0.3s;
-
-                &:hover {
-                    color: $secondary;
-                }
-            }
-        }
         .quickLinks {
             @extend .flex-center-start;
             gap: $commonUnit / 2;
@@ -1304,12 +1306,14 @@ footer {
             height: 100%;
 
             .footerLogo {
-                display: flex;
+                @extend .flex-center;
+                flex-direction: column;
+                gap: $commonUnit;
                 height: 100%;
 
                 img {
                     max-width: 9.375rem !important;
-                    margin: auto;
+                    margin: 0 auto;
                 }
             }
 

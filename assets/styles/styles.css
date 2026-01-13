@@ -73,7 +73,7 @@ textarea:not([rows]) {
   display: flex;
 }
 
-.flex-center, .contactUs .contactCard .contactChip .icon, .blogDetails .blogSidebar .sidebarContent .recentPost, .documents .documentCard figure, .barnicles .barnicleCard figure, .collaborations .affilationCard .collaborationCard, .videoSection .playBtn, .about .aboutImgContainer figure, .hero .paginationContainer .navigation .swiper-button-next,
+.flex-center, .contactUs .contactCard .contactChip .icon, .blogDetails .blogSidebar .sidebarContent .recentPost, footer .footerContent .footerCard .footerLogo, .documents .documentCard figure, .barnicles .barnicleCard figure, .collaborations .affilationCard .collaborationCard, .videoSection .playBtn, .about .aboutImgContainer figure, .hero .paginationContainer .navigation .swiper-button-next,
 .hero .paginationContainer .navigation .swiper-button-prev, .hero .paginationContainer .navigation, .hero .heroSlide, .videoBtn, header .navbar .nav-item .nav-link, .progressLoader .loaderContent .imgContainer, .progressLoader, .searchModal .nrs, .searchModal .searchResult .resultItem a .productIcon img, .pgHeader.centered .pgTitle,
 .pgHeader.centered .pgSection, .pgHeader.centered {
   display: flex;
@@ -94,7 +94,7 @@ textarea:not([rows]) {
 }
 
 .flex-center-start, .blogDetails .blogSidebar .sidebarContent ul.blogTags,
-.blogDetails .blogSidebar .sidebarContent ol.blogTags, footer .copyright .copyrightContent .copyrightLinks, .albums .albumCard .albumThumbs, .academics .contentCard .content .subjectList, .videoSection, .menu .menuContact .contactDetail .social, .menu .menuContact .contactDetail .contactNumbers, .menu, header .notification .notificationsContainer .title, header .notification .notificationsContainer, .topbar .topbarContent .quickLinks a, .topbar .topbarContent .quickLinks, .topbar .topbarContent .social, .searchModal .searchResult .resultItem a, .pgHeader, .btnGroup {
+.blogDetails .blogSidebar .sidebarContent ol.blogTags, footer .copyright .copyrightContent .copyrightLinks, .albums .albumCard .albumThumbs, .academics .contentCard .content .subjectList, .videoSection, .menu .menuContact .contactDetail .social, .menu .menuContact .contactDetail .contactNumbers, .menu, header .notification .notificationsContainer .title, header .notification .notificationsContainer, .topbar .topbarContent .quickLinks a, .topbar .topbarContent .quickLinks, .social, .searchModal .searchResult .resultItem a, .pgHeader, .btnGroup {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -1086,6 +1086,19 @@ section:not(.hero) .wrapper .contentCard .note p span {
   transition: width 0.3s ease;
 }
 
+.social {
+  gap: 1.5rem;
+}
+.social .socialIcon {
+  font-size: 1.125rem !important;
+  color: #ffffff;
+  line-height: normal;
+  transition: color 0.3s;
+}
+.social .socialIcon:hover {
+  color: #00b0ff;
+}
+
 .topbar {
   background: #000b20 !important;
   color: #ffffff;
@@ -1095,16 +1108,6 @@ section:not(.hero) .wrapper .contentCard .note p span {
 .topbar .topbarContent {
   flex-wrap: wrap;
   padding: 0 !important;
-}
-.topbar .topbarContent .social {
-  gap: 1.5rem;
-}
-.topbar .topbarContent .social .socialIcon {
-  color: #ffffff;
-  transition: color 0.3s;
-}
-.topbar .topbarContent .social .socialIcon:hover {
-  color: #00b0ff;
 }
 .topbar .topbarContent .quickLinks {
   gap: 0.75rem;
@@ -2096,12 +2099,13 @@ footer .footerContent .footerCard {
   height: 100%;
 }
 footer .footerContent .footerCard .footerLogo {
-  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
   height: 100%;
 }
 footer .footerContent .footerCard .footerLogo img {
   max-width: 9.375rem !important;
-  margin: auto;
+  margin: 0 auto;
 }
 footer .footerContent .footerCard h6 {
   font-size: 1.5rem;
