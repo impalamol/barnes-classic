@@ -6,6 +6,13 @@
                     <div class="footerCard">
                         <div class="footerLogo">
                             <img src="assets/media/barnes-logo.png" alt="Barnes Logo" class="img-fluid">
+                            <div class="social">
+                                <a href="#" class="socialIcon"><i class="ph-duotone ph-linkedin-logo"></i></a>
+                                <a href="#" class="socialIcon"><i class="ph-duotone ph-facebook-logo"></i></a>
+                                <a href="#" class="socialIcon"><i class="ph-duotone ph-instagram-logo"></i></a>
+                                <a href="#" class="socialIcon"><i class="ph-duotone ph-twitter-logo"></i></a>
+                                <a href="#" class="socialIcon"><i class="ph-duotone ph-youtube-logo"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
