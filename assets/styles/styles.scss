@@ -556,7 +556,7 @@ header {
     overflow: hidden;
     position: relative;
     height: 100%;
-    border: none;
+    border: $commonBorder;
     figure,
     .cardContent {
         width: 100%;
@@ -566,7 +566,13 @@ header {
         border-radius: 0 !important;
         position: relative;
         flex-grow: 1;
-
+        img {
+            width: 100%;
+            min-height: 100% !important;
+            height: 17.5rem !important;
+            -webkit-object-fit: cover;
+            object-fit: cover;
+        }
         .videoBtn {
             position: absolute;
             top: 80%;
@@ -1044,6 +1050,71 @@ header {
     }
 }
 .feeStructure {
+    .accordion {
+        .accordionItem {
+            .accordionHeader {
+                .accordionHeaderContent {
+                    h3 {
+                        font-size: $xLarge;
+                        color: $dark;
+                        margin: 0;
+                    }
+                    .subTitle {
+                        font-size: $medium;
+                        color: $gray;
+                        opacity: 0.6;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            .accordionCollapse {
+                .accordionBody {
+                    .feeDetails {
+                        ul,
+                        ol {
+                            padding-left: $commonUnit;
+
+                            li {
+                                padding: $commonUnit / 3;
+                                border-bottom: $commonBorder;
+                            }
+                        }
+                    }
+                    .totalFee {
+                        position: -webkit-sticky;
+                        position: sticky;                        
+                        padding: $commonUnit;
+                        border: 1px solid $primary;
+                        background-color: rgba($color: $primary, $alpha: 0.1);
+                        border-radius: $cardRadius / 2;
+
+                        .fee,
+                        .info {
+                            font-weight: 700;
+                            text-align: center;
+                            display: block;
+                        }
+                        .fee {
+                            font-size: $h4;
+                            color: $primary;
+                            margin: 0;
+                            line-height: normal;
+                        }
+                        .info {
+                            font-size: $small;
+                            color: $dark;
+                            opacity: 0.8;
+                        }
+                    }
+                }
+                &.show  .accordionBody .totalFee {
+                    top: 11.25rem;
+
+                }
+            }
+        }
+    }
+
     .feeCard {
         @extend .flex-center-between;
         gap: $commonUnit;
@@ -1055,33 +1126,6 @@ header {
         border: $commonBorder;
         border-radius: $cardRadius / 2;
         // box-shadow: 0 0.125rem 0.75rem rgba(110, 140, 170, 0.1);
-
-        h3 {
-            font-size: $xLarge;
-            color: $dark;
-            margin: 0;
-        }
-        .subTitle {
-            font-size: $large;
-            color: $gray;
-            opacity: 0.6;
-            margin-bottom: 0;
-        }
-        .fee {
-            font-size: $h5;
-            font-weight: 700;
-            text-align: right;
-            color: $primary;
-            display: block;
-            margin: 0;
-            line-height: normal;
-        }
-        .info {
-            font-size: $small;
-            font-weight: 700;
-            color: $dark;
-            opacity: 0.8;
-        }
     }
 }
 // documents

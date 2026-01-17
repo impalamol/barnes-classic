@@ -1482,7 +1482,7 @@ header .notification .notificationsContainer .notificationListContainer .notific
   overflow: hidden;
   position: relative;
   height: 100%;
-  border: none;
+  border: 0.0625rem solid #e4e4e4;
 }
 .avatarCard figure,
 .avatarCard .cardContent {
@@ -1493,6 +1493,14 @@ header .notification .notificationsContainer .notificationListContainer .notific
   border-radius: 0 !important;
   position: relative;
   flex-grow: 1;
+}
+.avatarCard figure img {
+  width: 100%;
+  min-height: 100% !important;
+  height: 17.5rem !important;
+  -webkit-object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .avatarCard figure .videoBtn {
   position: absolute;
@@ -1869,6 +1877,53 @@ header .notification .notificationsContainer .notificationListContainer .notific
   box-shadow: rgba(0, 11, 32, 0.1) 0rem 0.4375rem 1.8125rem 0rem;
 }
 
+.feeStructure .accordion .accordionItem .accordionHeader .accordionHeaderContent h3 {
+  font-size: 1.125rem;
+  color: #000b20;
+  margin: 0;
+}
+.feeStructure .accordion .accordionItem .accordionHeader .accordionHeaderContent .subTitle {
+  font-size: 0.875rem;
+  color: #343e45;
+  opacity: 0.6;
+  margin-bottom: 0;
+}
+.feeStructure .accordion .accordionItem .accordionCollapse .accordionBody .feeDetails ul,
+.feeStructure .accordion .accordionItem .accordionCollapse .accordionBody .feeDetails ol {
+  padding-left: 1.5rem;
+}
+.feeStructure .accordion .accordionItem .accordionCollapse .accordionBody .feeDetails ul li,
+.feeStructure .accordion .accordionItem .accordionCollapse .accordionBody .feeDetails ol li {
+  padding: 0.5rem;
+  border-bottom: 0.0625rem solid #e4e4e4;
+}
+.feeStructure .accordion .accordionItem .accordionCollapse .accordionBody .totalFee {
+  position: sticky;
+  padding: 1.5rem;
+  border: 1px solid #0071bf;
+  background-color: rgba(0, 113, 191, 0.1);
+  border-radius: 0.5rem;
+}
+.feeStructure .accordion .accordionItem .accordionCollapse .accordionBody .totalFee .fee,
+.feeStructure .accordion .accordionItem .accordionCollapse .accordionBody .totalFee .info {
+  font-weight: 700;
+  text-align: center;
+  display: block;
+}
+.feeStructure .accordion .accordionItem .accordionCollapse .accordionBody .totalFee .fee {
+  font-size: 2rem;
+  color: #0071bf;
+  margin: 0;
+  line-height: normal;
+}
+.feeStructure .accordion .accordionItem .accordionCollapse .accordionBody .totalFee .info {
+  font-size: 0.75rem;
+  color: #000b20;
+  opacity: 0.8;
+}
+.feeStructure .accordion .accordionItem .accordionCollapse.show .accordionBody .totalFee {
+  top: 11.25rem;
+}
 .feeStructure .feeCard {
   gap: 1.5rem;
   flex-wrap: wrap;
@@ -1878,32 +1933,6 @@ header .notification .notificationsContainer .notificationListContainer .notific
   height: 100%;
   border: 0.0625rem solid #e4e4e4;
   border-radius: 0.5rem;
-}
-.feeStructure .feeCard h3 {
-  font-size: 1.125rem;
-  color: #000b20;
-  margin: 0;
-}
-.feeStructure .feeCard .subTitle {
-  font-size: 1rem;
-  color: #343e45;
-  opacity: 0.6;
-  margin-bottom: 0;
-}
-.feeStructure .feeCard .fee {
-  font-size: 1.5rem;
-  font-weight: 700;
-  text-align: right;
-  color: #0071bf;
-  display: block;
-  margin: 0;
-  line-height: normal;
-}
-.feeStructure .feeCard .info {
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: #000b20;
-  opacity: 0.8;
 }
 
 .documents .documentCard {
