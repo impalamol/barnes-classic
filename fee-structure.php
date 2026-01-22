@@ -51,9 +51,9 @@ $currentPage = 'fee-structure';
                                     <!-- LKG to 4 -->
                                     <div class="accordion-item accordionItem">
                                         <h2 class="accordion-header accordionHeader">
-                                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                                data-bs-target="#collapseLKG" aria-expanded="true"
-                                                aria-controls="collapseLKG">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseLKG"
+                                                aria-expanded="false" aria-controls="collapseLKG">
                                                 <div class="accordionHeaderContent">
                                                     <h3>LKG to 4</h3>
                                                     <p class="subTitle">All Streams</p>
@@ -61,7 +61,7 @@ $currentPage = 'fee-structure';
                                             </button>
                                         </h2>
 
-                                        <div id="collapseLKG" class="accordion-collapse collapse show accordionCollapse"
+                                        <div id="collapseLKG" class="accordion-collapse collapse accordionCollapse"
                                             data-bs-parent="#boardingAccordion">
                                             <div class="accordion-body accordionBody">
                                                 <div class="row">
@@ -95,7 +95,8 @@ $currentPage = 'fee-structure';
                                     <div class="accordion-item accordionItem">
                                         <h2 class="accordion-header accordionHeader">
                                             <button class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#collapseGrade5">
+                                                data-bs-toggle="collapse" data-bs-target="#collapseGrade5"
+                                                aria-expanded="false">
                                                 <div class="accordionHeaderContent">
                                                     <h3>Grade 5</h3>
                                                     <p class="subTitle">All Streams</p>
@@ -137,7 +138,8 @@ $currentPage = 'fee-structure';
                                     <div class="accordion-item accordionItem">
                                         <h2 class="accordion-header accordionHeader">
                                             <button class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#collapseGrade6to8">
+                                                data-bs-toggle="collapse" data-bs-target="#collapseGrade6to8"
+                                                aria-expanded="false">
                                                 <div class="accordionHeaderContent">
                                                     <h3>Grade 6 to 8</h3>
                                                     <p class="subTitle">All Streams</p>
@@ -180,7 +182,8 @@ $currentPage = 'fee-structure';
                                     <div class="accordion-item accordionItem">
                                         <h2 class="accordion-header accordionHeader">
                                             <button class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#collapseGrade9Science">
+                                                data-bs-toggle="collapse" data-bs-target="#collapseGrade9Science"
+                                                aria-expanded="false">
                                                 <div class="accordionHeaderContent">
                                                     <h3>Grade 9 &amp; 10 (Science)</h3>
                                                     <p class="subTitle">Science Stream</p>
@@ -223,7 +226,8 @@ $currentPage = 'fee-structure';
                                     <div class="accordion-item accordionItem">
                                         <h2 class="accordion-header accordionHeader">
                                             <button class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#collapseGrade11Science">
+                                                data-bs-toggle="collapse" data-bs-target="#collapseGrade11Science"
+                                                aria-expanded="false">
                                                 <div class="accordionHeaderContent">
                                                     <h3>Grade 11 Science</h3>
                                                     <p class="subTitle">Higher Secondary</p>
@@ -263,6 +267,7 @@ $currentPage = 'fee-structure';
                                     </div>
 
                                 </div>
+
                             </div>
 
                             <div class="content">
