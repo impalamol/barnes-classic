@@ -120,7 +120,30 @@
                     }, pagination: { el: ".swiper-pagination", clickable: true },
                 });
             } /* ---
-          
+                  /* Popup Gallery (keeps Magnific Popup jQuery plugin usage) */
+        (function () {
+            if (window.jQuery && $.fn && $.fn.magnificPopup) {
+                $(function () {
+                    $('.popupGallery').magnificPopup({
+                        delegate: 'a',
+                        type: 'image',
+                        gallery: {
+                            enabled: true,
+                            navigateByImgClick: true,
+                            preload: [0, 1]
+                        },
+                        keyboard: {
+                            enabled: true,
+                            left: true,
+                            right: true,
+                            escKey: true
+                        },
+                        mainClass: 'mfp-fade',
+                        removalDelay: 300
+                    });
+                });
+            }
+        })();
         /* --- Grid Gallery Logic --- */
         function resizeGridItem(item) {
             const grid = document.getElementsByClassName("gridGallery")[0];
