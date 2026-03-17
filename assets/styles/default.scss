@@ -420,6 +420,11 @@ section:not(.hero) {
                         transition: all 0.7s linear;
                     }
                 }
+                br + br {
+                    display: block;
+                    margin-bottom: 10px;
+                    content: "";
+                }
                 p {
                     text-align: justify;
                     text-align-last: left;
@@ -498,7 +503,7 @@ section:not(.hero) {
     gap: $commonUnit;
     position: relative;
     z-index: 2;
-    margin-bottom: $commonUnit + $commonUnit / 2;
+    margin-bottom: $commonUnit;
 
     .pgTitle {
         @extend .flex-start;
