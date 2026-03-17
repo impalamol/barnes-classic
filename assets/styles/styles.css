@@ -662,7 +662,7 @@ section:not(.hero) .wrapper .contentCard .note p span {
   gap: 1.5rem;
   position: relative;
   z-index: 2;
-  margin-bottom: 2.25rem;
+  margin-bottom: 1.5rem;
 }
 .pgHeader .pgTitle {
   flex-direction: column;
