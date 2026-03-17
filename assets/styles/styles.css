@@ -592,10 +592,16 @@ section:not(.hero) .wrapper .contentCard .content figure {
 section:not(.hero) .wrapper .contentCard .content figure img {
   transition: all 0.7s linear;
 }
+section:not(.hero) .wrapper .contentCard .content br + br {
+  display: block;
+  margin-bottom: 10px;
+  content: "";
+}
 section:not(.hero) .wrapper .contentCard .content p {
   text-align: justify;
   -moz-text-align-last: left;
        text-align-last: left;
+  margin-bottom: 0.8rem !important;
 }
 section:not(.hero) .wrapper .contentCard .content p:last-child {
   margin-bottom: 0 !important;
