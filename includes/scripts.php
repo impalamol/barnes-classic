@@ -292,5 +292,17 @@
 </script>
 
 <script>
-    const html = text.replace(/(<br\s*\/?>\s*){2,}/g, '</p><p>');
+   function formatParagraphs(html) {
+  return '<p>' +
+    html
+      // replace 2+ <br> with paragraph break
+      .replace(/(<br\s*\/?>\s*){2,}/gi, '</p><p>')
+      
+      // remove single <br> at start/end
+      .replace(/^(<br\s*\/?>)+|(<br\s*\/?>)+$/gi, '')
+      
+      // optional: clean extra spaces
+      .trim()
+  + '</p>';
+}
 </script>
