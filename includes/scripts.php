@@ -290,3 +290,7 @@
     });
     tableObserver.observe(document.body, { childList: true, subtree: true });
 </script>
+
+<script>
+    const html = text.replace(/(<br\s*\/?>\s*){2,}/g, '</p><p>');
+</script>
