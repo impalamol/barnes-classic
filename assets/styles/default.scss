@@ -401,7 +401,7 @@ section:not(.hero) {
                 flex-grow: 1;
                 width: 100%;
                 background-color: $white;
-                padding: $commonUnit * 2;
+                padding: $commonUnit;
                 border: $commonBorder;
                 border-radius: $cardRadius;
 
@@ -516,7 +516,7 @@ section:not(.hero) {
         h2 {
             font-size: $h4;
             font-weight: 700;
-            color: $primary;
+            color: $dark;
             margin: 0;
 
             span {

@@ -569,9 +569,12 @@ header {
         img {
             width: 100%;
             min-height: 100% !important;
-            height: 17.5rem !important;
+            height: 14.375rem !important;
+            -o-object-fit: cover;
             -webkit-object-fit: cover;
             object-fit: cover;
+            -o-object-position: top;
+            object-position: top;
         }
         .videoBtn {
             position: absolute;
