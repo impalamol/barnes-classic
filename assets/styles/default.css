@@ -597,6 +597,7 @@ section:not(.hero) .wrapper .contentCard .content p {
   text-align: justify;
   -moz-text-align-last: left;
        text-align-last: left;
+  margin-bottom: 0.8rem !important;
 }
 section:not(.hero) .wrapper .contentCard .content p:last-child {
   margin-bottom: 0 !important;

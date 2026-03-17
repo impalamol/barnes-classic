@@ -428,6 +428,7 @@ section:not(.hero) {
                 p {
                     text-align: justify;
                     text-align-last: left;
+                    margin-bottom: 0.8rem !important;
                     &:last-child {
                         margin-bottom: 0 !important;
                     }
