@@ -80,7 +80,7 @@ $currentPage = 'about';
                                                 <th>Position</th>
                                                 <th>Department</th>
                                                 <th>Type (Boarding cum Day)</th>
-                                                
+
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -89,14 +89,13 @@ $currentPage = 'about';
                                                 <td>Social Studies Teacher</td>
                                                 <td>Middle Section</td>
                                                 <td>Full-time</td>
-                                                
+
                                             </tr>
                                             <tr>
                                                 <td>2</td>
                                                 <td>Dance Teacher</td>
                                                 <td>-</td>
                                                 <td>Full-time</td>
-                                                
                                             </tr>
                                         </tbody>
                                     </table>
@@ -148,7 +147,126 @@ $currentPage = 'about';
                                             </tr>
                                         </tbody>
                                     </table>
-                                </div>                                
+                                </div>
+                                <div class="row mb-4">
+                                    <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-4">
+                                        <div class="iconCard">
+                                            <div class="icon">
+                                                <i class="ph-duotone ph-trophy"></i>
+                                            </div>
+                                            <p>Consistently achieving 100% academic results across disciplines.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-4">
+                                        <div class="iconCard">
+                                            <div class="icon">
+                                                <i class="ph-duotone ph-graduation-cap"></i>
+                                            </div>
+                                            <p>Rooted in tradition but also encouraging inclusive learning practices.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-4">
+                                        <div class="iconCard">
+                                            <div class="icon">
+                                                <i class="ph-duotone ph-tree-palm"></i>
+                                            </div>
+                                            <p>A sprawling campus nestled in the scenic Sahyadri ranges of the Western
+                                                Ghats.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-4">
+                                        <div class="iconCard">
+                                            <div class="icon">
+                                                <i class="ph-duotone ph-graduation-cap"></i>
+                                            </div>
+                                            <p>Highly qualified and reputed faculties from all around.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-4">
+                                        <div class="iconCard">
+                                            <div class="icon">
+                                                <i class="ph-duotone ph-heart"></i>
+                                            </div>
+                                            <p>Fosters instilling values in students that lasts a lifetime.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-4">
+                                        <div class="iconCard">
+                                            <div class="icon">
+                                                <i class="ph-duotone ph-bed"></i>
+                                            </div>
+                                            <p>Spacious, comfortable, and well-supervised dormitories for both boys and
+                                                girls.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-4">
+                                        <div class="iconCard">
+                                            <div class="icon">
+                                                <i class="ph-duotone ph-briefcase"></i>
+                                            </div>
+                                            <p>Career counselling and mentorship programs to guide students toward their
+                                                aspirations.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-4">
+                                        <div class="iconCard">
+                                            <div class="icon">
+                                                <i class="ph-duotone ph-globe"></i>
+                                            </div>
+                                            <p>Multilingual education including French and Japanese to foster global
+                                                competencies.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-4">
+                                        <div class="iconCard">
+                                            <div class="icon">
+                                                <i class="ph-duotone ph-desktop"></i>
+                                            </div>
+                                            <p>Smart classrooms and campus-wide Wi-Fi ensure a future-ready learning
+                                                environment.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-4">
+                                        <div class="iconCard">
+                                            <div class="icon">
+                                                <i class="ph-duotone ph-users"></i>
+                                            </div>
+                                            <p>Our co-scholastic programs are designed to nurture creativity,
+                                                leadership, collaboration, and personal growth.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-4">
+                                        <div class="iconCard">
+                                            <div class="icon">
+                                                <i class="ph-duotone ph-globe-simple"></i>
+                                            </div>
+                                            <p>Our Foreign Cultural Exchange Programs immerse students in diverse
+                                                international environments.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-4">
+                                        <div class="iconCard">
+                                            <div class="icon">
+                                                <i class="ph-duotone ph-trophy"></i>
+                                            </div>
+                                            <p>Strong performance in sports with structured training and inter-school
+                                                achievements.</p>
+                                        </div>
+                                    </div>
+
+                                </div>
                                 <p>This is just a snippet of what you can get for your child at Barnes. There’s much
                                     more!</p>
                             </div>

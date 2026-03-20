@@ -745,6 +745,58 @@ header {
         }
     }
 }
+// IconCard
+.iconCard {
+    background-color: $white;
+    padding: $commonUnit;
+    flex-direction: column;
+    gap: $commonUnit / 3;
+    @extend .flex-center;
+    border-radius: $cardRadius;
+    border: $commonBorder;
+    height: 100%;
+    transition: all 0.3s ease;
+    .icon {
+        background-color: $light;
+        @extend .flex-center;
+        $wh: 4.375rem;
+        width: $wh;
+        height: $wh;
+        border-radius: 50%;
+    }
+
+    i {
+        font-size: $h2;
+        color: $dark;
+    }
+
+    h4 {
+        font-size: $h5;
+        color: $dark;
+        margin-bottom: 0;
+    }
+    p {
+        text-align: center !important;
+        text-align-last: center !important;
+        margin: 0;
+    }
+    &:hover {
+        background-color: $dark;
+        border-color: $primary;
+
+        .icon {
+            background-color: rgba($color: $primary, $alpha: 0.3);
+
+            i {
+                color: $primary;
+            }
+        }
+        h4,
+        p {
+            color: $white;
+        }
+    }
+}
 // Departments
 .departments {
     .departmentCard {
@@ -1085,7 +1137,7 @@ header {
                     }
                     .totalFee {
                         position: -webkit-sticky;
-                        position: sticky;                        
+                        position: sticky;
                         padding: $commonUnit;
                         border: 1px solid $primary;
                         background-color: rgba($color: $primary, $alpha: 0.1);
@@ -1110,9 +1162,8 @@ header {
                         }
                     }
                 }
-                &.show  .accordionBody .totalFee {
+                &.show .accordionBody .totalFee {
                     top: 11.25rem;
-
                 }
             }
         }
