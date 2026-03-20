@@ -620,7 +620,7 @@ section:not(.hero) .wrapper .contentCard .content .table-responsive .table {
 section:not(.hero) .wrapper .contentCard .content .table-responsive .table td,
 section:not(.hero) .wrapper .contentCard .content .table-responsive .table th {
   font-size: 0.875rem;
-  padding: 0.75rem 1.5rem;
+  padding: 1.5rem;
 }
 section:not(.hero) .wrapper .contentCard .content .table-responsive .table > :not(caption) > * > * {
   background-color: #000b20;
@@ -643,6 +643,23 @@ section:not(.hero) .wrapper .contentCard .content .table-responsive .table.table
   background: linear-gradient(180deg, #ffffff 0%, #f5f9fd 100%);
   --bs-table-bg-type: $dark;
   border-color: rgba(0, 11, 32, 0.2);
+}
+section:not(.hero) .wrapper .contentCard .content .table-responsive .table.iconTable th,
+section:not(.hero) .wrapper .contentCard .content .table-responsive .table.iconTable td {
+  border: none !important;
+  text-align: center;
+  vertical-align: middle;
+}
+section:not(.hero) .wrapper .contentCard .content .table-responsive .table.iconTable .tableIcon,
+section:not(.hero) .wrapper .contentCard .content .table-responsive .table.iconTable span {
+  display: block;
+}
+section:not(.hero) .wrapper .contentCard .content .table-responsive .table.iconTable .tableIcon {
+  margin: auto;
+}
+section:not(.hero) .wrapper .contentCard .content .table-responsive .table.iconTable .tableIcon i {
+  font-size: 3.125rem;
+  color: #0071bf;
 }
 section:not(.hero) .wrapper .contentCard .note {
   background-color: rgba(255, 165, 1, 0.1);

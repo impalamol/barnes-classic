@@ -450,7 +450,7 @@ section:not(.hero) {
                         td,
                         th {
                             font-size: $medium;
-                            padding: $commonUnit/2 $commonUnit;
+                            padding: $commonUnit;
                         }
                         & > :not(caption) > * > * {
                             background-color: $dark;
@@ -473,6 +473,29 @@ section:not(.hero) {
                                 background: linear-gradient(180deg, $white 0%, $light 100%);
                                 --bs-table-bg-type: $dark;
                                 border-color: rgba($color: $dark, $alpha: 0.2);
+                            }
+                        }
+                        &.iconTable {
+                            th,
+                            td {
+                                border: none !important;
+                                text-align: center;
+                                vertical-align: middle;
+                                &:hover {
+
+                                }
+                            }
+                            .tableIcon,
+                            span {
+                                display: block;
+                            }
+                            .tableIcon {
+                                margin: auto;
+
+                                i {
+                                    font-size: $h1;
+                                    color: $primary;
+                                }
                             }
                         }
                     }
