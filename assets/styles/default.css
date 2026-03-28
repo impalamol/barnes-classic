@@ -588,6 +588,9 @@ section:not(.hero) .wrapper .contentCard .content figure {
 section:not(.hero) .wrapper .contentCard .content figure img {
   transition: all 0.7s linear;
 }
+section:not(.hero) .wrapper .contentCard .content .pgHeader + figure {
+  margin-top: 0 !important;
+}
 section:not(.hero) .wrapper .contentCard .content br + br {
   display: block;
   margin-bottom: 10px;

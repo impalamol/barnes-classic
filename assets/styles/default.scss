@@ -420,6 +420,9 @@ section:not(.hero) {
                         transition: all 0.7s linear;
                     }
                 }
+                .pgHeader + figure {
+                    margin-top: 0 !important;
+                }
                 br + br {
                     display: block;
                     margin-bottom: 10px;
