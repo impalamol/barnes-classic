@@ -587,6 +587,7 @@ section:not(.hero) .wrapper .contentCard .content figure {
 }
 section:not(.hero) .wrapper .contentCard .content figure img {
   transition: all 0.7s linear;
+  width: 100% !important;
 }
 section:not(.hero) .wrapper .contentCard .content .pgHeader + figure {
   margin-top: 0 !important;
@@ -689,7 +690,6 @@ section:not(.hero) .wrapper .contentCard .note p span {
 .pgHeader .pgTitle {
   flex-direction: column;
   flex-grow: 1;
-  max-width: 53.125rem;
 }
 .pgHeader .pgTitle .pgSection {
   font-size: 1.25rem;

@@ -72,12 +72,12 @@ $currentPage = 'history';
                                         <h6 class="pgSection">The Inspiration Behind Our School</h6>
                                         <h2>Venerable Archdeacon George Barnes</h2>
                                         <hr>
-                                        <figure>
-                                            <img src="assets/media/george-barnes.jpg"
-                                                alt="Venerable Archdeacon George Barnes">
-                                        </figure>
                                     </div>
                                 </div>
+                                <figure>
+                                    <img src="assets/media/george-barnes.jpg"
+                                        alt="Venerable Archdeacon George Barnes">
+                                </figure>
                                 <p>On January 27th 1815 the Venerable Archdeacon George Barnes, the Senior
                                     Anglican Priest in Western India, preached to the congregation of St Thomas'
                                     Church, Bombay - now the Cathedral - appealing for help in educating the

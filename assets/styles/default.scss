@@ -418,6 +418,7 @@ section:not(.hero) {
 
                     img {
                         transition: all 0.7s linear;
+                        width: 100% !important;
                     }
                 }
                 .pgHeader + figure {
@@ -536,7 +537,7 @@ section:not(.hero) {
         @extend .flex-start;
         flex-direction: column;
         flex-grow: 1;
-        max-width: 53.125rem;
+        // max-width: 53.125rem;
 
         .pgSection {
             font-size: $h6;
