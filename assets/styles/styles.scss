@@ -1037,7 +1037,7 @@ header {
             counter-reset: listItem;
             list-style-type: none;
             padding-left: 0;
-            margin: $commonUnit * 2 0 0;
+            margin: $commonUnit 0 0;
 
             li:not(:last-child) {
                 padding-bottom: $commonUnit / 2;
