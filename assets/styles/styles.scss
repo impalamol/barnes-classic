@@ -1237,6 +1237,76 @@ header {
             max-width: 100% !important;
         }
     }
+            .testimonialCard {
+            background: $white;
+            padding: 0 !important;
+            border: $commonBorder;
+            border-radius: $cardRadius * 2;
+            overflow: hidden;
+
+            .testimonialImg {
+            position: relative;
+            padding: $commonUnit * 2;
+            overflow: hidden;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                z-index: 0;
+                width: 50%;
+                height: 100%;
+                background: $primary;
+            }
+
+            img {
+                background: $light;
+                width: 100% !important;
+                height: 21.875rem;
+                -o-object-fit: cover;
+                object-fit: cover;
+                position: relative;
+                z-index: 1;
+                border-radius: $cardRadius;
+            }
+            }
+
+            .testimonialContent {
+            // @extend .flex-start-center;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            height: 100%;
+            padding: $commonUnit * 2;
+
+            .testimonialText {
+                .rating i {
+                color: $primary;
+                }
+
+                h3 {
+                font-size: $h4;
+                }
+
+                p {
+                margin-bottom: 0;
+                }
+            }
+
+            .testimonialUser {
+                h4 {
+                font-size: $h6 !important;
+                }
+
+                h6 {
+                font-size: $large;
+                color: $primary;
+                }
+            }
+            }
+        }
 }
 // Gallery
 .albums {
@@ -2295,11 +2365,12 @@ footer {
     }
 
     .testimonials {
-        .testimonialCard {
-            padding: $commonUnit !important;
-            margin-left: 0 !important;
-            height: auto !important;
-        }
+        // .testimonialCard {
+        //     padding: $commonUnit !important;
+        //     margin-left: 0 !important;
+        //     height: auto !important;
+        // }
+
     }
 
     // About us

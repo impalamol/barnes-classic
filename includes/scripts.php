@@ -290,19 +290,42 @@
     });
     tableObserver.observe(document.body, { childList: true, subtree: true });
 </script>
-
 <script>
-   function formatParagraphs(html) {
-  return '<p>' +
-    html
-      // replace 2+ <br> with paragraph break
-      .replace(/(<br\s*\/?>\s*){2,}/gi, '</p><p>')
-      
-      // remove single <br> at start/end
-      .replace(/^(<br\s*\/?>)+|(<br\s*\/?>)+$/gi, '')
-      
-      // optional: clean extra spaces
-      .trim()
-  + '</p>';
-}
+    const swiper = new Swiper(".testimonialSlider", {
+        spaceBetween: 30,
+        centeredSlides: false,
+        loop: false,
+        slidesPerView: 1,
+
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+        },
+
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
+<script>
+    function formatParagraphs(html) {
+        return '<p>' +
+            html
+                // replace 2+ <br> with paragraph break
+                .replace(/(<br\s*\/?>\s*){2,}/gi, '</p><p>')
+
+                // remove single <br> at start/end
+                .replace(/^(<br\s*\/?>)+|(<br\s*\/?>)+$/gi, '')
+
+                // optional: clean extra spaces
+                .trim()
+            + '</p>';
+    }
 </script>

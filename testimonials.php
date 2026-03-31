@@ -38,7 +38,7 @@ $currentPage = 'testimonials';
         <section class="testimonials">
             <div class="container">
                 <div class="row">
-                    <div class="wrapper flex-wrap flex-lg-nowrap">
+                    <div class="wrapper flex-wrap flex-lg-nowrap mb-5">
                         <div class="contentCard">
                             <div class="content">
                                 <div class="pgHeader">
@@ -67,6 +67,90 @@ $currentPage = 'testimonials';
                                                 <source src="https://barnesschool.in/Test/3.mp4" type="video/mp4">
                                             </video>
                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <div class="content">
+                                    <div class="pgHeader">
+                                        <div class="pgTitle">
+                                            <h2>Alumni Testimonials</h2>
+                                        </div>
+                                    </div>
+                                    <div class="swiper testimonialSlider">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="testimonialCard">
+                                                    <div class="row">
+                                                        <div class="col-12 col-lg-8 mb-3">
+                                                            <div class="testimonialContent">
+                                                                <div class="testimonialText">
+                                                                    <div class="rating">
+                                                                        <i class="ph-duotone ph-star"></i>
+                                                                        <i class="ph-duotone ph-star"></i>
+                                                                        <i class="ph-duotone ph-star"></i>
+                                                                        <i class="ph-duotone ph-star"></i>
+                                                                        <i class="ph-duotone ph-star"></i>
+                                                                    </div>
+                                                                    <h3>Excellent Service</h3>
+                                                                    <p>This platform helped us grow our business
+                                                                        significantly.</p>
+                                                                </div>
+                                                                <hr />
+                                                                <div class="testimonialUser">
+                                                                    <h4>John Doe</h4>
+                                                                    <h6>CEO, Company</h6>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-lg-4">
+                                                            <div class="testimonialImg">
+                                                                <img src="https://via.placeholder.com/300"
+                                                                    alt="John Doe" loading="lazy" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="testimonialCard">
+                                                    <div class="row">
+                                                        <div class="col-12 col-lg-8 mb-3">
+                                                            <div class="testimonialContent">
+                                                                <div class="testimonialText">
+                                                                    <div class="rating">
+                                                                        <i class="ph-duotone ph-star"></i>
+                                                                        <i class="ph-duotone ph-star"></i>
+                                                                        <i class="ph-duotone ph-star"></i>
+                                                                        <i class="ph-duotone ph-star"></i>
+                                                                        <i class="ph-duotone ph-star"></i>
+                                                                    </div>
+                                                                    <h3>Amazing Experience</h3>
+                                                                    <p>Smooth UI and great support. Loved working with
+                                                                        this
+                                                                        team!</p>
+                                                                </div>
+                                                                <hr />
+                                                                <div class="testimonialUser">
+                                                                    <h4>Jane Smith</h4>
+                                                                    <h6>Marketing Head</h6>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-lg-4">
+                                                            <div class="testimonialImg">
+                                                                <img src="https://via.placeholder.com/300"
+                                                                    alt="Jane Smith" loading="lazy" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                        <div class="swiper-button-next"></div>
+                                        <div class="swiper-button-prev"></div>
                                     </div>
                                 </div>
                             </div>
