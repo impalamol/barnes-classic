@@ -591,7 +591,7 @@ section:not(.hero) .wrapper .contentCard .content figure {
 }
 section:not(.hero) .wrapper .contentCard .content figure img {
   transition: all 0.7s linear;
-  width: 100%;
+  width: 100% !important;
 }
 section:not(.hero) .wrapper .contentCard .content .pgHeader + figure {
   margin-top: 0 !important;
@@ -2053,6 +2053,62 @@ header .notification .notificationsContainer .notificationListContainer .notific
 .testimonials .testimonialCard video {
   max-width: 100% !important;
 }
+.testimonials .testimonialCard {
+  background: #ffffff;
+  padding: 0 !important;
+  border: 0.0625rem solid #e4e4e4;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+.testimonials .testimonialCard .testimonialImg {
+  position: relative;
+  padding: 3rem;
+  overflow: hidden;
+}
+.testimonials .testimonialCard .testimonialImg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;
+  width: 50%;
+  height: 100%;
+  background: #0071bf;
+}
+.testimonials .testimonialCard .testimonialImg img {
+  background: #f5f9fd;
+  width: 100% !important;
+  height: 21.875rem;
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+  border-radius: 1rem;
+}
+.testimonials .testimonialCard .testimonialContent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  padding: 3rem;
+}
+.testimonials .testimonialCard .testimonialContent .testimonialText .rating i {
+  color: #0071bf;
+}
+.testimonials .testimonialCard .testimonialContent .testimonialText h3 {
+  font-size: 2rem;
+}
+.testimonials .testimonialCard .testimonialContent .testimonialText p {
+  margin-bottom: 0;
+}
+.testimonials .testimonialCard .testimonialContent .testimonialUser h4 {
+  font-size: 1.25rem !important;
+}
+.testimonials .testimonialCard .testimonialContent .testimonialUser h6 {
+  font-size: 1rem;
+  color: #0071bf;
+}
 
 .albums .albumCard {
   background-color: #ffffff;
@@ -2933,11 +2989,6 @@ footer .copyright .copyrightContent .copyrightLinks {
   }
   .applicationIndustries .counterCard {
     flex-wrap: wrap;
-  }
-  .testimonials .testimonialCard {
-    padding: 1.5rem !important;
-    margin-left: 0 !important;
-    height: auto !important;
   }
   .about .pgHeader {
     padding-left: 0 !important;
