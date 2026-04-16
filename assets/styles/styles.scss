@@ -1237,14 +1237,14 @@ header {
             max-width: 100% !important;
         }
     }
-            .testimonialCard {
-            background: $white;
-            padding: 0 !important;
-            border: $commonBorder;
-            border-radius: $cardRadius * 2;
-            overflow: hidden;
+    .testimonialCard {
+        background: $white;
+        padding: 0 !important;
+        border: $commonBorder;
+        border-radius: $cardRadius * 2;
+        overflow: hidden;
 
-            .testimonialImg {
+        .testimonialImg {
             position: relative;
             padding: $commonUnit * 2;
             overflow: hidden;
@@ -1270,9 +1270,9 @@ header {
                 z-index: 1;
                 border-radius: $cardRadius;
             }
-            }
+        }
 
-            .testimonialContent {
+        .testimonialContent {
             // @extend .flex-start-center;
             display: flex;
             align-items: flex-start;
@@ -1283,30 +1283,30 @@ header {
 
             .testimonialText {
                 .rating i {
-                color: $primary;
+                    color: $primary;
                 }
 
                 h3 {
-                font-size: $h4;
+                    font-size: $h4;
                 }
 
                 p {
-                margin-bottom: 0;
+                    margin-bottom: 0;
                 }
             }
 
             .testimonialUser {
                 h4 {
-                font-size: $h6 !important;
+                    font-size: $h6 !important;
                 }
 
                 h6 {
-                font-size: $large;
-                color: $primary;
+                    font-size: $large;
+                    color: $primary;
                 }
             }
-            }
         }
+    }
 }
 // Gallery
 .albums {
@@ -1366,7 +1366,7 @@ header {
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-    grid-auto-rows: 1rem auto;
+    grid-auto-rows: 0.5rem;
 
     figure {
         overflow: hidden;
@@ -1376,7 +1376,9 @@ header {
         img {
             opacity: 1;
             transition: linear 1s;
+            display: block;
             width: 100% !important;
+            height: auto;
         }
 
         img[data-src] {
@@ -2370,7 +2372,6 @@ footer {
         //     margin-left: 0 !important;
         //     height: auto !important;
         // }
-
     }
 
     // About us

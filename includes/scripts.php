@@ -120,56 +120,132 @@
                     }, pagination: { el: ".swiper-pagination", clickable: true },
                 });
             } /* ---
-                  /* Popup Gallery (keeps Magnific Popup jQuery plugin usage) */
-        (function () {
-            if (window.jQuery && $.fn && $.fn.magnificPopup) {
-                $(function () {
-                    $('.popupGallery').magnificPopup({
-                        delegate: 'a',
-                        type: 'image',
-                        gallery: {
-                            enabled: true,
-                            navigateByImgClick: true,
-                            preload: [0, 1]
-                        },
-                        keyboard: {
-                            enabled: true,
-                            left: true,
-                            right: true,
-                            escKey: true
-                        },
-                        mainClass: 'mfp-fade',
-                        removalDelay: 300
-                    });
-                });
-            }
-        })();
-        /* --- Grid Gallery Logic --- */
+       (function () {
+    if (window.jQuery && $.fn && $.fn.magnificPopup) {
+        $(document).ready(function () {
+            $('.popupGallery').magnificPopup({
+                delegate: 'a',
+                type: 'image',
+                gallery: {
+                    enabled: true,
+                    navigateByImgClick: true,
+                    preload: [0, 1]
+                },
+                keyboard: {
+                    enabled: true,
+                    left: true,
+                    right: true,
+                    escKey: true
+                },
+                mainClass: 'mfp-fade',
+                removalDelay: 300
+            });
+        });
+    }
+})();
+
+
+/* ===============================
+   GRID GALLERY (MASONRY FIX)
+================================= */
+
         function resizeGridItem(item) {
-            const grid = document.getElementsByClassName("gridGallery")[0];
+            const grid = document.querySelector(".gridGallery");
             if (!grid || !item.querySelector('figure')) return;
 
             const rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
             const rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
-            const rowSpan = Math.ceil((item.querySelector('figure').getBoundingClientRect().height + rowGap) /
-                (rowHeight + rowGap));
+
+            const content = item.querySelector('figure');
+            const contentHeight = content.getBoundingClientRect().height;
+
+            const rowSpan = Math.ceil((contentHeight + rowGap) / (rowHeight + rowGap));
             item.style.gridRowEnd = "span " + rowSpan;
         }
 
-        function resizeAllGridItems() {
-            const allItems = document.getElementsByClassName("item");
-            for (let x = 0; x < allItems.length; x++) { resizeGridItem(allItems[x]); }
-        } window.addEventListener("load",
-            resizeAllGridItems); window.addEventListener("resize", resizeAllGridItems); const
-                gridItems = document.getElementsByClassName("item"); if (typeof imagesLoaded !== 'undefined') {
-                    for (let
-                        x = 0; x < gridItems.length; x++) {
-                        imagesLoaded(gridItems[x], (instance) => {
-                            resizeGridItem(instance.elements[0]);
-                        });
-                    }
-                }
 
+        /* Resize all items */
+        function resizeAllGridItems() {
+            const allItems = document.querySelectorAll(".gridGallery .item");
+
+            allItems.forEach(item => {
+                resizeGridItem(item);
+            });
+        }
+
+
+        /* Wait for ALL images (Fix for Firefox) */
+        function waitForImagesAndResize() {
+            const images = document.querySelectorAll('.gridGallery img');
+
+            let loadedCount = 0;
+            const totalImages = images.length;
+
+            if (totalImages === 0) return;
+
+            images.forEach(img => {
+                if (img.complete) {
+                    loadedCount++;
+                } else {
+                    img.addEventListener('load', imageLoaded);
+                    img.addEventListener('error', imageLoaded);
+                }
+            });
+
+            function imageLoaded() {
+                loadedCount++;
+                if (loadedCount === totalImages) {
+                    triggerResize();
+                }
+            }
+
+            // If already cached
+            if (loadedCount === totalImages) {
+                triggerResize();
+            }
+        }
+
+
+        /* Trigger resize with delay (Firefox paint fix) */
+        function triggerResize() {
+            setTimeout(() => {
+                resizeAllGridItems();
+            }, 120); // small delay is key for Firefox
+        }
+
+
+        /* ===============================
+           EVENTS
+        ================================= */
+
+        /* Initial load */
+        window.addEventListener('load', () => {
+            waitForImagesAndResize();
+        });
+
+        /* Resize */
+        window.addEventListener('resize', () => {
+            triggerResize();
+        });
+
+
+        /* ===============================
+           OPTIONAL: Mutation Observer
+           (for dynamic content / AJAX)
+        ================================= */
+
+        const gallery = document.querySelector('.gridGallery');
+
+        if (gallery) {
+            const observer = new MutationObserver(() => {
+                waitForImagesAndResize();
+            });
+
+            observer.observe(gallery, {
+                childList: true,
+                subtree: true
+            });
+        }
         /* --- Video Section Follow Mouse --- */
         const videoSection = document.querySelector('.videoSection');
         const playBtn = document.querySelector('.playBtn');

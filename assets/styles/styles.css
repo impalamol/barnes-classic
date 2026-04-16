@@ -2162,7 +2162,7 @@ header .notification .notificationsContainer .notificationListContainer .notific
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-  grid-auto-rows: 1rem auto;
+  grid-auto-rows: 0.5rem;
 }
 .gridGallery figure {
   overflow: hidden;
@@ -2172,7 +2172,9 @@ header .notification .notificationsContainer .notificationListContainer .notific
 .gridGallery figure img {
   opacity: 1;
   transition: linear 1s;
+  display: block;
   width: 100% !important;
+  height: auto;
 }
 .gridGallery figure img[data-src] {
   opacity: 0;
