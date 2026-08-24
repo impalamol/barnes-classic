@@ -1718,6 +1718,9 @@ header .notification .notificationsContainer .notificationListContainer .notific
   overflow: hidden;
 }
 .departments .departmentCard figure img {
+  width: 100%;
+  object-fit: cover;
+  -o-object-fit: cover;
   transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .departments .departmentCard .departmentContent {
